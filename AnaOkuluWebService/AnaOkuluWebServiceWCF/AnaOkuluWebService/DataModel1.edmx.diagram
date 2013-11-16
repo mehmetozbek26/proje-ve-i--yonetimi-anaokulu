@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df278e59a0094ffebc4ad74815ebd3b9" Name="Diagram1">
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Demirbaslar" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.DemirbasMekanlari" Width="1.5" PointX="10" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.DERSLER" Width="1.5" PointX="3.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.DersTablo" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Ogrenciler" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Ogretmenler" Width="1.5" PointX="1.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Personeller" Width="1.5" PointX="1.5" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.pwd" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Servisler" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Siniflar" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.UcuncuSahislar" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Veliler" Width="1.5" PointX="5.25" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Yemekler" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Yoklama" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <AssociationConnector Association="AnaOkuluDBModel.DemirBasFor" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL0FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL10FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL11FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL12FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL13FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL14FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL15FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL16FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL17FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL18FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL19FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL1FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL20FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL21FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL22FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL23FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL24FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL25FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL26FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL27FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL28FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL29FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL2FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL30FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL31FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL32FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL33FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL34FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL35FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL36FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL37FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL38FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL39FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL3FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL4FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL5FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL6FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL7FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL8FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.CL9FR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.OGR" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.sinif" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Ogrenciler_Servisler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Ogrenciler_Siniflar" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_UcuncuSahislar_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Veliler_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Yoklama_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Ogretmenler_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Yoklama_Siniflar" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
