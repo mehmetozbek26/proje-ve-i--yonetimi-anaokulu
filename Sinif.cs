@@ -14,6 +14,10 @@ namespace AnaOkuluBilisim.Models
             get { return sinifid; }
             set { sinifid = value; }
         }
+       /// <summary>
+       /// /////////////////////
+       /// //////////////
+       /// </summary>
         private string sinifadi;
 
         public string Sinifadi
