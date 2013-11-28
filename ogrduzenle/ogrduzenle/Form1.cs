@@ -31,6 +31,11 @@ namespace AnaOkuluBilisim
             // TODO: This line of code loads data into the 'anaOkuluDBDataSet11.Ogrenciler' table. You can move, or remove it, as needed.
 
             // TODO: This line of code loads data into the 'anaOkuluDBDataSet1.Ogrenciler' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'anaOkuluDBDataSet11.Ogrenciler' table. You can move, or remove it, as needed.
+
+            // TODO: This line of code loads data into the 'anaOkuluDBDataSet11.Ogrenciler' table. You can move, or remove it, as needed.
+
+            // TODO: This line of code loads data into the 'anaOkuluDBDataSet1.Ogrenciler' table. You can move, or remove it, as needed.
 
 
             string ogrid = (GlobalClass.Ogrid);
