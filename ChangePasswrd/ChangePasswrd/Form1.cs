@@ -56,31 +56,4 @@ namespace AnaOkuluBilisim
                         //////////////////////////////////////////////////n
                        
                         //////////////////////////////////////////////////d
-                        else
-                        {
-                            MessageBox.Show("Password did not change your user id or password is wrong", "Message");
-                            txtuserid.Clear();
-                            txtoldpwd.Clear();
-                            txtnewpwd.Clear();
-                            txtconfirmpwd.Clear();
-                        }
-                        conn.Close();
-                        txtuserid.Clear();
-                        txtoldpwd.Clear();
-                        txtnewpwd.Clear();
-                        txtconfirmpwd.Clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Your new password and confirm password is not same","Message");
-                        txtnewpwd.Clear();
-                        txtconfirmpwd.Clear();
-                    }
-                }
-          }
-
-                        //////////////////////////////////////////////////t
-                        //////////////////////////////////////////////////h
-                        //////////////////////////////////////////////////i
-                        //////////////////////////////////////////////////r
-                        //////////////////////////////////////////////////d
+                      
