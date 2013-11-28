@@ -19,3 +19,6 @@ namespace AnaOkuluBilisim
         string qry;
     
         private void btncreatepwd_Click_1(object sender, EventArgs e)
+            ////
+            ////
+            ////

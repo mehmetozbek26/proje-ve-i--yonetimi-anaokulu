@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace AnaOkuluBilisim
 {
-    partial class Form1
+    partial class ChangePassword
     {
         /// <summary>
         /// Required designer variable.
