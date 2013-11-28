@@ -11,13 +11,13 @@ namespace AnaOkuluBilisim
 {
     public partial class ListeForm : Form
     {
-       
-  
+
+
         public ListeForm()
         {
-         
+
             InitializeComponent();
-            if (GlobalClass.GlobalVar=="OGRETMEN")
+            if (GlobalClass.GlobalVar == "OGRETMEN")
             {
                 personelİşlemleriToolStripMenuItem.Enabled = false;
                 demirbaşlarToolStripMenuItem.Enabled = false;
@@ -35,16 +35,16 @@ namespace AnaOkuluBilisim
                 yoklamalarToolStripMenuItem.Enabled = false;
             }
 
-            
+
         }
         private void öğrencilerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OgrenciKayit frm = new OgrenciKayit();
             frm.MdiParent = this;
-           // frm.Width = this.Width-20;
-           // frm.Height = this.Height-20;
-            
-           
+            // frm.Width = this.Width-20;
+            // frm.Height = this.Height-20;
+
+
             frm.Show();
         }
         private void öğrencilerToolStripMenuItem1_Click(object sender, EventArgs e)
