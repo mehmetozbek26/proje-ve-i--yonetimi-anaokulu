@@ -138,7 +138,25 @@ namespace AnaOkuluBilisim
 
 
 
-
+        private System.Windows.Forms.TextBox txtuserid;
+        private System.Windows.Forms.Label lbluserid;
+        private System.Windows.Forms.TextBox txtconfirmpwd;
+        private System.Windows.Forms.TextBox txtnewpwd;
+        private System.Windows.Forms.TextBox txtoldpwd;
+        private System.Windows.Forms.Button btncreatepwd;
+        private System.Windows.Forms.Button btnresetpwd;
+        private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel Information;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPwd;
+    }
+}
 
 
 
