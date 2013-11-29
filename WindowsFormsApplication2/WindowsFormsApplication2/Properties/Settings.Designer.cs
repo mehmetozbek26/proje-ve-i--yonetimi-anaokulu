@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DemirBasKayit.Properties
+namespace WindowsFormsApplication2.Properties
 {
 
 

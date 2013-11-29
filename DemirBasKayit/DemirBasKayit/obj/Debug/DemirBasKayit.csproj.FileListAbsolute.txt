@@ -1,4 +1,0 @@
-C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirBasKayit\DemirBasKayit\obj\Debug\DemirBasKayit.csprojResolveAssemblyReference.cache
-C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirBasKayit\DemirBasKayit\obj\Debug\AnaOkuluBilisim.DemirbasKayit.resources
-C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirBasKayit\DemirBasKayit\obj\Debug\DemirBasKayit.Properties.Resources.resources
-C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirBasKayit\DemirBasKayit\obj\Debug\DemirBasKayit.csproj.GenerateResource.Cache
