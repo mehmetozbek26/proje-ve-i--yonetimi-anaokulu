@@ -70,6 +70,8 @@ namespace AnaOkuluBilisim
             txtKayitNo.Text = dr["KayitNo"].ToString();
             byte[] resim = dr["Resim"] as byte[];
             MemoryStream ms = new MemoryStream();
+            ///////////
+            //////////
 
             ms.Write(resim, 0, resim.Length);
             Image img = Image.FromStream(ms);
