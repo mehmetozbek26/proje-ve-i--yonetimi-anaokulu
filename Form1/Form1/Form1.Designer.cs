@@ -1,4 +1,4 @@
-﻿namespace Form1
+﻿namespace AnaOkuluBilisim
 {
     partial class Form1
     {
