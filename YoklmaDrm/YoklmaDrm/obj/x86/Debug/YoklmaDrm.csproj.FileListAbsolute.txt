@@ -1,0 +1,7 @@
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\bin\Debug\YoklmaDrm.exe
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\bin\Debug\YoklmaDrm.pdb
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\obj\x86\Debug\YoklmaDrm.Form1.resources
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\obj\x86\Debug\YoklmaDrm.Properties.Resources.resources
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\obj\x86\Debug\YoklmaDrm.csproj.GenerateResource.Cache
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\obj\x86\Debug\YoklmaDrm.exe
+C:\Users\PC\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\YoklmaDrm\YoklmaDrm\obj\x86\Debug\YoklmaDrm.pdb
