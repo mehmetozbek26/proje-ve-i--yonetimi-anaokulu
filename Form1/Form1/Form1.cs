@@ -63,21 +63,7 @@ namespace AnaOkuluBilisim
                     yeniform.Show();
                     this.Hide();
                     rdr.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Hatalı kullanıcı adı veya şifre.");
-                }
-                cnn.Close();
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
+               
 
 
     }
