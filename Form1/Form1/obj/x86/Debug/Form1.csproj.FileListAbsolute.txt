@@ -1,0 +1,5 @@
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\Form1\Form1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\Form1\Form1\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\Form1\Form1\obj\x86\Debug\Form1.Properties.Resources.resources
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\Form1\Form1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\Form1\Form1\obj\x86\Debug\GenerateResource.write.1.tlog
