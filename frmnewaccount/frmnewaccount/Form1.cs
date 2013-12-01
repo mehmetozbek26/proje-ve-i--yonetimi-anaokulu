@@ -286,5 +286,41 @@ namespace AnaOkuluBilisim
             }
         }
 
-        
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == false)
+            {
+                e.Handled = true;
+                inform.Text = "Please enter correct format";
+                inform.Visible = true;
+            }
+            else
+            {
+                inform.Visible = false;
+            }
+        }
+
+        private void comboBox3_Enter(object sender, EventArgs e)
+        {
+            Information1.Text = "Please enter your Age";
+        }
+
+        private void txtcontact_Enter(object sender, EventArgs e)
+        {
+            Information1.Text = "Please enter your contact no.";
+        }
+
+        private void comqualification_Enter(object sender, EventArgs e)
+        {
+            Information1.Text = "Please enter your Qualification";
+        }
+
+        private void textBox7_Enter(object sender, EventArgs e)
+        {
+            int a;
+            a = Convert.ToInt32(comboBox3.SelectedItem);
+            int c = d - a;
+            textBox7.Text = c.ToString();
+        }
+       
 }
