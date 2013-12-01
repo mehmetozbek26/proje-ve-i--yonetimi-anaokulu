@@ -7,3 +7,4 @@ C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplicati
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication4\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication4\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.exe
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication4\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.pdb
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication4\WindowsFormsApplication4\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources

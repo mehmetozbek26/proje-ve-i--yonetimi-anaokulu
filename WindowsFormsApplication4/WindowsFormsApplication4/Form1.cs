@@ -6,18 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
-namespace WindowsFormsApplication4
+namespace AnaOkuluBilisim
 {
-    public partial class Form1 : Form
+    public partial class DemirBasGuncelle : Form
     {
-        public Form1()
+        public DemirbasKayit DmrBasKayit;
+        public DemirBasGuncelle()
         {
             InitializeComponent();
         }
+        SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
     }
