@@ -1,0 +1,14 @@
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\bin\AnaOkuluWebService.dll
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\bin\AnaOkuluWebService.pdb
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.dll
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.pdb
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\bin\EntityFramework.dll
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\bin\EntityFramework.xml
+C:\Users\MERKAN\Desktop\AnaOkuluWebService\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.csprojResolveAssemblyReference.cache
+J:\AnaOkuluWebService\AnaOkuluWebService\bin\AnaOkuluWebService.dll
+J:\AnaOkuluWebService\AnaOkuluWebService\bin\AnaOkuluWebService.pdb
+J:\AnaOkuluWebService\AnaOkuluWebService\bin\EntityFramework.dll
+J:\AnaOkuluWebService\AnaOkuluWebService\bin\EntityFramework.xml
+J:\AnaOkuluWebService\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.csprojResolveAssemblyReference.cache
+J:\AnaOkuluWebService\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.dll
+J:\AnaOkuluWebService\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.pdb

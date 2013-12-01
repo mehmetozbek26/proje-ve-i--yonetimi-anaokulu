@@ -1,0 +1,1276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AnaOkuluDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AnaOkuluDBModelStoreContainer">
+    <EntitySet Name="Demirbaslar" EntityType="AnaOkuluDBModel.Store.Demirbaslar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DemirbasMekanlari" EntityType="AnaOkuluDBModel.Store.DemirbasMekanlari" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DERSLER" EntityType="AnaOkuluDBModel.Store.DERSLER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DersTablo" EntityType="AnaOkuluDBModel.Store.DersTablo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ogrenciler" EntityType="AnaOkuluDBModel.Store.Ogrenciler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ogretmenler" EntityType="AnaOkuluDBModel.Store.Ogretmenler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personeller" EntityType="AnaOkuluDBModel.Store.Personeller" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pwd" EntityType="AnaOkuluDBModel.Store.pwd" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Servisler" EntityType="AnaOkuluDBModel.Store.Servisler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Siniflar" EntityType="AnaOkuluDBModel.Store.Siniflar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="AnaOkuluDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UcuncuSahislar" EntityType="AnaOkuluDBModel.Store.UcuncuSahislar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Veliler" EntityType="AnaOkuluDBModel.Store.Veliler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Yemekler" EntityType="AnaOkuluDBModel.Store.Yemekler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Yoklama" EntityType="AnaOkuluDBModel.Store.Yoklama" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CL0FR" Association="AnaOkuluDBModel.Store.CL0FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL10FR" Association="AnaOkuluDBModel.Store.CL10FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL11FR" Association="AnaOkuluDBModel.Store.CL11FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL12FR" Association="AnaOkuluDBModel.Store.CL12FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL13FR" Association="AnaOkuluDBModel.Store.CL13FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL14FR" Association="AnaOkuluDBModel.Store.CL14FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL15FR" Association="AnaOkuluDBModel.Store.CL15FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL16FR" Association="AnaOkuluDBModel.Store.CL16FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL17FR" Association="AnaOkuluDBModel.Store.CL17FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL18FR" Association="AnaOkuluDBModel.Store.CL18FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL19FR" Association="AnaOkuluDBModel.Store.CL19FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL1FR" Association="AnaOkuluDBModel.Store.CL1FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL20FR" Association="AnaOkuluDBModel.Store.CL20FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL21FR" Association="AnaOkuluDBModel.Store.CL21FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL22FR" Association="AnaOkuluDBModel.Store.CL22FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL23FR" Association="AnaOkuluDBModel.Store.CL23FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL24FR" Association="AnaOkuluDBModel.Store.CL24FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL25FR" Association="AnaOkuluDBModel.Store.CL25FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL26FR" Association="AnaOkuluDBModel.Store.CL26FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL27FR" Association="AnaOkuluDBModel.Store.CL27FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL28FR" Association="AnaOkuluDBModel.Store.CL28FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL29FR" Association="AnaOkuluDBModel.Store.CL29FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL2FR" Association="AnaOkuluDBModel.Store.CL2FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL30FR" Association="AnaOkuluDBModel.Store.CL30FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL31FR" Association="AnaOkuluDBModel.Store.CL31FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL32FR" Association="AnaOkuluDBModel.Store.CL32FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL33FR" Association="AnaOkuluDBModel.Store.CL33FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL34FR" Association="AnaOkuluDBModel.Store.CL34FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL35FR" Association="AnaOkuluDBModel.Store.CL35FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL36FR" Association="AnaOkuluDBModel.Store.CL36FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL37FR" Association="AnaOkuluDBModel.Store.CL37FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL38FR" Association="AnaOkuluDBModel.Store.CL38FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL39FR" Association="AnaOkuluDBModel.Store.CL39FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL3FR" Association="AnaOkuluDBModel.Store.CL3FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL4FR" Association="AnaOkuluDBModel.Store.CL4FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL5FR" Association="AnaOkuluDBModel.Store.CL5FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL6FR" Association="AnaOkuluDBModel.Store.CL6FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL7FR" Association="AnaOkuluDBModel.Store.CL7FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL8FR" Association="AnaOkuluDBModel.Store.CL8FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="CL9FR" Association="AnaOkuluDBModel.Store.CL9FR">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+    <AssociationSet Name="DemirBasFor" Association="AnaOkuluDBModel.Store.DemirBasFor">
+      <End Role="Demirbaslar" EntitySet="Demirbaslar" />
+      <End Role="DemirbasMekanlari" EntitySet="DemirbasMekanlari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenciler_Servisler" Association="AnaOkuluDBModel.Store.FK_Ogrenciler_Servisler">
+      <End Role="Servisler" EntitySet="Servisler" />
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenciler_Siniflar" Association="AnaOkuluDBModel.Store.FK_Ogrenciler_Siniflar">
+      <End Role="Siniflar" EntitySet="Siniflar" />
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogretmenler_Personeller" Association="AnaOkuluDBModel.Store.FK_Ogretmenler_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="Ogretmenler" EntitySet="Ogretmenler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UcuncuSahislar_Ogrenciler" Association="AnaOkuluDBModel.Store.FK_UcuncuSahislar_Ogrenciler">
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+      <End Role="UcuncuSahislar" EntitySet="UcuncuSahislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Veliler_Ogrenciler" Association="AnaOkuluDBModel.Store.FK_Veliler_Ogrenciler">
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+      <End Role="Veliler" EntitySet="Veliler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Yoklama_Ogrenciler" Association="AnaOkuluDBModel.Store.FK_Yoklama_Ogrenciler">
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+      <End Role="Yoklama" EntitySet="Yoklama" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Yoklama_Siniflar" Association="AnaOkuluDBModel.Store.FK_Yoklama_Siniflar">
+      <End Role="Siniflar" EntitySet="Siniflar" />
+      <End Role="Yoklama" EntitySet="Yoklama" />
+    </AssociationSet>
+    <AssociationSet Name="OGR" Association="AnaOkuluDBModel.Store.OGR">
+      <End Role="Ogretmenler" EntitySet="Ogretmenler" />
+      <End Role="DERSLER" EntitySet="DERSLER" />
+    </AssociationSet>
+    <AssociationSet Name="sinif" Association="AnaOkuluDBModel.Store.sinif">
+      <End Role="Siniflar" EntitySet="Siniflar" />
+      <End Role="DersTablo" EntitySet="DersTablo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Demirbaslar">
+    <Key>
+      <PropertyRef Name="DEMIRBASID" />
+    </Key>
+    <Property Name="DEMIRBASID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Turu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cinsi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adet" Type="int" />
+    <Property Name="Birim" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlindigiYer" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlisTarihi" Type="datetime" Nullable="false" />
+    <Property Name="GirisTutari" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="AlisFaturaNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="KdvOrani" Type="int" />
+    <Property Name="KdvTutari" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SatisYeri" Type="nvarchar" MaxLength="50" />
+    <Property Name="SatisTarihi" Type="datetime" />
+    <Property Name="SatisTutari" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SatisFaturaNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SatisKdvTutari" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SatisNedeni" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DemirbasMekanlari">
+    <Key>
+      <PropertyRef Name="MekanId" />
+    </Key>
+    <Property Name="MekanId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DemirbasId" Type="int" Nullable="false" />
+    <Property Name="BulunduguYer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adet" Type="int" Nullable="false" />
+    <Property Name="Sorumlusu" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeslimTarihi" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DERSLER">
+    <Key>
+      <PropertyRef Name="DERSID" />
+    </Key>
+    <Property Name="DERSID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DERSADI" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OGRETMENID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DersTablo">
+    <Key>
+      <PropertyRef Name="SINIFID" />
+    </Key>
+    <Property Name="SINIFID" Type="int" Nullable="false" />
+    <Property Name="CL0" Type="int" Nullable="false" />
+    <Property Name="CL1" Type="int" Nullable="false" />
+    <Property Name="CL2" Type="int" Nullable="false" />
+    <Property Name="CL3" Type="int" Nullable="false" />
+    <Property Name="CL4" Type="int" Nullable="false" />
+    <Property Name="CL5" Type="int" Nullable="false" />
+    <Property Name="CL6" Type="int" Nullable="false" />
+    <Property Name="CL7" Type="int" Nullable="false" />
+    <Property Name="CL8" Type="int" Nullable="false" />
+    <Property Name="CL9" Type="int" Nullable="false" />
+    <Property Name="CL10" Type="int" Nullable="false" />
+    <Property Name="CL11" Type="int" Nullable="false" />
+    <Property Name="CL12" Type="int" Nullable="false" />
+    <Property Name="CL13" Type="int" Nullable="false" />
+    <Property Name="CL14" Type="int" Nullable="false" />
+    <Property Name="CL15" Type="int" Nullable="false" />
+    <Property Name="CL16" Type="int" Nullable="false" />
+    <Property Name="CL17" Type="int" Nullable="false" />
+    <Property Name="CL18" Type="int" Nullable="false" />
+    <Property Name="CL19" Type="int" Nullable="false" />
+    <Property Name="CL20" Type="int" Nullable="false" />
+    <Property Name="CL21" Type="int" Nullable="false" />
+    <Property Name="CL22" Type="int" Nullable="false" />
+    <Property Name="CL23" Type="int" Nullable="false" />
+    <Property Name="CL24" Type="int" Nullable="false" />
+    <Property Name="CL25" Type="int" Nullable="false" />
+    <Property Name="CL26" Type="int" Nullable="false" />
+    <Property Name="CL27" Type="int" Nullable="false" />
+    <Property Name="CL28" Type="int" Nullable="false" />
+    <Property Name="CL29" Type="int" Nullable="false" />
+    <Property Name="CL30" Type="int" Nullable="false" />
+    <Property Name="CL31" Type="int" Nullable="false" />
+    <Property Name="CL32" Type="int" Nullable="false" />
+    <Property Name="CL33" Type="int" Nullable="false" />
+    <Property Name="CL34" Type="int" Nullable="false" />
+    <Property Name="CL35" Type="int" Nullable="false" />
+    <Property Name="CL36" Type="int" Nullable="false" />
+    <Property Name="CL37" Type="int" Nullable="false" />
+    <Property Name="CL38" Type="int" Nullable="false" />
+    <Property Name="CL39" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ogrenciler">
+    <Key>
+      <PropertyRef Name="OgrenciId" />
+    </Key>
+    <Property Name="OgrenciId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="50" />
+    <Property Name="Semt" Type="nvarchar" MaxLength="50" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="50" />
+    <Property Name="il" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="EvTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="KanGrubu" Type="nvarchar" MaxLength="15" />
+    <Property Name="TcNo" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="Uyruk" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cinsiyet" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="KimlikSeriNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DogumYeri" Type="nvarchar" MaxLength="50" />
+    <Property Name="DogumTarihi" Type="datetime" Nullable="false" />
+    <Property Name="Dogumili" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dogumilce" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mahalle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Koy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cilt" Type="nvarchar" MaxLength="10" />
+    <Property Name="Aile" Type="nvarchar" MaxLength="10" />
+    <Property Name="SiraNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="VerilisYeri" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayitNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="Resim" Type="image" />
+    <Property Name="KayitTarihi" Type="datetime" Nullable="false" />
+    <Property Name="SinifId" Type="int" Nullable="false" />
+    <Property Name="ServisId" Type="int" Nullable="false" />
+    <Property Name="DavranisSorunu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Yapilanlar" Type="nvarchar" MaxLength="50" />
+    <Property Name="YasitlariylaIliskisi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fobileri" Type="nvarchar" MaxLength="50" />
+    <Property Name="SevdigiYiyecekler" Type="nvarchar" MaxLength="50" />
+    <Property Name="Asilar" Type="nvarchar" MaxLength="50" />
+    <Property Name="GecirdigiHastaliklar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alerjiler" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ameliyatlar" Type="nvarchar" MaxLength="50" />
+    <Property Name="SaglikSorunlari" Type="nvarchar" MaxLength="50" />
+    <Property Name="ilac" Type="nvarchar" MaxLength="50" />
+    <Property Name="Protez" Type="nvarchar" MaxLength="50" />
+    <Property Name="Diyet" Type="nvarchar" MaxLength="50" />
+    <Property Name="RuhsalDurum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ogretmenler">
+    <Key>
+      <PropertyRef Name="KayitId" />
+    </Key>
+    <Property Name="KayitId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelID" Type="int" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="PersonelId" />
+    </Key>
+    <Property Name="PersonelId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TcNo" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SicilNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BasvuruTarihi" Type="datetime" />
+    <Property Name="BaslamaTarihi" Type="datetime" />
+    <Property Name="AskerlikDurumu" Type="nvarchar" MaxLength="50" />
+    <Property Name="TecilBitisYili" Type="nvarchar" MaxLength="4" />
+    <Property Name="KanGrubu" Type="nvarchar" MaxLength="10" />
+    <Property Name="Cinsiyet" Type="nvarchar" MaxLength="10" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="50" />
+    <Property Name="Semt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ilce" Type="nvarchar" MaxLength="50" />
+    <Property Name="il" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="EvTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="CepTel" Type="nvarchar" MaxLength="15" />
+    <Property Name="EgitimDurumu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Durumu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Departman" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Kuyruk" Type="nvarchar" MaxLength="50" />
+    <Property Name="KkimlikSeriNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="KdogumYeri" Type="nvarchar" MaxLength="50" />
+    <Property Name="KdogumTarihi" Type="datetime" />
+    <Property Name="Kdogumili" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kdogumilce" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kmahalle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kkoy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kcilt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kaile" Type="nvarchar" MaxLength="50" />
+    <Property Name="KSiraNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="KVerilisYeri" Type="nvarchar" MaxLength="50" />
+    <Property Name="KKayitNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="pwd">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="createpassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="year" Type="int" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="comdepart" Type="nvarchar" MaxLength="50" />
+    <Property Name="day" Type="int" />
+    <Property Name="mount" Type="int" />
+    <Property Name="confirmpassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Servisler">
+    <Key>
+      <PropertyRef Name="ServisID" />
+    </Key>
+    <Property Name="ServisID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServisAdi" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Siniflar">
+    <Key>
+      <PropertyRef Name="sinifId" />
+    </Key>
+    <Property Name="sinifId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sinifAdi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="sinifkapasite" Type="int" Nullable="false" />
+    <Property Name="ögretmenId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UcuncuSahislar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TcNo" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="Ceptel" Type="nvarchar" MaxLength="20" />
+    <Property Name="EvTel" Type="nvarchar" MaxLength="20" />
+    <Property Name="YakinlikDerecesi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Meslek" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrenciId" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Veliler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TcNo" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ceptel" Type="nvarchar" MaxLength="20" />
+    <Property Name="EvTel" Type="nvarchar" MaxLength="20" />
+    <Property Name="YakinlikDerecesi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Meslek" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrenciId" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sifre" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Yemekler">
+    <Key>
+      <PropertyRef Name="YemekId" />
+    </Key>
+    <Property Name="YemekId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Corba" Type="nvarchar" MaxLength="50" />
+    <Property Name="AnaYemek" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tatli" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tarih" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Yoklama">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OgrenciId" Type="int" Nullable="false" />
+    <Property Name="SinifId" Type="int" Nullable="false" />
+    <Property Name="Tarih" Type="date" Nullable="false" />
+    <Property Name="DevamsizlikTuru" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="CL0FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL0" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL10FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL11FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL11" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL12FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL13FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL13" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL14FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL14" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL15FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL15" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL16FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL16" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL17FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL17" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL18FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL18" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL19FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL19" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL1FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL20FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL20" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL21FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL21" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL22FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL22" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL23FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL23" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL24FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL24" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL25FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL25" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL26FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL26" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL27FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL27" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL28FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL28" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL29FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL29" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL2FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL30FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL30" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL31FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL31" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL32FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL32" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL33FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL33" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL34FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL34" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL35FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL35" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL36FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL36" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL37FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL37" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL38FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL38" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL39FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL39" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL3FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL4FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL5FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL6FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL7FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL8FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CL9FR">
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="CL9" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemirBasFor">
+    <End Role="Demirbaslar" Type="AnaOkuluDBModel.Store.Demirbaslar" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DemirbasMekanlari" Type="AnaOkuluDBModel.Store.DemirbasMekanlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demirbaslar">
+        <PropertyRef Name="DEMIRBASID" />
+      </Principal>
+      <Dependent Role="DemirbasMekanlari">
+        <PropertyRef Name="DemirbasId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenciler_Servisler">
+    <End Role="Servisler" Type="AnaOkuluDBModel.Store.Servisler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Store.Ogrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servisler">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="Ogrenciler">
+        <PropertyRef Name="ServisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenciler_Siniflar">
+    <End Role="Siniflar" Type="AnaOkuluDBModel.Store.Siniflar" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Store.Ogrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="sinifId" />
+      </Principal>
+      <Dependent Role="Ogrenciler">
+        <PropertyRef Name="SinifId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogretmenler_Personeller">
+    <End Role="Personeller" Type="AnaOkuluDBModel.Store.Personeller" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ogretmenler" Type="AnaOkuluDBModel.Store.Ogretmenler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelId" />
+      </Principal>
+      <Dependent Role="Ogretmenler">
+        <PropertyRef Name="PersonelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UcuncuSahislar_Ogrenciler">
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Store.Ogrenciler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UcuncuSahislar" Type="AnaOkuluDBModel.Store.UcuncuSahislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenciler">
+        <PropertyRef Name="OgrenciId" />
+      </Principal>
+      <Dependent Role="UcuncuSahislar">
+        <PropertyRef Name="OgrenciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Veliler_Ogrenciler">
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Store.Ogrenciler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Veliler" Type="AnaOkuluDBModel.Store.Veliler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenciler">
+        <PropertyRef Name="OgrenciId" />
+      </Principal>
+      <Dependent Role="Veliler">
+        <PropertyRef Name="OgrenciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Yoklama_Ogrenciler">
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Store.Ogrenciler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Yoklama" Type="AnaOkuluDBModel.Store.Yoklama" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenciler">
+        <PropertyRef Name="OgrenciId" />
+      </Principal>
+      <Dependent Role="Yoklama">
+        <PropertyRef Name="OgrenciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Yoklama_Siniflar">
+    <End Role="Siniflar" Type="AnaOkuluDBModel.Store.Siniflar" Multiplicity="1" />
+    <End Role="Yoklama" Type="AnaOkuluDBModel.Store.Yoklama" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="sinifId" />
+      </Principal>
+      <Dependent Role="Yoklama">
+        <PropertyRef Name="SinifId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OGR">
+    <End Role="Ogretmenler" Type="AnaOkuluDBModel.Store.Ogretmenler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DERSLER" Type="AnaOkuluDBModel.Store.DERSLER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogretmenler">
+        <PropertyRef Name="KayitId" />
+      </Principal>
+      <Dependent Role="DERSLER">
+        <PropertyRef Name="OGRETMENID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sinif">
+    <End Role="Siniflar" Type="AnaOkuluDBModel.Store.Siniflar" Multiplicity="1" />
+    <End Role="DersTablo" Type="AnaOkuluDBModel.Store.DersTablo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="sinifId" />
+      </Principal>
+      <Dependent Role="DersTablo">
+        <PropertyRef Name="SINIFID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ParolaDegistir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="confirmpassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="createpassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="userid" Type="nvarchar" Mode="In" />
+    <Parameter Name="returnbit" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_DemirbasEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Turu" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cinsi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adet" Type="int" Mode="In" />
+    <Parameter Name="Birim" Type="nvarchar" Mode="In" />
+    <Parameter Name="AlindigiYer" Type="nvarchar" Mode="In" />
+    <Parameter Name="AlisTarihi" Type="date" Mode="In" />
+    <Parameter Name="GirisTutari" Type="money" Mode="In" />
+    <Parameter Name="AlisFaturaNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="KdvOrani" Type="int" Mode="In" />
+    <Parameter Name="KdvTutari" Type="money" Mode="In" />
+    <Parameter Name="SatisYeri" Type="nvarchar" Mode="In" />
+    <Parameter Name="SatisTarihi" Type="date" Mode="In" />
+    <Parameter Name="SatisTutari" Type="money" Mode="In" />
+    <Parameter Name="SatisFaturaNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="SatisKdvTutari" Type="money" Mode="In" />
+    <Parameter Name="SatisNedeni" Type="nvarchar" Mode="In" />
+    <Parameter Name="DemirbasID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_DemirbasMekaniEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DemirbasId" Type="int" Mode="In" />
+    <Parameter Name="BulunduguYer" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adet" Type="int" Mode="In" />
+    <Parameter Name="Sorumlusu" Type="nvarchar" Mode="In" />
+    <Parameter Name="TeslimTarihi" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_OgrenciKayitEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Soyadi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adres" Type="nvarchar" Mode="In" />
+    <Parameter Name="Semt" Type="nvarchar" Mode="In" />
+    <Parameter Name="ilce" Type="nvarchar" Mode="In" />
+    <Parameter Name="il" Type="nvarchar" Mode="In" />
+    <Parameter Name="PostaKodu" Type="nvarchar" Mode="In" />
+    <Parameter Name="EvTel" Type="nvarchar" Mode="In" />
+    <Parameter Name="KanGrubu" Type="nvarchar" Mode="In" />
+    <Parameter Name="TcNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Uyruk" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cinsiyet" Type="nvarchar" Mode="In" />
+    <Parameter Name="KimlikSeriNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="DogumYeri" Type="nvarchar" Mode="In" />
+    <Parameter Name="DogumTarihi" Type="date" Mode="In" />
+    <Parameter Name="Dogumili" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dogumilce" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mahalle" Type="nvarchar" Mode="In" />
+    <Parameter Name="Koy" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cilt" Type="nvarchar" Mode="In" />
+    <Parameter Name="Aile" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiraNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="VerilisYeri" Type="nvarchar" Mode="In" />
+    <Parameter Name="KayitNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Resim" Type="image" Mode="In" />
+    <Parameter Name="SinifId" Type="int" Mode="In" />
+    <Parameter Name="ServisId" Type="int" Mode="In" />
+    <Parameter Name="KayitTarihi" Type="date" Mode="In" />
+    <Parameter Name="DavranisSorunu" Type="nvarchar" Mode="In" />
+    <Parameter Name="Yapilanlar" Type="nvarchar" Mode="In" />
+    <Parameter Name="YasitlariylaIliskisi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fobileri" Type="nvarchar" Mode="In" />
+    <Parameter Name="SevdigiYiyecekler" Type="nvarchar" Mode="In" />
+    <Parameter Name="Asilar" Type="nvarchar" Mode="In" />
+    <Parameter Name="GecirdigiHastaliklar" Type="nvarchar" Mode="In" />
+    <Parameter Name="Alerjiler" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ameliyatlar" Type="nvarchar" Mode="In" />
+    <Parameter Name="SaglikSorunlari" Type="nvarchar" Mode="In" />
+    <Parameter Name="ilac" Type="nvarchar" Mode="In" />
+    <Parameter Name="Protez" Type="nvarchar" Mode="In" />
+    <Parameter Name="Diyet" Type="nvarchar" Mode="In" />
+    <Parameter Name="RuhsalDurum" Type="nvarchar" Mode="In" />
+    <Parameter Name="ReturnId" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_PersonelEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TcNos" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adis" Type="nvarchar" Mode="In" />
+    <Parameter Name="Soyadis" Type="nvarchar" Mode="In" />
+    <Parameter Name="SicilNos" Type="nvarchar" Mode="In" />
+    <Parameter Name="BasvuruTarihis" Type="date" Mode="In" />
+    <Parameter Name="BaslamaTarihis" Type="date" Mode="In" />
+    <Parameter Name="AskerlikDurumus" Type="nvarchar" Mode="In" />
+    <Parameter Name="TecilBitisYilis" Type="nvarchar" Mode="In" />
+    <Parameter Name="KanGrubus" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cinsiyets" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Semts" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ilces" Type="nvarchar" Mode="In" />
+    <Parameter Name="ils" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mails" Type="nvarchar" Mode="In" />
+    <Parameter Name="EvTels" Type="nvarchar" Mode="In" />
+    <Parameter Name="CepTels" Type="nvarchar" Mode="In" />
+    <Parameter Name="EgitimDurumus" Type="nvarchar" Mode="In" />
+    <Parameter Name="Departmans" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kuyruks" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kcinsiyets" Type="nvarchar" Mode="In" />
+    <Parameter Name="KkimlikSeriNos" Type="nvarchar" Mode="In" />
+    <Parameter Name="KdogumYeris" Type="nvarchar" Mode="In" />
+    <Parameter Name="KdogumTarihis" Type="date" Mode="In" />
+    <Parameter Name="Kdogumilis" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kdogumilces" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kmahalles" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kkoys" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kcilts" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kailes" Type="nvarchar" Mode="In" />
+    <Parameter Name="KSiraNos" Type="nvarchar" Mode="In" />
+    <Parameter Name="KVerilisYeris" Type="nvarchar" Mode="In" />
+    <Parameter Name="KKayitNos" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_SinifEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SinifAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="KapaSitesi" Type="int" Mode="In" />
+    <Parameter Name="OgretmenId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UcuncuSahisEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Soyadi" Type="nvarchar" Mode="In" />
+    <Parameter Name="CepTel" Type="nvarchar" Mode="In" />
+    <Parameter Name="EvTel" Type="nvarchar" Mode="In" />
+    <Parameter Name="TcNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="YakinlikDerecesi" Type="nvarchar" Mode="In" />
+    <Parameter Name="Meslek" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="OgrenciId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>
