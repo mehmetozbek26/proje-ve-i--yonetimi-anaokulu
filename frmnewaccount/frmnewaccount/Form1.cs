@@ -322,5 +322,40 @@ namespace AnaOkuluBilisim
             int c = d - a;
             textBox7.Text = c.ToString();
         }
-       
+        string str2;
+        private void textBox5_KeyUp(object sender, KeyEventArgs e)
+        {
+            str2 = textBox5.Text;
+            if (str2.StartsWith("1") || (str2.StartsWith("2") || (str2.StartsWith("3") || (str2.StartsWith("4") || (str2.StartsWith("5") || (str2.StartsWith("6") || (str2.StartsWith("7") || (str2.StartsWith("8") || (str2.StartsWith("9") || (str2.StartsWith("0") || (str2.StartsWith("!") || (str2.StartsWith("@") || (str2.StartsWith("#") || (str2.StartsWith("$") || (str2.StartsWith("%") || (str2.StartsWith("^") || (str2.StartsWith("&") || (str2.StartsWith("*") || (str2.StartsWith("(") || (str2.StartsWith(")") || (str2.StartsWith("-") || (str2.StartsWith("_") || (str2.StartsWith("+") || (str2.StartsWith("=") || (str2.StartsWith("[") || (str2.StartsWith("{") || (str2.StartsWith("]") || (str2.StartsWith("}") || (str2.StartsWith(":") || (str2.StartsWith(";") || (str2.StartsWith("'") || (str2.StartsWith("<") || (str2.StartsWith(",") || (str2.StartsWith(">") || (str2.StartsWith(".") || (str2.StartsWith("/") || (str2.StartsWith("?")) || (str2.StartsWith("|"))))))))))))))))))))))))))))))))))))))
+            {
+                textBox5.Clear();
+                inform.Text = "Please enter correct format";
+                inform.Visible = true;
+            }
+            else
+            {
+                inform.Visible = false;
+            }
+        }
+
+        private void textBox6_KeyUp(object sender, KeyEventArgs e)
+        {
+            str2 = textBox6.Text;
+            if (str2.StartsWith("1") || (str2.StartsWith("2") || (str2.StartsWith("3") || (str2.StartsWith("4") || (str2.StartsWith("5") || (str2.StartsWith("6") || (str2.StartsWith("7") || (str2.StartsWith("8") || (str2.StartsWith("9") || (str2.StartsWith("0") || (str2.StartsWith("!") || (str2.StartsWith("@") || (str2.StartsWith("#") || (str2.StartsWith("$") || (str2.StartsWith("%") || (str2.StartsWith("^") || (str2.StartsWith("&") || (str2.StartsWith("*") || (str2.StartsWith("(") || (str2.StartsWith(")") || (str2.StartsWith("-") || (str2.StartsWith("_") || (str2.StartsWith("+") || (str2.StartsWith("=") || (str2.StartsWith("[") || (str2.StartsWith("{") || (str2.StartsWith("]") || (str2.StartsWith("}") || (str2.StartsWith(":") || (str2.StartsWith(";") || (str2.StartsWith("'") || (str2.StartsWith("<") || (str2.StartsWith(",") || (str2.StartsWith(">") || (str2.StartsWith(".") || (str2.StartsWith("/") || (str2.StartsWith("?")) || (str2.StartsWith("|"))))))))))))))))))))))))))))))))))))))
+            {
+                textBox6.Clear();
+                inform.Text = "Please enter correct format";
+                inform.Visible = true;
+            }
+            else
+            {
+                inform.Visible = false;
+            }
+        }
+
+        private void comboBox3_Click(object sender, EventArgs e)
+        {
+            textBox7.Clear();
+        }
+    }
 }
