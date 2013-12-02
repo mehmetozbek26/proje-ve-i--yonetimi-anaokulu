@@ -695,6 +695,66 @@
 
         }
 
-        
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtSatisNedeni;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtSatisKdvTutari;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtSatisKdvOrani;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtSatisFaturaNo;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtSatisTutari;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtSatisTarihi;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtSatisYeri;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtKdvTutari;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtKdvOrani;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtAlisFaturaNo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtGirisTutari;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAlisTarihi;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtAlindigiYer;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDemirbasTuru;
+        private System.Windows.Forms.TextBox txtDemirbasAdeti;
+        private System.Windows.Forms.TextBox txtDemirbasCinsi;
+        private System.Windows.Forms.TextBox txtDemirbasBirimi;
+        private System.Windows.Forms.TextBox txtDemirbasAdi;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnDuzenle;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtBulunduguYer;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtAdeti;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtSorumlusu;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtTeslimTarihi;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMekanKaydet;
+        private System.Windows.Forms.Button btnMekanSil;
     }
 }
