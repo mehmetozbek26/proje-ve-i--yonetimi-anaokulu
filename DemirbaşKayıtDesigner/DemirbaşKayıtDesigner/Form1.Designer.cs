@@ -1,6 +1,6 @@
-﻿namespace AnaOkuluBilisim
+﻿namespace DemirbaşKayıtDesigner
 {
-    partial class ChangePassword
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
