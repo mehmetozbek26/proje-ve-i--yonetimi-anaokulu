@@ -1,0 +1,9 @@
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\bin\Debug\GlobalClass.Designer.exe
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\bin\Debug\GlobalClass.Designer.pdb
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GlobalClass.Designer.Form1.resources
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GlobalClass.Designer.Properties.Resources.resources
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GlobalClass.Designer.exe
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GlobalClass.Designer.pdb
