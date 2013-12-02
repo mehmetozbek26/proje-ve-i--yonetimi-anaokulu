@@ -7,3 +7,4 @@ C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GlobalClass.Designer.exe
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\GlobalClass.Designer.pdb
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\GlobalClass.Designer\GlobalClass.Designer\obj\x86\Debug\AnaOkuluBilisim.GlobalClass.resources
