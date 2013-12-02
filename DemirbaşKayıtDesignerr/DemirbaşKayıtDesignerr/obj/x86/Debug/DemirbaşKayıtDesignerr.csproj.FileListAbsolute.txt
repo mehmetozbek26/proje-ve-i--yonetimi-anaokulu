@@ -7,3 +7,4 @@ C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesign
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesignerr\DemirbaşKayıtDesignerr\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesignerr\DemirbaşKayıtDesignerr\obj\x86\Debug\DemirbaşKayıtDesignerr.exe
 C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesignerr\DemirbaşKayıtDesignerr\obj\x86\Debug\DemirbaşKayıtDesignerr.pdb
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesignerr\DemirbaşKayıtDesignerr\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
