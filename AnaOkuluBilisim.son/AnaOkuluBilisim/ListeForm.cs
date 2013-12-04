@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnaOkuluBilisim.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +12,13 @@ namespace AnaOkuluBilisim
 {
     public partial class ListeForm : Form
     {
-       
+        Parola par = Parola.GET();
   
         public ListeForm()
         {
          
             InitializeComponent();
-            if (GlobalClass.GlobalVar=="OGRETMEN")
+            if (par.Departman=="OGRETMEN")
             {
                 personelİşlemleriToolStripMenuItem.Enabled = false;
                 demirbaşlarToolStripMenuItem.Enabled = false;
@@ -25,7 +26,7 @@ namespace AnaOkuluBilisim
                 hesapEkleToolStripMenuItem.Enabled = false;
             }
 
-            if (GlobalClass.GlobalVar == "MUHASEBE")
+            if (par.Departman == "MUHASEBE")
             {
                 hesabımToolStripMenuItem.Enabled = false;
                 ogrenciİToolStripMenuItem.Enabled = false;

@@ -15,6 +15,243 @@ namespace AnaOkuluBilisim.AnaOkuluService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="pwd", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
+    [System.SerializableAttribute()]
+    public partial class pwd : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string addressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string comdepartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string confirmpasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string createpasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> dayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string firstnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string genderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string lastnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> mountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string telField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string useridField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> yearField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.addressField, value) != true)) {
+                    this.addressField = value;
+                    this.RaisePropertyChanged("address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> age {
+            get {
+                return this.ageField;
+            }
+            set {
+                if ((this.ageField.Equals(value) != true)) {
+                    this.ageField = value;
+                    this.RaisePropertyChanged("age");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string comdepart {
+            get {
+                return this.comdepartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.comdepartField, value) != true)) {
+                    this.comdepartField = value;
+                    this.RaisePropertyChanged("comdepart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string confirmpassword {
+            get {
+                return this.confirmpasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.confirmpasswordField, value) != true)) {
+                    this.confirmpasswordField = value;
+                    this.RaisePropertyChanged("confirmpassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string createpassword {
+            get {
+                return this.createpasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.createpasswordField, value) != true)) {
+                    this.createpasswordField = value;
+                    this.RaisePropertyChanged("createpassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> day {
+            get {
+                return this.dayField;
+            }
+            set {
+                if ((this.dayField.Equals(value) != true)) {
+                    this.dayField = value;
+                    this.RaisePropertyChanged("day");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string firstname {
+            get {
+                return this.firstnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.firstnameField, value) != true)) {
+                    this.firstnameField = value;
+                    this.RaisePropertyChanged("firstname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string gender {
+            get {
+                return this.genderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.genderField, value) != true)) {
+                    this.genderField = value;
+                    this.RaisePropertyChanged("gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string lastname {
+            get {
+                return this.lastnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lastnameField, value) != true)) {
+                    this.lastnameField = value;
+                    this.RaisePropertyChanged("lastname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> mount {
+            get {
+                return this.mountField;
+            }
+            set {
+                if ((this.mountField.Equals(value) != true)) {
+                    this.mountField = value;
+                    this.RaisePropertyChanged("mount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tel {
+            get {
+                return this.telField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.telField, value) != true)) {
+                    this.telField = value;
+                    this.RaisePropertyChanged("tel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userid {
+            get {
+                return this.useridField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.useridField, value) != true)) {
+                    this.useridField = value;
+                    this.RaisePropertyChanged("userid");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> year {
+            get {
+                return this.yearField;
+            }
+            set {
+                if ((this.yearField.Equals(value) != true)) {
+                    this.yearField = value;
+                    this.RaisePropertyChanged("year");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Yemekler", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
     [System.SerializableAttribute()]
     public partial class Yemekler : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -132,13 +369,13 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] OgrencilersField;
+        private AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] OgrencilerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AnaOkuluBilisim.AnaOkuluService.Personeller PersonellerField;
+        private AnaOkuluBilisim.AnaOkuluService.Ogretmenler OgretmenlerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AnaOkuluBilisim.AnaOkuluService.Yoklama[] YoklamasField;
+        private AnaOkuluBilisim.AnaOkuluService.Yoklama[] YoklamaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string sinifAdiField;
@@ -147,10 +384,10 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         private int sinifIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> sinifkapasiteField;
+        private string sinifkapasiteField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ögretmenIdField;
+        private int ögretmenIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -163,40 +400,40 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] Ogrencilers {
+        public AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] Ogrenciler {
             get {
-                return this.OgrencilersField;
+                return this.OgrencilerField;
             }
             set {
-                if ((object.ReferenceEquals(this.OgrencilersField, value) != true)) {
-                    this.OgrencilersField = value;
-                    this.RaisePropertyChanged("Ogrencilers");
+                if ((object.ReferenceEquals(this.OgrencilerField, value) != true)) {
+                    this.OgrencilerField = value;
+                    this.RaisePropertyChanged("Ogrenciler");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AnaOkuluBilisim.AnaOkuluService.Personeller Personeller {
+        public AnaOkuluBilisim.AnaOkuluService.Ogretmenler Ogretmenler {
             get {
-                return this.PersonellerField;
+                return this.OgretmenlerField;
             }
             set {
-                if ((object.ReferenceEquals(this.PersonellerField, value) != true)) {
-                    this.PersonellerField = value;
-                    this.RaisePropertyChanged("Personeller");
+                if ((object.ReferenceEquals(this.OgretmenlerField, value) != true)) {
+                    this.OgretmenlerField = value;
+                    this.RaisePropertyChanged("Ogretmenler");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AnaOkuluBilisim.AnaOkuluService.Yoklama[] Yoklamas {
+        public AnaOkuluBilisim.AnaOkuluService.Yoklama[] Yoklama {
             get {
-                return this.YoklamasField;
+                return this.YoklamaField;
             }
             set {
-                if ((object.ReferenceEquals(this.YoklamasField, value) != true)) {
-                    this.YoklamasField = value;
-                    this.RaisePropertyChanged("Yoklamas");
+                if ((object.ReferenceEquals(this.YoklamaField, value) != true)) {
+                    this.YoklamaField = value;
+                    this.RaisePropertyChanged("Yoklama");
                 }
             }
         }
@@ -228,12 +465,12 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> sinifkapasite {
+        public string sinifkapasite {
             get {
                 return this.sinifkapasiteField;
             }
             set {
-                if ((this.sinifkapasiteField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.sinifkapasiteField, value) != true)) {
                     this.sinifkapasiteField = value;
                     this.RaisePropertyChanged("sinifkapasite");
                 }
@@ -241,7 +478,7 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ögretmenId {
+        public int ögretmenId {
             get {
                 return this.ögretmenIdField;
             }
@@ -265,9 +502,9 @@ namespace AnaOkuluBilisim.AnaOkuluService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Personeller", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Ogretmenler", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
     [System.SerializableAttribute()]
-    public partial class Personeller : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Ogretmenler : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -276,112 +513,19 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         private string AdiField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AdresField;
+        private int KayitIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AskerlikDurumuField;
+        private int PersonelIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> AyrilisTarihiField;
+        private AnaOkuluBilisim.AnaOkuluService.Personeller PersonellerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> BaslamaTarihiField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> BasvuruTarihiField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CepTelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CinsiyetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DepartmanField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EgitimDurumuField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EvTelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IlceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KKayitNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KSiraNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KVerilisYeriField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KaileField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KanGrubuField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KciltField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KcinsiyetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> KdogumTarihiField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KdogumYeriField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KdogumilceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KdogumiliField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KkimlikSeriNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KkoyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KmahalleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KtcNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KuyrukField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PersonelIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SemtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SicilNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AnaOkuluBilisim.AnaOkuluService.Siniflar[] SiniflarsField;
+        private AnaOkuluBilisim.AnaOkuluService.Siniflar[] SiniflarField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SoyadiField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TcNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TecilBitisYiliField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ilField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -407,417 +551,53 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Adres {
+        public int KayitId {
             get {
-                return this.AdresField;
+                return this.KayitIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.AdresField, value) != true)) {
-                    this.AdresField = value;
-                    this.RaisePropertyChanged("Adres");
+                if ((this.KayitIdField.Equals(value) != true)) {
+                    this.KayitIdField = value;
+                    this.RaisePropertyChanged("KayitId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AskerlikDurumu {
+        public int PersonelID {
             get {
-                return this.AskerlikDurumuField;
+                return this.PersonelIDField;
             }
             set {
-                if ((object.ReferenceEquals(this.AskerlikDurumuField, value) != true)) {
-                    this.AskerlikDurumuField = value;
-                    this.RaisePropertyChanged("AskerlikDurumu");
+                if ((this.PersonelIDField.Equals(value) != true)) {
+                    this.PersonelIDField = value;
+                    this.RaisePropertyChanged("PersonelID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> AyrilisTarihi {
+        public AnaOkuluBilisim.AnaOkuluService.Personeller Personeller {
             get {
-                return this.AyrilisTarihiField;
+                return this.PersonellerField;
             }
             set {
-                if ((this.AyrilisTarihiField.Equals(value) != true)) {
-                    this.AyrilisTarihiField = value;
-                    this.RaisePropertyChanged("AyrilisTarihi");
+                if ((object.ReferenceEquals(this.PersonellerField, value) != true)) {
+                    this.PersonellerField = value;
+                    this.RaisePropertyChanged("Personeller");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> BaslamaTarihi {
+        public AnaOkuluBilisim.AnaOkuluService.Siniflar[] Siniflar {
             get {
-                return this.BaslamaTarihiField;
+                return this.SiniflarField;
             }
             set {
-                if ((this.BaslamaTarihiField.Equals(value) != true)) {
-                    this.BaslamaTarihiField = value;
-                    this.RaisePropertyChanged("BaslamaTarihi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> BasvuruTarihi {
-            get {
-                return this.BasvuruTarihiField;
-            }
-            set {
-                if ((this.BasvuruTarihiField.Equals(value) != true)) {
-                    this.BasvuruTarihiField = value;
-                    this.RaisePropertyChanged("BasvuruTarihi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CepTel {
-            get {
-                return this.CepTelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CepTelField, value) != true)) {
-                    this.CepTelField = value;
-                    this.RaisePropertyChanged("CepTel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cinsiyet {
-            get {
-                return this.CinsiyetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CinsiyetField, value) != true)) {
-                    this.CinsiyetField = value;
-                    this.RaisePropertyChanged("Cinsiyet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Departman {
-            get {
-                return this.DepartmanField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DepartmanField, value) != true)) {
-                    this.DepartmanField = value;
-                    this.RaisePropertyChanged("Departman");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EgitimDurumu {
-            get {
-                return this.EgitimDurumuField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EgitimDurumuField, value) != true)) {
-                    this.EgitimDurumuField = value;
-                    this.RaisePropertyChanged("EgitimDurumu");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EvTel {
-            get {
-                return this.EvTelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EvTelField, value) != true)) {
-                    this.EvTelField = value;
-                    this.RaisePropertyChanged("EvTel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Ilce {
-            get {
-                return this.IlceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IlceField, value) != true)) {
-                    this.IlceField = value;
-                    this.RaisePropertyChanged("Ilce");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KKayitNo {
-            get {
-                return this.KKayitNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KKayitNoField, value) != true)) {
-                    this.KKayitNoField = value;
-                    this.RaisePropertyChanged("KKayitNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KSiraNo {
-            get {
-                return this.KSiraNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KSiraNoField, value) != true)) {
-                    this.KSiraNoField = value;
-                    this.RaisePropertyChanged("KSiraNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KVerilisYeri {
-            get {
-                return this.KVerilisYeriField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KVerilisYeriField, value) != true)) {
-                    this.KVerilisYeriField = value;
-                    this.RaisePropertyChanged("KVerilisYeri");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kaile {
-            get {
-                return this.KaileField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KaileField, value) != true)) {
-                    this.KaileField = value;
-                    this.RaisePropertyChanged("Kaile");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KanGrubu {
-            get {
-                return this.KanGrubuField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KanGrubuField, value) != true)) {
-                    this.KanGrubuField = value;
-                    this.RaisePropertyChanged("KanGrubu");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kcilt {
-            get {
-                return this.KciltField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KciltField, value) != true)) {
-                    this.KciltField = value;
-                    this.RaisePropertyChanged("Kcilt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kcinsiyet {
-            get {
-                return this.KcinsiyetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KcinsiyetField, value) != true)) {
-                    this.KcinsiyetField = value;
-                    this.RaisePropertyChanged("Kcinsiyet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> KdogumTarihi {
-            get {
-                return this.KdogumTarihiField;
-            }
-            set {
-                if ((this.KdogumTarihiField.Equals(value) != true)) {
-                    this.KdogumTarihiField = value;
-                    this.RaisePropertyChanged("KdogumTarihi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KdogumYeri {
-            get {
-                return this.KdogumYeriField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KdogumYeriField, value) != true)) {
-                    this.KdogumYeriField = value;
-                    this.RaisePropertyChanged("KdogumYeri");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kdogumilce {
-            get {
-                return this.KdogumilceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KdogumilceField, value) != true)) {
-                    this.KdogumilceField = value;
-                    this.RaisePropertyChanged("Kdogumilce");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kdogumili {
-            get {
-                return this.KdogumiliField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KdogumiliField, value) != true)) {
-                    this.KdogumiliField = value;
-                    this.RaisePropertyChanged("Kdogumili");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KkimlikSeriNo {
-            get {
-                return this.KkimlikSeriNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KkimlikSeriNoField, value) != true)) {
-                    this.KkimlikSeriNoField = value;
-                    this.RaisePropertyChanged("KkimlikSeriNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kkoy {
-            get {
-                return this.KkoyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KkoyField, value) != true)) {
-                    this.KkoyField = value;
-                    this.RaisePropertyChanged("Kkoy");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kmahalle {
-            get {
-                return this.KmahalleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KmahalleField, value) != true)) {
-                    this.KmahalleField = value;
-                    this.RaisePropertyChanged("Kmahalle");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KtcNo {
-            get {
-                return this.KtcNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KtcNoField, value) != true)) {
-                    this.KtcNoField = value;
-                    this.RaisePropertyChanged("KtcNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Kuyruk {
-            get {
-                return this.KuyrukField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KuyrukField, value) != true)) {
-                    this.KuyrukField = value;
-                    this.RaisePropertyChanged("Kuyruk");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mail {
-            get {
-                return this.MailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MailField, value) != true)) {
-                    this.MailField = value;
-                    this.RaisePropertyChanged("Mail");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PersonelId {
-            get {
-                return this.PersonelIdField;
-            }
-            set {
-                if ((this.PersonelIdField.Equals(value) != true)) {
-                    this.PersonelIdField = value;
-                    this.RaisePropertyChanged("PersonelId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Semt {
-            get {
-                return this.SemtField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SemtField, value) != true)) {
-                    this.SemtField = value;
-                    this.RaisePropertyChanged("Semt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SicilNo {
-            get {
-                return this.SicilNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SicilNoField, value) != true)) {
-                    this.SicilNoField = value;
-                    this.RaisePropertyChanged("SicilNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AnaOkuluBilisim.AnaOkuluService.Siniflar[] Siniflars {
-            get {
-                return this.SiniflarsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SiniflarsField, value) != true)) {
-                    this.SiniflarsField = value;
-                    this.RaisePropertyChanged("Siniflars");
+                if ((object.ReferenceEquals(this.SiniflarField, value) != true)) {
+                    this.SiniflarField = value;
+                    this.RaisePropertyChanged("Siniflar");
                 }
             }
         }
@@ -831,45 +611,6 @@ namespace AnaOkuluBilisim.AnaOkuluService {
                 if ((object.ReferenceEquals(this.SoyadiField, value) != true)) {
                     this.SoyadiField = value;
                     this.RaisePropertyChanged("Soyadi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TcNo {
-            get {
-                return this.TcNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TcNoField, value) != true)) {
-                    this.TcNoField = value;
-                    this.RaisePropertyChanged("TcNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TecilBitisYili {
-            get {
-                return this.TecilBitisYiliField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TecilBitisYiliField, value) != true)) {
-                    this.TecilBitisYiliField = value;
-                    this.RaisePropertyChanged("TecilBitisYili");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string il {
-            get {
-                return this.ilField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ilField, value) != true)) {
-                    this.ilField = value;
-                    this.RaisePropertyChanged("il");
                 }
             }
         }
@@ -1017,7 +758,7 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         private string UyrukField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AnaOkuluBilisim.AnaOkuluService.Veliler[] VelilersField;
+        private AnaOkuluBilisim.AnaOkuluService.Veliler[] VelilerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string VerilisYeriField;
@@ -1027,6 +768,9 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string YasitlariylaIliskisiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AnaOkuluBilisim.AnaOkuluService.Yoklama[] YoklamaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ilField;
@@ -1581,14 +1325,14 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AnaOkuluBilisim.AnaOkuluService.Veliler[] Velilers {
+        public AnaOkuluBilisim.AnaOkuluService.Veliler[] Veliler {
             get {
-                return this.VelilersField;
+                return this.VelilerField;
             }
             set {
-                if ((object.ReferenceEquals(this.VelilersField, value) != true)) {
-                    this.VelilersField = value;
-                    this.RaisePropertyChanged("Velilers");
+                if ((object.ReferenceEquals(this.VelilerField, value) != true)) {
+                    this.VelilerField = value;
+                    this.RaisePropertyChanged("Veliler");
                 }
             }
         }
@@ -1628,6 +1372,19 @@ namespace AnaOkuluBilisim.AnaOkuluService {
                 if ((object.ReferenceEquals(this.YasitlariylaIliskisiField, value) != true)) {
                     this.YasitlariylaIliskisiField = value;
                     this.RaisePropertyChanged("YasitlariylaIliskisi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AnaOkuluBilisim.AnaOkuluService.Yoklama[] Yoklama {
+            get {
+                return this.YoklamaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.YoklamaField, value) != true)) {
+                    this.YoklamaField = value;
+                    this.RaisePropertyChanged("Yoklama");
                 }
             }
         }
@@ -1697,19 +1454,22 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         private string DevamsizlikTuruField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
+        private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> OgrenciIdField;
+        private int OgrenciIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> SinifIDField;
+        private AnaOkuluBilisim.AnaOkuluService.Ogrenciler OgrencilerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SinifIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private AnaOkuluBilisim.AnaOkuluService.Siniflar SiniflarField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> TarihField;
+        private System.DateTime TarihField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1748,20 +1508,20 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public int ID {
             get {
-                return this.IdField;
+                return this.IDField;
             }
             set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> OgrenciId {
+        public int OgrenciId {
             get {
                 return this.OgrenciIdField;
             }
@@ -1774,14 +1534,27 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> SinifID {
+        public AnaOkuluBilisim.AnaOkuluService.Ogrenciler Ogrenciler {
             get {
-                return this.SinifIDField;
+                return this.OgrencilerField;
             }
             set {
-                if ((this.SinifIDField.Equals(value) != true)) {
-                    this.SinifIDField = value;
-                    this.RaisePropertyChanged("SinifID");
+                if ((object.ReferenceEquals(this.OgrencilerField, value) != true)) {
+                    this.OgrencilerField = value;
+                    this.RaisePropertyChanged("Ogrenciler");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SinifId {
+            get {
+                return this.SinifIdField;
+            }
+            set {
+                if ((this.SinifIdField.Equals(value) != true)) {
+                    this.SinifIdField = value;
+                    this.RaisePropertyChanged("SinifId");
                 }
             }
         }
@@ -1800,7 +1573,7 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Tarih {
+        public System.DateTime Tarih {
             get {
                 return this.TarihField;
             }
@@ -1832,7 +1605,7 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] OgrencilersField;
+        private AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] OgrencilerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ServisAdiField;
@@ -1851,14 +1624,14 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] Ogrencilers {
+        public AnaOkuluBilisim.AnaOkuluService.Ogrenciler[] Ogrenciler {
             get {
-                return this.OgrencilersField;
+                return this.OgrencilerField;
             }
             set {
-                if ((object.ReferenceEquals(this.OgrencilersField, value) != true)) {
-                    this.OgrencilersField = value;
-                    this.RaisePropertyChanged("Ogrencilers");
+                if ((object.ReferenceEquals(this.OgrencilerField, value) != true)) {
+                    this.OgrencilerField = value;
+                    this.RaisePropertyChanged("Ogrenciler");
                 }
             }
         }
@@ -2311,6 +2084,627 @@ namespace AnaOkuluBilisim.AnaOkuluService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Personeller", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
+    [System.SerializableAttribute()]
+    public partial class Personeller : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AskerlikDurumuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> AyrilisTarihiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> BaslamaTarihiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> BasvuruTarihiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CepTelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CinsiyetField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DepartmanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EgitimDurumuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EvTelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IlceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KKayitNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KSiraNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KVerilisYeriField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KaileField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KanGrubuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KciltField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KcinsiyetField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> KdogumTarihiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KdogumYeriField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KdogumilceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KdogumiliField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KkimlikSeriNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KkoyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KmahalleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KtcNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KuyrukField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AnaOkuluBilisim.AnaOkuluService.Ogretmenler[] OgretmenlerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PersonelIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SemtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SicilNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SoyadiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TcNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TecilBitisYiliField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ilField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Adi {
+            get {
+                return this.AdiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdiField, value) != true)) {
+                    this.AdiField = value;
+                    this.RaisePropertyChanged("Adi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Adres {
+            get {
+                return this.AdresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdresField, value) != true)) {
+                    this.AdresField = value;
+                    this.RaisePropertyChanged("Adres");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AskerlikDurumu {
+            get {
+                return this.AskerlikDurumuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AskerlikDurumuField, value) != true)) {
+                    this.AskerlikDurumuField = value;
+                    this.RaisePropertyChanged("AskerlikDurumu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> AyrilisTarihi {
+            get {
+                return this.AyrilisTarihiField;
+            }
+            set {
+                if ((this.AyrilisTarihiField.Equals(value) != true)) {
+                    this.AyrilisTarihiField = value;
+                    this.RaisePropertyChanged("AyrilisTarihi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> BaslamaTarihi {
+            get {
+                return this.BaslamaTarihiField;
+            }
+            set {
+                if ((this.BaslamaTarihiField.Equals(value) != true)) {
+                    this.BaslamaTarihiField = value;
+                    this.RaisePropertyChanged("BaslamaTarihi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> BasvuruTarihi {
+            get {
+                return this.BasvuruTarihiField;
+            }
+            set {
+                if ((this.BasvuruTarihiField.Equals(value) != true)) {
+                    this.BasvuruTarihiField = value;
+                    this.RaisePropertyChanged("BasvuruTarihi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CepTel {
+            get {
+                return this.CepTelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CepTelField, value) != true)) {
+                    this.CepTelField = value;
+                    this.RaisePropertyChanged("CepTel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cinsiyet {
+            get {
+                return this.CinsiyetField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CinsiyetField, value) != true)) {
+                    this.CinsiyetField = value;
+                    this.RaisePropertyChanged("Cinsiyet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Departman {
+            get {
+                return this.DepartmanField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DepartmanField, value) != true)) {
+                    this.DepartmanField = value;
+                    this.RaisePropertyChanged("Departman");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EgitimDurumu {
+            get {
+                return this.EgitimDurumuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EgitimDurumuField, value) != true)) {
+                    this.EgitimDurumuField = value;
+                    this.RaisePropertyChanged("EgitimDurumu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EvTel {
+            get {
+                return this.EvTelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EvTelField, value) != true)) {
+                    this.EvTelField = value;
+                    this.RaisePropertyChanged("EvTel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ilce {
+            get {
+                return this.IlceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IlceField, value) != true)) {
+                    this.IlceField = value;
+                    this.RaisePropertyChanged("Ilce");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KKayitNo {
+            get {
+                return this.KKayitNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KKayitNoField, value) != true)) {
+                    this.KKayitNoField = value;
+                    this.RaisePropertyChanged("KKayitNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KSiraNo {
+            get {
+                return this.KSiraNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KSiraNoField, value) != true)) {
+                    this.KSiraNoField = value;
+                    this.RaisePropertyChanged("KSiraNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KVerilisYeri {
+            get {
+                return this.KVerilisYeriField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KVerilisYeriField, value) != true)) {
+                    this.KVerilisYeriField = value;
+                    this.RaisePropertyChanged("KVerilisYeri");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kaile {
+            get {
+                return this.KaileField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KaileField, value) != true)) {
+                    this.KaileField = value;
+                    this.RaisePropertyChanged("Kaile");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KanGrubu {
+            get {
+                return this.KanGrubuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KanGrubuField, value) != true)) {
+                    this.KanGrubuField = value;
+                    this.RaisePropertyChanged("KanGrubu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kcilt {
+            get {
+                return this.KciltField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KciltField, value) != true)) {
+                    this.KciltField = value;
+                    this.RaisePropertyChanged("Kcilt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kcinsiyet {
+            get {
+                return this.KcinsiyetField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KcinsiyetField, value) != true)) {
+                    this.KcinsiyetField = value;
+                    this.RaisePropertyChanged("Kcinsiyet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> KdogumTarihi {
+            get {
+                return this.KdogumTarihiField;
+            }
+            set {
+                if ((this.KdogumTarihiField.Equals(value) != true)) {
+                    this.KdogumTarihiField = value;
+                    this.RaisePropertyChanged("KdogumTarihi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KdogumYeri {
+            get {
+                return this.KdogumYeriField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KdogumYeriField, value) != true)) {
+                    this.KdogumYeriField = value;
+                    this.RaisePropertyChanged("KdogumYeri");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kdogumilce {
+            get {
+                return this.KdogumilceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KdogumilceField, value) != true)) {
+                    this.KdogumilceField = value;
+                    this.RaisePropertyChanged("Kdogumilce");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kdogumili {
+            get {
+                return this.KdogumiliField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KdogumiliField, value) != true)) {
+                    this.KdogumiliField = value;
+                    this.RaisePropertyChanged("Kdogumili");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KkimlikSeriNo {
+            get {
+                return this.KkimlikSeriNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KkimlikSeriNoField, value) != true)) {
+                    this.KkimlikSeriNoField = value;
+                    this.RaisePropertyChanged("KkimlikSeriNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kkoy {
+            get {
+                return this.KkoyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KkoyField, value) != true)) {
+                    this.KkoyField = value;
+                    this.RaisePropertyChanged("Kkoy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kmahalle {
+            get {
+                return this.KmahalleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KmahalleField, value) != true)) {
+                    this.KmahalleField = value;
+                    this.RaisePropertyChanged("Kmahalle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KtcNo {
+            get {
+                return this.KtcNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KtcNoField, value) != true)) {
+                    this.KtcNoField = value;
+                    this.RaisePropertyChanged("KtcNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kuyruk {
+            get {
+                return this.KuyrukField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KuyrukField, value) != true)) {
+                    this.KuyrukField = value;
+                    this.RaisePropertyChanged("Kuyruk");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mail {
+            get {
+                return this.MailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MailField, value) != true)) {
+                    this.MailField = value;
+                    this.RaisePropertyChanged("Mail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AnaOkuluBilisim.AnaOkuluService.Ogretmenler[] Ogretmenler {
+            get {
+                return this.OgretmenlerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OgretmenlerField, value) != true)) {
+                    this.OgretmenlerField = value;
+                    this.RaisePropertyChanged("Ogretmenler");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PersonelId {
+            get {
+                return this.PersonelIdField;
+            }
+            set {
+                if ((this.PersonelIdField.Equals(value) != true)) {
+                    this.PersonelIdField = value;
+                    this.RaisePropertyChanged("PersonelId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Semt {
+            get {
+                return this.SemtField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SemtField, value) != true)) {
+                    this.SemtField = value;
+                    this.RaisePropertyChanged("Semt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SicilNo {
+            get {
+                return this.SicilNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SicilNoField, value) != true)) {
+                    this.SicilNoField = value;
+                    this.RaisePropertyChanged("SicilNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Soyadi {
+            get {
+                return this.SoyadiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SoyadiField, value) != true)) {
+                    this.SoyadiField = value;
+                    this.RaisePropertyChanged("Soyadi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TcNo {
+            get {
+                return this.TcNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TcNoField, value) != true)) {
+                    this.TcNoField = value;
+                    this.RaisePropertyChanged("TcNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TecilBitisYili {
+            get {
+                return this.TecilBitisYiliField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TecilBitisYiliField, value) != true)) {
+                    this.TecilBitisYiliField = value;
+                    this.RaisePropertyChanged("TecilBitisYili");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string il {
+            get {
+                return this.ilField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ilField, value) != true)) {
+                    this.ilField = value;
+                    this.RaisePropertyChanged("il");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OgretmelerDB", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
     [System.SerializableAttribute()]
     public partial class OgretmelerDB : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -2402,6 +2796,480 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Demirbaslar", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
+    [System.SerializableAttribute()]
+    public partial class Demirbaslar : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> AdetField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AlindigiYerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AlisFaturaNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> AlisTarihiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BirimField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CinsiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DEMIRBASIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AnaOkuluBilisim.AnaOkuluService.DemirbasMekanlari[] DemirbasMekanlariField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> GirisTutariField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> KdvOraniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> KdvTutariField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SatisFaturaNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> SatisKdvTutariField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SatisNedeniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> SatisTarihiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> SatisTutariField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SatisYeriField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TuruField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Adet {
+            get {
+                return this.AdetField;
+            }
+            set {
+                if ((this.AdetField.Equals(value) != true)) {
+                    this.AdetField = value;
+                    this.RaisePropertyChanged("Adet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Adi {
+            get {
+                return this.AdiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdiField, value) != true)) {
+                    this.AdiField = value;
+                    this.RaisePropertyChanged("Adi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AlindigiYer {
+            get {
+                return this.AlindigiYerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AlindigiYerField, value) != true)) {
+                    this.AlindigiYerField = value;
+                    this.RaisePropertyChanged("AlindigiYer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AlisFaturaNo {
+            get {
+                return this.AlisFaturaNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AlisFaturaNoField, value) != true)) {
+                    this.AlisFaturaNoField = value;
+                    this.RaisePropertyChanged("AlisFaturaNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> AlisTarihi {
+            get {
+                return this.AlisTarihiField;
+            }
+            set {
+                if ((this.AlisTarihiField.Equals(value) != true)) {
+                    this.AlisTarihiField = value;
+                    this.RaisePropertyChanged("AlisTarihi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Birim {
+            get {
+                return this.BirimField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BirimField, value) != true)) {
+                    this.BirimField = value;
+                    this.RaisePropertyChanged("Birim");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cinsi {
+            get {
+                return this.CinsiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CinsiField, value) != true)) {
+                    this.CinsiField = value;
+                    this.RaisePropertyChanged("Cinsi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DEMIRBASID {
+            get {
+                return this.DEMIRBASIDField;
+            }
+            set {
+                if ((this.DEMIRBASIDField.Equals(value) != true)) {
+                    this.DEMIRBASIDField = value;
+                    this.RaisePropertyChanged("DEMIRBASID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AnaOkuluBilisim.AnaOkuluService.DemirbasMekanlari[] DemirbasMekanlari {
+            get {
+                return this.DemirbasMekanlariField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DemirbasMekanlariField, value) != true)) {
+                    this.DemirbasMekanlariField = value;
+                    this.RaisePropertyChanged("DemirbasMekanlari");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> GirisTutari {
+            get {
+                return this.GirisTutariField;
+            }
+            set {
+                if ((this.GirisTutariField.Equals(value) != true)) {
+                    this.GirisTutariField = value;
+                    this.RaisePropertyChanged("GirisTutari");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> KdvOrani {
+            get {
+                return this.KdvOraniField;
+            }
+            set {
+                if ((this.KdvOraniField.Equals(value) != true)) {
+                    this.KdvOraniField = value;
+                    this.RaisePropertyChanged("KdvOrani");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> KdvTutari {
+            get {
+                return this.KdvTutariField;
+            }
+            set {
+                if ((this.KdvTutariField.Equals(value) != true)) {
+                    this.KdvTutariField = value;
+                    this.RaisePropertyChanged("KdvTutari");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SatisFaturaNo {
+            get {
+                return this.SatisFaturaNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SatisFaturaNoField, value) != true)) {
+                    this.SatisFaturaNoField = value;
+                    this.RaisePropertyChanged("SatisFaturaNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> SatisKdvTutari {
+            get {
+                return this.SatisKdvTutariField;
+            }
+            set {
+                if ((this.SatisKdvTutariField.Equals(value) != true)) {
+                    this.SatisKdvTutariField = value;
+                    this.RaisePropertyChanged("SatisKdvTutari");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SatisNedeni {
+            get {
+                return this.SatisNedeniField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SatisNedeniField, value) != true)) {
+                    this.SatisNedeniField = value;
+                    this.RaisePropertyChanged("SatisNedeni");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> SatisTarihi {
+            get {
+                return this.SatisTarihiField;
+            }
+            set {
+                if ((this.SatisTarihiField.Equals(value) != true)) {
+                    this.SatisTarihiField = value;
+                    this.RaisePropertyChanged("SatisTarihi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> SatisTutari {
+            get {
+                return this.SatisTutariField;
+            }
+            set {
+                if ((this.SatisTutariField.Equals(value) != true)) {
+                    this.SatisTutariField = value;
+                    this.RaisePropertyChanged("SatisTutari");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SatisYeri {
+            get {
+                return this.SatisYeriField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SatisYeriField, value) != true)) {
+                    this.SatisYeriField = value;
+                    this.RaisePropertyChanged("SatisYeri");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Turu {
+            get {
+                return this.TuruField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TuruField, value) != true)) {
+                    this.TuruField = value;
+                    this.RaisePropertyChanged("Turu");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DemirbasMekanlari", Namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService")]
+    [System.SerializableAttribute()]
+    public partial class DemirbasMekanlari : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdetField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BulunduguYerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DemirbasIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AnaOkuluBilisim.AnaOkuluService.Demirbaslar DemirbaslarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MekanIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SorumlusuField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime TeslimTarihiField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Adet {
+            get {
+                return this.AdetField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdetField, value) != true)) {
+                    this.AdetField = value;
+                    this.RaisePropertyChanged("Adet");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BulunduguYer {
+            get {
+                return this.BulunduguYerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BulunduguYerField, value) != true)) {
+                    this.BulunduguYerField = value;
+                    this.RaisePropertyChanged("BulunduguYer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DemirbasId {
+            get {
+                return this.DemirbasIdField;
+            }
+            set {
+                if ((this.DemirbasIdField.Equals(value) != true)) {
+                    this.DemirbasIdField = value;
+                    this.RaisePropertyChanged("DemirbasId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AnaOkuluBilisim.AnaOkuluService.Demirbaslar Demirbaslar {
+            get {
+                return this.DemirbaslarField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DemirbaslarField, value) != true)) {
+                    this.DemirbaslarField = value;
+                    this.RaisePropertyChanged("Demirbaslar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MekanId {
+            get {
+                return this.MekanIdField;
+            }
+            set {
+                if ((this.MekanIdField.Equals(value) != true)) {
+                    this.MekanIdField = value;
+                    this.RaisePropertyChanged("MekanId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sorumlusu {
+            get {
+                return this.SorumlusuField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SorumlusuField, value) != true)) {
+                    this.SorumlusuField = value;
+                    this.RaisePropertyChanged("Sorumlusu");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime TeslimTarihi {
+            get {
+                return this.TeslimTarihiField;
+            }
+            set {
+                if ((this.TeslimTarihiField.Equals(value) != true)) {
+                    this.TeslimTarihiField = value;
+                    this.RaisePropertyChanged("TeslimTarihi");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AnaOkuluService.IAnaOkuluWebService")]
     public interface IAnaOkuluWebService {
@@ -2411,6 +3279,15 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/ParolaDegistir", ReplyAction="http://tempuri.org/IAnaOkuluWebService/ParolaDegistirResponse")]
         bool ParolaDegistir(string oldpassword, string createpassword, string userid, string departman);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/KullaniciEkle", ReplyAction="http://tempuri.org/IAnaOkuluWebService/KullaniciEkleResponse")]
+        bool KullaniciEkle(string userid, string userpass, string departman, AnaOkuluBilisim.AnaOkuluService.pwd pwd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/TumKullanicilar", ReplyAction="http://tempuri.org/IAnaOkuluWebService/TumKullanicilarResponse")]
+        AnaOkuluBilisim.AnaOkuluService.pwd[] TumKullanicilar(string userid, string userpass, string departman);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/KontrolAdVeSoyad", ReplyAction="http://tempuri.org/IAnaOkuluWebService/KontrolAdVeSoyadResponse")]
+        bool KontrolAdVeSoyad(string userid, string userpass, string departman, string ad, string soyad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/TumYemekler", ReplyAction="http://tempuri.org/IAnaOkuluWebService/TumYemeklerResponse")]
         AnaOkuluBilisim.AnaOkuluService.Yemekler[] TumYemekler(string userid, string userpass, string departman);
@@ -2459,6 +3336,12 @@ namespace AnaOkuluBilisim.AnaOkuluService {
                     string SatisFaturaNo, 
                     string SatisKdvTutari, 
                     string SatisNedeni);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/TumDemirbaslar", ReplyAction="http://tempuri.org/IAnaOkuluWebService/TumDemirbaslarResponse")]
+        AnaOkuluBilisim.AnaOkuluService.Demirbaslar[] TumDemirbaslar(string userid, string userpass, string departman);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAnaOkuluWebService/DemirbasEkle", ReplyAction="http://tempuri.org/IAnaOkuluWebService/DemirbasEkleResponse")]
+        bool DemirbasEkle(string userid, string userpass, string departman, AnaOkuluBilisim.AnaOkuluService.Demirbaslar demirbas);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2494,6 +3377,18 @@ namespace AnaOkuluBilisim.AnaOkuluService {
         
         public bool ParolaDegistir(string oldpassword, string createpassword, string userid, string departman) {
             return base.Channel.ParolaDegistir(oldpassword, createpassword, userid, departman);
+        }
+        
+        public bool KullaniciEkle(string userid, string userpass, string departman, AnaOkuluBilisim.AnaOkuluService.pwd pwd) {
+            return base.Channel.KullaniciEkle(userid, userpass, departman, pwd);
+        }
+        
+        public AnaOkuluBilisim.AnaOkuluService.pwd[] TumKullanicilar(string userid, string userpass, string departman) {
+            return base.Channel.TumKullanicilar(userid, userpass, departman);
+        }
+        
+        public bool KontrolAdVeSoyad(string userid, string userpass, string departman, string ad, string soyad) {
+            return base.Channel.KontrolAdVeSoyad(userid, userpass, departman, ad, soyad);
         }
         
         public AnaOkuluBilisim.AnaOkuluService.Yemekler[] TumYemekler(string userid, string userpass, string departman) {
@@ -2551,6 +3446,14 @@ namespace AnaOkuluBilisim.AnaOkuluService {
                     string SatisKdvTutari, 
                     string SatisNedeni) {
             return base.Channel.DemirbasGunceller(userid, userpass, departman, demirbasid, DemirbasAdi, DemirbasTuru, DemirbasCinsi, DemirbasAdeti, DemirbasBirimi, AlindigiYer, AlisTarihi, GirisTutari, AlisFaturaNo, KdvOrani, KdvTutari, SatisYeri, SatisTarihi, SatisTutari, SatisFaturaNo, SatisKdvTutari, SatisNedeni);
+        }
+        
+        public AnaOkuluBilisim.AnaOkuluService.Demirbaslar[] TumDemirbaslar(string userid, string userpass, string departman) {
+            return base.Channel.TumDemirbaslar(userid, userpass, departman);
+        }
+        
+        public bool DemirbasEkle(string userid, string userpass, string departman, AnaOkuluBilisim.AnaOkuluService.Demirbaslar demirbas) {
+            return base.Channel.DemirbasEkle(userid, userpass, departman, demirbas);
         }
     }
 }

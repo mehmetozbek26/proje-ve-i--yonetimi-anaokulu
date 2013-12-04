@@ -34,11 +34,12 @@
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtTecilBitisYili = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtTcNo = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtAyrilisTarihi = new System.Windows.Forms.TextBox();
             this.cmbKayitDurumu = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cmbOgrenimDurumu = new System.Windows.Forms.ComboBox();
@@ -76,6 +77,7 @@
             this.txtAd = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.txtKoy = new System.Windows.Forms.TextBox();
             this.txtKayitNo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -109,9 +111,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -181,13 +181,13 @@
             // 
             this.tabPage1.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.dateTimePicker4);
             this.tabPage1.Controls.Add(this.dateTimePicker2);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.txtTecilBitisYili);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.txtTcNo);
             this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Controls.Add(this.txtAyrilisTarihi);
             this.tabPage1.Controls.Add(this.cmbKayitDurumu);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.cmbOgrenimDurumu);
@@ -232,6 +232,20 @@
             this.tabPage1.Text = "Personel Ön Bilgilierl";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(131, 148);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker2.TabIndex = 88;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(131, 122);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker1.TabIndex = 87;
+            // 
             // txtTecilBitisYili
             // 
             this.txtTecilBitisYili.Location = new System.Drawing.Point(131, 229);
@@ -266,17 +280,13 @@
             this.label20.TabIndex = 81;
             this.label20.Text = "Ayrılış Tarihi";
             // 
-            // txtAyrilisTarihi
-            // 
-            this.txtAyrilisTarihi.Location = new System.Drawing.Point(398, 267);
-            this.txtAyrilisTarihi.Name = "txtAyrilisTarihi";
-            this.txtAyrilisTarihi.Size = new System.Drawing.Size(121, 20);
-            this.txtAyrilisTarihi.TabIndex = 80;
-            // 
             // cmbKayitDurumu
             // 
             this.cmbKayitDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKayitDurumu.FormattingEnabled = true;
+            this.cmbKayitDurumu.Items.AddRange(new object[] {
+            "Çalışıyor",
+            "Çalışmıyor"});
             this.cmbKayitDurumu.Location = new System.Drawing.Point(398, 240);
             this.cmbKayitDurumu.Name = "cmbKayitDurumu";
             this.cmbKayitDurumu.Size = new System.Drawing.Size(121, 21);
@@ -296,6 +306,10 @@
             // 
             this.cmbOgrenimDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOgrenimDurumu.FormattingEnabled = true;
+            this.cmbOgrenimDurumu.Items.AddRange(new object[] {
+            "Lise",
+            "ÖnLisans",
+            "YüksekLisans"});
             this.cmbOgrenimDurumu.Location = new System.Drawing.Point(398, 212);
             this.cmbOgrenimDurumu.Name = "cmbOgrenimDurumu";
             this.cmbOgrenimDurumu.Size = new System.Drawing.Size(121, 21);
@@ -434,6 +448,9 @@
             // 
             this.cmbCinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCinsiyet.FormattingEnabled = true;
+            this.cmbCinsiyet.Items.AddRange(new object[] {
+            "ERKEK",
+            "KIZ"});
             this.cmbCinsiyet.Location = new System.Drawing.Point(131, 283);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(121, 21);
@@ -453,6 +470,15 @@
             // 
             this.cmbKanGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKanGrubu.FormattingEnabled = true;
+            this.cmbKanGrubu.Items.AddRange(new object[] {
+            "A rh(+)",
+            "A rh(-)",
+            "0 rh(+)",
+            "A rh(-)",
+            "B rh(+)",
+            "B rh(-)",
+            "AB rh(+)",
+            "AB rh(-)"});
             this.cmbKanGrubu.Location = new System.Drawing.Point(131, 256);
             this.cmbKanGrubu.Name = "cmbKanGrubu";
             this.cmbKanGrubu.Size = new System.Drawing.Size(121, 21);
@@ -472,6 +498,10 @@
             // 
             this.cmbAskerlikDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAskerlikDurumu.FormattingEnabled = true;
+            this.cmbAskerlikDurumu.Items.AddRange(new object[] {
+            "Yapıldı",
+            "Yapılmadı",
+            "Tecilli"});
             this.cmbAskerlikDurumu.Location = new System.Drawing.Point(131, 202);
             this.cmbAskerlikDurumu.Name = "cmbAskerlikDurumu";
             this.cmbAskerlikDurumu.Size = new System.Drawing.Size(121, 21);
@@ -501,6 +531,10 @@
             // 
             this.cmbDepartman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartman.FormattingEnabled = true;
+            this.cmbDepartman.Items.AddRange(new object[] {
+            "OGRETMEN",
+            "MUHASEBE",
+            "YONETIM"});
             this.cmbDepartman.Location = new System.Drawing.Point(131, 175);
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(121, 21);
@@ -636,6 +670,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(853, 375);
             this.panel2.TabIndex = 0;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(450, 142);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(187, 20);
+            this.dateTimePicker3.TabIndex = 88;
             // 
             // txtKoy
             // 
@@ -912,26 +953,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1011, 229);
             this.dataGridView1.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // dateTimePicker4
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 122);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker1.TabIndex = 87;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(131, 148);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker2.TabIndex = 88;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(450, 142);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(187, 20);
-            this.dateTimePicker3.TabIndex = 88;
+            this.dateTimePicker4.Location = new System.Drawing.Point(398, 267);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker4.TabIndex = 89;
             // 
             // PersonelKayit
             // 
@@ -964,7 +991,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtAyrilisTarihi;
         private System.Windows.Forms.ComboBox cmbKayitDurumu;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cmbOgrenimDurumu;
@@ -1042,5 +1068,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
     }
 }

@@ -173,7 +173,7 @@
             this.label17.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(26, 13);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(78, 14);
+            this.label17.Size = new System.Drawing.Size(76, 14);
             this.label17.TabIndex = 12;
             this.label17.Text = "BÖLÜM SEÇ :";
             // 
@@ -256,6 +256,7 @@
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(47, 20);
             this.textBox7.TabIndex = 7;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.textBox7.Enter += new System.EventHandler(this.textBox7_Enter);
             // 
             // comboBox5

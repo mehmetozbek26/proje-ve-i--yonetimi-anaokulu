@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
 
 namespace AnaOkuluBilisim
 {
@@ -16,8 +17,8 @@ namespace AnaOkuluBilisim
         {
             InitializeComponent();
         }
-        
-    
+
+        Parola par = Parola.GET();
         private void btncreatepwd_Click_1(object sender, EventArgs e)
         {
             Information.Text = "";
@@ -30,7 +31,7 @@ namespace AnaOkuluBilisim
                     {
                         using (AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient())
                         {
-                            var temp = client.ParolaDegistir(txtoldpwd.Text, txtconfirmpwd.Text, txtuserid.Text, GlobalClass.GlobalVar);
+                            var temp = client.ParolaDegistir(txtoldpwd.Text, txtconfirmpwd.Text, txtuserid.Text, par.Departman);
                             if (temp == true)
                             {
                                 MessageBox.Show("Password changed", "Message");

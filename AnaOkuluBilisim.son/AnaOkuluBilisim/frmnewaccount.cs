@@ -6,17 +6,19 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AnaOkuluBilisim.Models;
+using AnaOkuluBilisim.AnaOkuluService;
+
 namespace AnaOkuluBilisim
 {
     public partial class frmnewaccount : Form
     {
+        Parola par = Parola.GET();
+        AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
         public frmnewaccount()
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
-        SqlCommand cmd;
-        string qry;
         private void button1_Click(object sender, EventArgs e)
         {
             Information1.Text = "";
@@ -24,30 +26,36 @@ namespace AnaOkuluBilisim
             {
                 if (validatedata() == 0)
                 {
-                    errorProvider1.Clear();
-                    SqlConnection con1 = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
-                    string str = "select firstname from pwd where firstname='" + textBox5.Text + "' and lastname='" + textBox6.Text + "'";
-                    con1.Open();
-                    cmd = new SqlCommand(str, con1);
-                    SqlDataReader sdr = cmd.ExecuteReader();
-                    if (sdr.Read())
-                    {
-                        MessageBox.Show("Data already inserted");
-                        con1.Close();
-                    }
+                    errorProvider1.Clear();                 
+                    if (!client.KontrolAdVeSoyad(par.KullaniciAdi,par.Sifre,par.Departman,textBox5.Text,textBox6.Text))                                
+                        MessageBox.Show("Data already inserted");                   
                     else
                     {
                         if (textBox3.Text == textBox4.Text)
                         {
-                            qry = "insert into pwd values('" + textBox5.Text + "','" + textBox6.Text + "','" + comboBox3.Text + "','" + comboBox2.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + txtcontact.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comdepart.Text + "','" + comboBox4.Text + "','" + comboBox5.Text + "')";
-                            //MessageBox.Show(qry);
-                            con.Open();
-                            cmd = new SqlCommand(qry, con);
-                            int row = cmd.ExecuteNonQuery();
-                            if (row > 0)
+                            pwd yeni = new pwd
+                            {
+                                firstname = textBox5.Text,
+                                lastname = textBox6.Text,
+                                address = textBox8.Text,
+                                age = Convert.ToInt32(comboBox3.Text),
+                                comdepart = comdepart.Text,
+                                confirmpassword = textBox4.Text,
+                                createpassword = textBox3.Text,
+                                day = Convert.ToInt32(comboBox4.Text),
+                                gender = comboBox2.Text,
+                                mount = Convert.ToInt32(comboBox5.Text),
+                                tel = txtcontact.Text,
+                                userid = textBox2.Text,
+                                year = Convert.ToInt32(textBox7.Text)
+                            };
+                            if(client.KullaniciEkle(par.KullaniciAdi, par.Sifre, par.Departman, yeni))
                             {
                                 MessageBox.Show("New user accepted", "Message");
+                                this.Close();
                             }
+                            else
+                                MessageBox.Show("Error");
                         }
                         else
                         {
@@ -56,13 +64,9 @@ namespace AnaOkuluBilisim
                     }
                 }
             }
-            catch
+            catch(Exception err)
             {
                 MessageBox.Show("This user id has been created please create another userid.", "Error");
-            }
-            finally
-            {
-                con.Close();
             }
         }
         private void button3_Click(object sender, EventArgs e)
@@ -356,6 +360,11 @@ namespace AnaOkuluBilisim
         private void comboBox3_Click(object sender, EventArgs e)
         {
             textBox7.Clear();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

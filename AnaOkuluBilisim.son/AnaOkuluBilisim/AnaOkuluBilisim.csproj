@@ -223,6 +223,9 @@
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.OgretmelerDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.pwd.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Siniflar.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -18,41 +18,15 @@ namespace AnaOkuluBilisim
         public PersonelGuncelle prsguncelle;    
         public PersonelKayit()
         {
-            InitializeComponent();
-           
-             prsguncelle = new PersonelGuncelle();
+            InitializeComponent();        
+            prsguncelle = new PersonelGuncelle();
             prsguncelle.prskayit = this;    
         }
         bool kimlikbilgileri = true;
         SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");  
         private void PersonelKayit_Load(object sender, EventArgs e)
-        { 
-               
-
+        {               
             PersonelGetir();
-           
-            cmbDepartman.Items.Add("Yönetim");
-            cmbDepartman.Items.Add("Muhasebe");
-            cmbDepartman.Items.Add("Banko");
-            cmbDepartman.Items.Add("Öğretmen");
-            cmbCinsiyet.Items.Add("ERKEK");
-            cmbCinsiyet.Items.Add("KIZ");
-            cmbKanGrubu.Items.Add("A rh(+)");
-            cmbKanGrubu.Items.Add("A rh(-)");
-            cmbKanGrubu.Items.Add("0 rh(+)");
-            cmbKanGrubu.Items.Add("A rh(-)");
-            cmbKanGrubu.Items.Add("B rh(+)");
-            cmbKanGrubu.Items.Add("B rh(-)");
-            cmbKanGrubu.Items.Add("AB rh(+)");
-            cmbKanGrubu.Items.Add("AB rh(-)");
-            cmbAskerlikDurumu.Items.Add("Yapıldı");
-            cmbAskerlikDurumu.Items.Add("Yapılmadı");
-            cmbAskerlikDurumu.Items.Add("Tecilli");
-            cmbOgrenimDurumu.Items.Add("Lise");
-            cmbOgrenimDurumu.Items.Add("ÖnLisans");
-            cmbOgrenimDurumu.Items.Add("YüksekLisans");
-            cmbKayitDurumu.Items.Add("Çalışıyor");
-            cmbKayitDurumu.Items.Add("Çalışmıyor");
         }   
         private void button1_Click(object sender, EventArgs e)
         {

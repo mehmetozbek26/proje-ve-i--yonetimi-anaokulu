@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
 
 namespace AnaOkuluBilisim
 {
@@ -16,7 +18,8 @@ namespace AnaOkuluBilisim
         {
             InitializeComponent();
         }
-        SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
+        AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
+        Parola par = Parola.GET();
         private void YoklamaEkle_Load(object sender, EventArgs e)
         {
             cmbDurum.Items.Add("Katıldı");
@@ -25,28 +28,25 @@ namespace AnaOkuluBilisim
             txtSinifi.Enabled = false;
             txtOgrenciNo.Enabled = false;
             txtOgrenciSoyad.Enabled = false;
-            SqlCommand cmd = new SqlCommand("select * from siniflar", cnn);
-            cnn.Open();
-            SqlDataReader rdr = cmd.ExecuteReader();
+            var itemlist = client.TumSiniflar(par.KullaniciAdi, par.Sifre, par.Departman);       
             comboBox1.Items.Insert(0, "Seçiniz");
-            while (rdr.Read())
+            foreach (var item in itemlist)
             {
-                //comboBox1.Items.Add(rdr["SinifAdi"].ToString());
-                comboBox1.Items.Insert(Convert.ToInt32(rdr["sinifId"].ToString()), rdr["SinifAdi"].ToString());
+                comboBox1.Items.Add(item.sinifAdi);
+                comboBox1.Items.Insert(item.sinifId, item.sinifAdi);
             }
-            cnn.Close();
-            rdr.Close();
+          
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            using (SqlDataAdapter da = new SqlDataAdapter("sp_SinifaGoreOgrenciGetir", cnn))
-            {
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = Convert.ToInt32(comboBox1.SelectedIndex.ToString());
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-            }
+            //DataTable dt = new DataTable();
+            //using (SqlDataAdapter da = new SqlDataAdapter("sp_SinifaGoreOgrenciGetir", cnn))
+            //{
+            //    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            //    da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = Convert.ToInt32(comboBox1.SelectedIndex.ToString());
+            //    da.Fill(dt);
+            //    dataGridView1.DataSource = dt;
+            //}
         }
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -57,30 +57,30 @@ namespace AnaOkuluBilisim
         }
         private void btnKayit_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("sp_YoklamaEkle", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@OgrenciId", dataGridView1.CurrentRow.Cells[2].Value.ToString());
-            cmd.Parameters.Add("@OgrenciAdi", dataGridView1.CurrentRow.Cells[3].Value.ToString());
-            cmd.Parameters.Add("@OgrenciSoyadi", dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            cmd.Parameters.Add("@Sinifi", comboBox1.Text);
-            cmd.Parameters.Add("@Tarih", dateTimePicker1.Text);
-            cmd.Parameters.Add("@DevamsizlikTuru", cmbDurum.Text);
-            cmd.Parameters.Add("@Aciklama", txtAciklama.Text);
-            cmd.Parameters.Add("@SinifId", dataGridView1.CurrentRow.Cells[1].Value.ToString());
-            try
-            {
-                cnn.Open();
-                cmd.ExecuteScalar();
-                MessageBox.Show("Kayıt Başarılı");
-            }
-            catch
-            {
-                MessageBox.Show("Hata Oluştu");
-            }
-            finally
-            {
-                cnn.Close();
-            }
+            //SqlCommand cmd = new SqlCommand("sp_YoklamaEkle", cnn);
+            //cmd.CommandType = CommandType.StoredProcedure;
+            //cmd.Parameters.Add("@OgrenciId", dataGridView1.CurrentRow.Cells[2].Value.ToString());
+            //cmd.Parameters.Add("@OgrenciAdi", dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            //cmd.Parameters.Add("@OgrenciSoyadi", dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            //cmd.Parameters.Add("@Sinifi", comboBox1.Text);
+            //cmd.Parameters.Add("@Tarih", dateTimePicker1.Text);
+            //cmd.Parameters.Add("@DevamsizlikTuru", cmbDurum.Text);
+            //cmd.Parameters.Add("@Aciklama", txtAciklama.Text);
+            //cmd.Parameters.Add("@SinifId", dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            //try
+            //{
+            //    cnn.Open();
+            //    cmd.ExecuteScalar();
+            //    MessageBox.Show("Kayıt Başarılı");
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Hata Oluştu");
+            //}
+            //finally
+            //{
+            //    cnn.Close();
+            //}
         }
 
         private void btnYoklamaDurum_Click(object sender, EventArgs e)

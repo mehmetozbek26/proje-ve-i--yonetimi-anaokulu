@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnYoklamaDurum = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAciklama = new System.Windows.Forms.TextBox();
             this.btnKayit = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.txtOgrenciNo = new System.Windows.Forms.TextBox();
             this.txtSinifi = new System.Windows.Forms.TextBox();
             this.txtOgrenciAd = new System.Windows.Forms.TextBox();
-            this.btnYoklamaDurum = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,17 @@
             this.panel1.Size = new System.Drawing.Size(567, 502);
             this.panel1.TabIndex = 0;
             // 
+            // btnYoklamaDurum
+            // 
+            this.btnYoklamaDurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYoklamaDurum.Location = new System.Drawing.Point(166, 451);
+            this.btnYoklamaDurum.Name = "btnYoklamaDurum";
+            this.btnYoklamaDurum.Size = new System.Drawing.Size(121, 34);
+            this.btnYoklamaDurum.TabIndex = 16;
+            this.btnYoklamaDurum.Text = "YENİ FORM";
+            this.btnYoklamaDurum.UseVisualStyleBackColor = true;
+            this.btnYoklamaDurum.Click += new System.EventHandler(this.btnYoklamaDurum_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -91,13 +102,13 @@
             this.txtAciklama.Location = new System.Drawing.Point(198, 361);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(263, 84);
+            this.txtAciklama.Size = new System.Drawing.Size(200, 84);
             this.txtAciklama.TabIndex = 14;
             // 
             // btnKayit
             // 
             this.btnKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKayit.Location = new System.Drawing.Point(340, 451);
+            this.btnKayit.Location = new System.Drawing.Point(315, 451);
             this.btnKayit.Name = "btnKayit";
             this.btnKayit.Size = new System.Drawing.Size(121, 34);
             this.btnKayit.TabIndex = 13;
@@ -112,7 +123,7 @@
             this.cmbDurum.FormattingEnabled = true;
             this.cmbDurum.Location = new System.Drawing.Point(198, 334);
             this.cmbDurum.Name = "cmbDurum";
-            this.cmbDurum.Size = new System.Drawing.Size(121, 21);
+            this.cmbDurum.Size = new System.Drawing.Size(200, 21);
             this.cmbDurum.TabIndex = 12;
             // 
             // label5
@@ -171,7 +182,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(198, 177);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -197,40 +208,29 @@
             // 
             this.txtOgrenciSoyad.Location = new System.Drawing.Point(198, 230);
             this.txtOgrenciSoyad.Name = "txtOgrenciSoyad";
-            this.txtOgrenciSoyad.Size = new System.Drawing.Size(121, 20);
+            this.txtOgrenciSoyad.Size = new System.Drawing.Size(200, 20);
             this.txtOgrenciSoyad.TabIndex = 3;
             // 
             // txtOgrenciNo
             // 
             this.txtOgrenciNo.Location = new System.Drawing.Point(198, 256);
             this.txtOgrenciNo.Name = "txtOgrenciNo";
-            this.txtOgrenciNo.Size = new System.Drawing.Size(121, 20);
+            this.txtOgrenciNo.Size = new System.Drawing.Size(200, 20);
             this.txtOgrenciNo.TabIndex = 2;
             // 
             // txtSinifi
             // 
             this.txtSinifi.Location = new System.Drawing.Point(198, 282);
             this.txtSinifi.Name = "txtSinifi";
-            this.txtSinifi.Size = new System.Drawing.Size(121, 20);
+            this.txtSinifi.Size = new System.Drawing.Size(200, 20);
             this.txtSinifi.TabIndex = 1;
             // 
             // txtOgrenciAd
             // 
             this.txtOgrenciAd.Location = new System.Drawing.Point(198, 204);
             this.txtOgrenciAd.Name = "txtOgrenciAd";
-            this.txtOgrenciAd.Size = new System.Drawing.Size(121, 20);
+            this.txtOgrenciAd.Size = new System.Drawing.Size(200, 20);
             this.txtOgrenciAd.TabIndex = 0;
-            // 
-            // btnYoklamaDurum
-            // 
-            this.btnYoklamaDurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYoklamaDurum.Location = new System.Drawing.Point(198, 451);
-            this.btnYoklamaDurum.Name = "btnYoklamaDurum";
-            this.btnYoklamaDurum.Size = new System.Drawing.Size(121, 34);
-            this.btnYoklamaDurum.TabIndex = 16;
-            this.btnYoklamaDurum.Text = "KAYIT";
-            this.btnYoklamaDurum.UseVisualStyleBackColor = true;
-            this.btnYoklamaDurum.Click += new System.EventHandler(this.btnYoklamaDurum_Click);
             // 
             // YoklamaEkle
             // 
@@ -238,7 +238,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(601, 503);
+            this.ClientSize = new System.Drawing.Size(572, 503);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "YoklamaEkle";
