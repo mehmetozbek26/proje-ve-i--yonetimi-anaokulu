@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AnaOkuluWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AnaOkuluWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost/AnaOkuluWebService/AnaOkuluWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -38,11 +38,17 @@
   <wsdl:message name="IAnaOkuluWebService_KontrolAdVeSoyad_OutputMessage">
     <wsdl:part name="parameters" element="tns:KontrolAdVeSoyadResponse" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_TumYemekler_InputMessage">
-    <wsdl:part name="parameters" element="tns:TumYemekler" />
+  <wsdl:message name="IAnaOkuluWebService_TumServisler_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumServisler" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_TumYemekler_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TumYemeklerResponse" />
+  <wsdl:message name="IAnaOkuluWebService_TumServisler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumServislerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumUcuncuSahis_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumUcuncuSahis" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumUcuncuSahis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumUcuncuSahisResponse" />
   </wsdl:message>
   <wsdl:message name="IAnaOkuluWebService_VeliEmailler_InputMessage">
     <wsdl:part name="parameters" element="tns:VeliEmailler" />
@@ -50,23 +56,11 @@
   <wsdl:message name="IAnaOkuluWebService_VeliEmailler_OutputMessage">
     <wsdl:part name="parameters" element="tns:VeliEmaillerResponse" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_YemekEkle_InputMessage">
-    <wsdl:part name="parameters" element="tns:YemekEkle" />
+  <wsdl:message name="IAnaOkuluWebService_TumVeliler_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumVeliler" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_YemekEkle_OutputMessage">
-    <wsdl:part name="parameters" element="tns:YemekEkleResponse" />
-  </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_YemekSil_InputMessage">
-    <wsdl:part name="parameters" element="tns:YemekSil" />
-  </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_YemekSil_OutputMessage">
-    <wsdl:part name="parameters" element="tns:YemekSilResponse" />
-  </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_TumSiniflar_InputMessage">
-    <wsdl:part name="parameters" element="tns:TumSiniflar" />
-  </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_TumSiniflar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TumSiniflarResponse" />
+  <wsdl:message name="IAnaOkuluWebService_TumVeliler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumVelilerResponse" />
   </wsdl:message>
   <wsdl:message name="IAnaOkuluWebService_TumOgretmenler_InputMessage">
     <wsdl:part name="parameters" element="tns:TumOgretmenler" />
@@ -74,11 +68,17 @@
   <wsdl:message name="IAnaOkuluWebService_TumOgretmenler_OutputMessage">
     <wsdl:part name="parameters" element="tns:TumOgretmenlerResponse" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_SinifSil_InputMessage">
-    <wsdl:part name="parameters" element="tns:SinifSil" />
+  <wsdl:message name="IAnaOkuluWebService_TumOgrenciler_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumOgrenciler" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_SinifSil_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SinifSilResponse" />
+  <wsdl:message name="IAnaOkuluWebService_TumOgrenciler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumOgrencilerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumPersoneller_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumPersoneller" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumPersoneller_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumPersonellerResponse" />
   </wsdl:message>
   <wsdl:message name="IAnaOkuluWebService_SinifEkle_InputMessage">
     <wsdl:part name="parameters" element="tns:SinifEkle" />
@@ -86,11 +86,35 @@
   <wsdl:message name="IAnaOkuluWebService_SinifEkle_OutputMessage">
     <wsdl:part name="parameters" element="tns:SinifEkleResponse" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_DemirbasGunceller_InputMessage">
-    <wsdl:part name="parameters" element="tns:DemirbasGunceller" />
+  <wsdl:message name="IAnaOkuluWebService_SinifSil_InputMessage">
+    <wsdl:part name="parameters" element="tns:SinifSil" />
   </wsdl:message>
-  <wsdl:message name="IAnaOkuluWebService_DemirbasGunceller_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DemirbasGuncellerResponse" />
+  <wsdl:message name="IAnaOkuluWebService_SinifSil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SinifSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumSiniflar_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumSiniflar" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumSiniflar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumSiniflarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_YemekEkle_InputMessage">
+    <wsdl:part name="parameters" element="tns:YemekEkle" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_YemekEkle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:YemekEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumYemekler_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumYemekler" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumYemekler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumYemeklerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_YemekSil_InputMessage">
+    <wsdl:part name="parameters" element="tns:YemekSil" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_YemekSil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:YemekSilResponse" />
   </wsdl:message>
   <wsdl:message name="IAnaOkuluWebService_TumDemirbaslar_InputMessage">
     <wsdl:part name="parameters" element="tns:TumDemirbaslar" />
@@ -103,6 +127,48 @@
   </wsdl:message>
   <wsdl:message name="IAnaOkuluWebService_DemirbasEkle_OutputMessage">
     <wsdl:part name="parameters" element="tns:DemirbasEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasGunceller_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasGunceller" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasGunceller_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasGuncellerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasSil_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasSil" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasSil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumYoklama_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumYoklama" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumYoklama_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumYoklamaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_Yoklama_InputMessage">
+    <wsdl:part name="parameters" element="tns:Yoklama" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_Yoklama_OutputMessage">
+    <wsdl:part name="parameters" element="tns:YoklamaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumDemirbasMekanlari_InputMessage">
+    <wsdl:part name="parameters" element="tns:TumDemirbasMekanlari" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_TumDemirbasMekanlari_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TumDemirbasMekanlariResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasMekanlariSil_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasMekanlariSil" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasMekanlariSil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasMekanlariSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasMekanlariEkle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasMekanlariEkle" />
+  </wsdl:message>
+  <wsdl:message name="IAnaOkuluWebService_DemirbasMekanlariEkle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DemirbasMekanlariEkleResponse" />
   </wsdl:message>
   <wsdl:portType name="IAnaOkuluWebService">
     <wsdl:operation name="GirisKontrol">
@@ -125,41 +191,57 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/KontrolAdVeSoyad" message="tns:IAnaOkuluWebService_KontrolAdVeSoyad_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/KontrolAdVeSoyadResponse" message="tns:IAnaOkuluWebService_KontrolAdVeSoyad_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="TumYemekler">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumYemekler" message="tns:IAnaOkuluWebService_TumYemekler_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumYemeklerResponse" message="tns:IAnaOkuluWebService_TumYemekler_OutputMessage" />
+    <wsdl:operation name="TumServisler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumServisler" message="tns:IAnaOkuluWebService_TumServisler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumServislerResponse" message="tns:IAnaOkuluWebService_TumServisler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TumUcuncuSahis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumUcuncuSahis" message="tns:IAnaOkuluWebService_TumUcuncuSahis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumUcuncuSahisResponse" message="tns:IAnaOkuluWebService_TumUcuncuSahis_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="VeliEmailler">
       <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/VeliEmailler" message="tns:IAnaOkuluWebService_VeliEmailler_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/VeliEmaillerResponse" message="tns:IAnaOkuluWebService_VeliEmailler_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="YemekEkle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekEkle" message="tns:IAnaOkuluWebService_YemekEkle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekEkleResponse" message="tns:IAnaOkuluWebService_YemekEkle_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="YemekSil">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekSil" message="tns:IAnaOkuluWebService_YemekSil_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekSilResponse" message="tns:IAnaOkuluWebService_YemekSil_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TumSiniflar">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumSiniflar" message="tns:IAnaOkuluWebService_TumSiniflar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumSiniflarResponse" message="tns:IAnaOkuluWebService_TumSiniflar_OutputMessage" />
+    <wsdl:operation name="TumVeliler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumVeliler" message="tns:IAnaOkuluWebService_TumVeliler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumVelilerResponse" message="tns:IAnaOkuluWebService_TumVeliler_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TumOgretmenler">
       <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumOgretmenler" message="tns:IAnaOkuluWebService_TumOgretmenler_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumOgretmenlerResponse" message="tns:IAnaOkuluWebService_TumOgretmenler_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SinifSil">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/SinifSil" message="tns:IAnaOkuluWebService_SinifSil_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/SinifSilResponse" message="tns:IAnaOkuluWebService_SinifSil_OutputMessage" />
+    <wsdl:operation name="TumOgrenciler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumOgrenciler" message="tns:IAnaOkuluWebService_TumOgrenciler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumOgrencilerResponse" message="tns:IAnaOkuluWebService_TumOgrenciler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TumPersoneller">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumPersoneller" message="tns:IAnaOkuluWebService_TumPersoneller_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumPersonellerResponse" message="tns:IAnaOkuluWebService_TumPersoneller_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SinifEkle">
       <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/SinifEkle" message="tns:IAnaOkuluWebService_SinifEkle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/SinifEkleResponse" message="tns:IAnaOkuluWebService_SinifEkle_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DemirbasGunceller">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasGunceller" message="tns:IAnaOkuluWebService_DemirbasGunceller_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasGuncellerResponse" message="tns:IAnaOkuluWebService_DemirbasGunceller_OutputMessage" />
+    <wsdl:operation name="SinifSil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/SinifSil" message="tns:IAnaOkuluWebService_SinifSil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/SinifSilResponse" message="tns:IAnaOkuluWebService_SinifSil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TumSiniflar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumSiniflar" message="tns:IAnaOkuluWebService_TumSiniflar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumSiniflarResponse" message="tns:IAnaOkuluWebService_TumSiniflar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="YemekEkle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekEkle" message="tns:IAnaOkuluWebService_YemekEkle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekEkleResponse" message="tns:IAnaOkuluWebService_YemekEkle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TumYemekler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumYemekler" message="tns:IAnaOkuluWebService_TumYemekler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumYemeklerResponse" message="tns:IAnaOkuluWebService_TumYemekler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="YemekSil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekSil" message="tns:IAnaOkuluWebService_YemekSil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YemekSilResponse" message="tns:IAnaOkuluWebService_YemekSil_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TumDemirbaslar">
       <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumDemirbaslar" message="tns:IAnaOkuluWebService_TumDemirbaslar_InputMessage" />
@@ -168,6 +250,34 @@
     <wsdl:operation name="DemirbasEkle">
       <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasEkle" message="tns:IAnaOkuluWebService_DemirbasEkle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasEkleResponse" message="tns:IAnaOkuluWebService_DemirbasEkle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasGunceller">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasGunceller" message="tns:IAnaOkuluWebService_DemirbasGunceller_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasGuncellerResponse" message="tns:IAnaOkuluWebService_DemirbasGunceller_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasSil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasSil" message="tns:IAnaOkuluWebService_DemirbasSil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasSilResponse" message="tns:IAnaOkuluWebService_DemirbasSil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TumYoklama">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumYoklama" message="tns:IAnaOkuluWebService_TumYoklama_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumYoklamaResponse" message="tns:IAnaOkuluWebService_TumYoklama_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Yoklama">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/Yoklama" message="tns:IAnaOkuluWebService_Yoklama_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/YoklamaResponse" message="tns:IAnaOkuluWebService_Yoklama_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TumDemirbasMekanlari">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumDemirbasMekanlari" message="tns:IAnaOkuluWebService_TumDemirbasMekanlari_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/TumDemirbasMekanlariResponse" message="tns:IAnaOkuluWebService_TumDemirbasMekanlari_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasMekanlariSil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasMekanlariSil" message="tns:IAnaOkuluWebService_DemirbasMekanlariSil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasMekanlariSilResponse" message="tns:IAnaOkuluWebService_DemirbasMekanlariSil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasMekanlariEkle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasMekanlariEkle" message="tns:IAnaOkuluWebService_DemirbasMekanlariEkle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnaOkuluWebService/DemirbasMekanlariEkleResponse" message="tns:IAnaOkuluWebService_DemirbasMekanlariEkle_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAnaOkuluWebService" type="tns:IAnaOkuluWebService">
@@ -217,8 +327,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="TumYemekler">
-      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumYemekler" style="document" />
+    <wsdl:operation name="TumServisler">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumServisler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumUcuncuSahis">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumUcuncuSahis" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -235,26 +354,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="YemekEkle">
-      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/YemekEkle" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="YemekSil">
-      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/YemekSil" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TumSiniflar">
-      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumSiniflar" style="document" />
+    <wsdl:operation name="TumVeliler">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumVeliler" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -271,8 +372,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SinifSil">
-      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/SinifSil" style="document" />
+    <wsdl:operation name="TumOgrenciler">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumOgrenciler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumPersoneller">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumPersoneller" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -289,8 +399,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DemirbasGunceller">
-      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/DemirbasGunceller" style="document" />
+    <wsdl:operation name="SinifSil">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/SinifSil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumSiniflar">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumSiniflar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YemekEkle">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/YemekEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumYemekler">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumYemekler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YemekSil">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/YemekSil" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -309,6 +455,69 @@
     </wsdl:operation>
     <wsdl:operation name="DemirbasEkle">
       <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/DemirbasEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasGunceller">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/DemirbasGunceller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasSil">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/DemirbasSil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumYoklama">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumYoklama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Yoklama">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/Yoklama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumDemirbasMekanlari">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/TumDemirbasMekanlari" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasMekanlariSil">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/DemirbasMekanlariSil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemirbasMekanlariEkle">
+      <soap:operation soapAction="http://tempuri.org/IAnaOkuluWebService/DemirbasMekanlariEkle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

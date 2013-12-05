@@ -220,16 +220,40 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\Thumbs.db" />
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.DemirbaslarDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.DemirbasMekanlariDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Ogrenciler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.OgretmelerDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Personeller.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.pwd.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.ServislerDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Siniflar.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.UcuncuSahislar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Veliler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Yemekler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Yoklama.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluWebService.wsdl" />

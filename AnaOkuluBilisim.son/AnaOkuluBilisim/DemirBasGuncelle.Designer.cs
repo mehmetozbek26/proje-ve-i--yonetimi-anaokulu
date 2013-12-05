@@ -66,8 +66,8 @@
             this.txtDemirbasCinsi = new System.Windows.Forms.TextBox();
             this.txtDemirbasBirimi = new System.Windows.Forms.TextBox();
             this.txtDemirbasAdi = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.alistarihi = new System.Windows.Forms.DateTimePicker();
+            this.satisTarihi = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button1
@@ -404,19 +404,19 @@
             this.txtDemirbasAdi.Size = new System.Drawing.Size(184, 20);
             this.txtDemirbasAdi.TabIndex = 45;
             // 
-            // dateTimePicker1
+            // alistarihi
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(376, 76);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(105, 20);
-            this.dateTimePicker1.TabIndex = 85;
+            this.alistarihi.Location = new System.Drawing.Point(376, 76);
+            this.alistarihi.Name = "alistarihi";
+            this.alistarihi.Size = new System.Drawing.Size(105, 20);
+            this.alistarihi.TabIndex = 85;
             // 
-            // dateTimePicker2
+            // satisTarihi
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(741, 74);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(105, 20);
-            this.dateTimePicker2.TabIndex = 86;
+            this.satisTarihi.Location = new System.Drawing.Point(741, 74);
+            this.satisTarihi.Name = "satisTarihi";
+            this.satisTarihi.Size = new System.Drawing.Size(105, 20);
+            this.satisTarihi.TabIndex = 86;
             // 
             // DemirBasGuncelle
             // 
@@ -425,8 +425,8 @@
             this.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1057, 262);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.satisTarihi);
+            this.Controls.Add(this.alistarihi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtSatisNedeni);
@@ -514,7 +514,7 @@
         private System.Windows.Forms.TextBox txtDemirbasCinsi;
         private System.Windows.Forms.TextBox txtDemirbasBirimi;
         private System.Windows.Forms.TextBox txtDemirbasAdi;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker alistarihi;
+        private System.Windows.Forms.DateTimePicker satisTarihi;
     }
 }

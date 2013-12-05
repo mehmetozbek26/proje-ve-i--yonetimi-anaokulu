@@ -56,7 +56,7 @@ namespace AnaOkuluBilisim
                 cmd.Parameters.Add("@EvTels", txtEvTel.Text);
                 cmd.Parameters.Add("@CepTels", txtCepTel.Text);
                 cmd.Parameters.Add("@EgitimDurumus", cmbOgrenimDurumu.Text);
-                cmd.Parameters.Add("@AyrilisTarihis", txtAyrilisTarihi.Text);
+                cmd.Parameters.Add("@AyrilisTarihis", dateTimePicker4.Value.ToShortDateString());
                 cmd.Parameters.Add("@TcNos", txtTcNo.Text);
                 cmd.Parameters.Add("@Departmans", cmbDepartman.Text);
 

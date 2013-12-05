@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -57,6 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtAlisFaturaNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtGirisTutari = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAlindigiYer = new System.Windows.Forms.TextBox();
@@ -77,16 +80,13 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtSorumlusu = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtTeslimTarihi = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMekanSil = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnMekanKaydet = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtGirisTutari = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -149,6 +149,20 @@
             this.panel1.Size = new System.Drawing.Size(1100, 408);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(742, 68);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
+            this.dateTimePicker2.TabIndex = 46;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(379, 74);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
+            this.dateTimePicker1.TabIndex = 45;
             // 
             // btnDuzenle
             // 
@@ -407,6 +421,13 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Giriş Tutarı";
             // 
+            // txtGirisTutari
+            // 
+            this.txtGirisTutari.Location = new System.Drawing.Point(562, 71);
+            this.txtGirisTutari.Name = "txtGirisTutari";
+            this.txtGirisTutari.Size = new System.Drawing.Size(86, 20);
+            this.txtGirisTutari.TabIndex = 14;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -580,13 +601,6 @@
             this.label25.TabIndex = 48;
             this.label25.Text = "Teslim Tarihi";
             // 
-            // txtTeslimTarihi
-            // 
-            this.txtTeslimTarihi.Location = new System.Drawing.Point(113, 128);
-            this.txtTeslimTarihi.Name = "txtTeslimTarihi";
-            this.txtTeslimTarihi.Size = new System.Drawing.Size(100, 20);
-            this.txtTeslimTarihi.TabIndex = 47;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -597,10 +611,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dateTimePicker3);
             this.panel2.Controls.Add(this.btnMekanSil);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.txtTeslimTarihi);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.btnMekanKaydet);
@@ -659,26 +673,12 @@
             this.btnMekanKaydet.UseVisualStyleBackColor = true;
             this.btnMekanKaydet.Click += new System.EventHandler(this.btnMekanKaydet_Click);
             // 
-            // dateTimePicker1
+            // dateTimePicker3
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(379, 74);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 45;
-            // 
-            // txtGirisTutari
-            // 
-            this.txtGirisTutari.Location = new System.Drawing.Point(562, 71);
-            this.txtGirisTutari.Name = "txtGirisTutari";
-            this.txtGirisTutari.Size = new System.Drawing.Size(86, 20);
-            this.txtGirisTutari.TabIndex = 14;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(742, 68);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker2.TabIndex = 46;
+            this.dateTimePicker3.Location = new System.Drawing.Point(110, 128);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(102, 20);
+            this.dateTimePicker3.TabIndex = 50;
             // 
             // DemirbasKayit
             // 
@@ -754,7 +754,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtSorumlusu;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtTeslimTarihi;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
@@ -764,5 +763,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox txtGirisTutari;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }

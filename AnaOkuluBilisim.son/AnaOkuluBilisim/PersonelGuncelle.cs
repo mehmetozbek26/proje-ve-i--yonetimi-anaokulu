@@ -20,37 +20,12 @@ namespace AnaOkuluBilisim
         }
         SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
         private void PersonelGuncelle_Load(object sender, EventArgs e)
-        {
-            cmbDepartman.Items.Add("Yönetim");
-            cmbDepartman.Items.Add("Muhasebe");
-            cmbDepartman.Items.Add("Banko");
-            cmbCinsiyet.Items.Add("ERKEK");
-            cmbCinsiyet.Items.Add("KIZ");
-            cmbKanGrubu.Items.Add("A rh(+)");
-            cmbKanGrubu.Items.Add("A rh(-)");
-            cmbKanGrubu.Items.Add("0 rh(+)");
-            cmbKanGrubu.Items.Add("A rh(-)");
-            cmbKanGrubu.Items.Add("B rh(+)");
-            cmbKanGrubu.Items.Add("B rh(-)");
-            cmbKanGrubu.Items.Add("AB rh(+)");
-            cmbKanGrubu.Items.Add("AB rh(-)");
-            cmbAskerlikDurumu.Items.Add("Yapıldı");
-            cmbAskerlikDurumu.Items.Add("Yapılmadı");
-            cmbAskerlikDurumu.Items.Add("Tecilli");
-            cmbOgrenimDurumu.Items.Add("Lise");
-            cmbOgrenimDurumu.Items.Add("ÖnLisans");
-            cmbOgrenimDurumu.Items.Add("YüksekLisans");
-            cmbKayitDurumu.Items.Add("Çalışıyor");
-            cmbKayitDurumu.Items.Add("Çalışmıyor");
-            
-             comboBox1.Items.Add("ERKEK");
-            comboBox1.Items.Add("KIZ");
-
+        {          
             txtAd.Text = prskayit.dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtSoyad.Text = prskayit.dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtSicilNo.Text = prskayit.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtBasvuruTarihi.Text = prskayit.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtBaslamaTarihi.Text = prskayit.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            dateTimePicker1.Text = prskayit.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            dateTimePicker2.Text = prskayit.dataGridView1.CurrentRow.Cells[5].Value.ToString();
             cmbAskerlikDurumu.Text = prskayit.dataGridView1.CurrentRow.Cells[6].Value.ToString();
             txtTecilBitisYili.Text = prskayit.dataGridView1.CurrentRow.Cells[7].Value.ToString();
             cmbKanGrubu.Text = prskayit.dataGridView1.CurrentRow.Cells[8].Value.ToString();
@@ -92,7 +67,7 @@ namespace AnaOkuluBilisim
         {
             MessageBox.Show("buton calisti.");
             cnn.Open();
-            SqlCommand cmd = new SqlCommand("update Personeller set Adi='" + txtAd.Text + "',SoyAdi='" + txtSoyad.Text + "',SicilNo='" + txtSicilNo.Text + "',IsBasvuruTarihi='" + txtBasvuruTarihi.Text + "',IseBaslamaTarihi='" + txtBaslamaTarihi.Text + "',AskerlikDurumu='" + cmbAskerlikDurumu.Text + "',TecilBitisYili='" + txtTecilBitisYili.Text + "',KanGrubu='" + cmbKanGrubu.Text + "',Cinsiyet='" + cmbCinsiyet.Text + "',Adres='" + txtAdres.Text + "',Semt='" + txtSemt.Text + "',Ilce='" + txtilce.Text + "',Il='" + txtil.Text + "',Mail='" + txtMail.Text + "',EvTel='" + txtEvTel.Text + "',CepTel='" + txtCepTel.Text + "',EgitimDurumu='" + cmbOgrenimDurumu.Text + "',AyrilisTarihi='" + txtAyrilisTarihi.Text + "',TcNo='" + txtTcNo.Text + "',Departman='" + cmbDepartman.Text + "',KTcNo='" + textBox1.Text + "',KUyruk='" + txtUyruk.Text + "',KCinsiyet='" + comboBox1.Text + "',KKimlikSeriNo='" + txtKimlikSeriNo.Text + "',KDogumYeri='" + txtDogumYeri.Text + "',KDogumTarihi='" + txtDogumTarihi.Text + "',KDogumili='" + txtKimlikil.Text + "',KDogumilce='" + txtKimlikilce.Text + "',KMahalle='" + txtMahalle.Text + "',KKoy='" + txtKoy.Text + "',KCilt='" + txtCilt.Text + "',KAile='" + txtAile.Text + "',KSiraNo='" + txtSiraNo.Text + "',KVerilisYeri='" + txtVerYeri.Text + "',KKayitNo='" + txtKayitNo.Text + "'", cnn);
+            SqlCommand cmd = new SqlCommand("update Personeller set Adi='" + txtAd.Text + "',SoyAdi='" + txtSoyad.Text + "',SicilNo='" + txtSicilNo.Text + "',IsBasvuruTarihi='" + dateTimePicker1.Value.ToShortDateString() + "',IseBaslamaTarihi='" + dateTimePicker2.Value.ToShortDateString() + "',AskerlikDurumu='" + cmbAskerlikDurumu.Text + "',TecilBitisYili='" + txtTecilBitisYili.Text + "',KanGrubu='" + cmbKanGrubu.Text + "',Cinsiyet='" + cmbCinsiyet.Text + "',Adres='" + txtAdres.Text + "',Semt='" + txtSemt.Text + "',Ilce='" + txtilce.Text + "',Il='" + txtil.Text + "',Mail='" + txtMail.Text + "',EvTel='" + txtEvTel.Text + "',CepTel='" + txtCepTel.Text + "',EgitimDurumu='" + cmbOgrenimDurumu.Text + "',AyrilisTarihi='" + txtAyrilisTarihi.Text + "',TcNo='" + txtTcNo.Text + "',Departman='" + cmbDepartman.Text + "',KTcNo='" + textBox1.Text + "',KUyruk='" + txtUyruk.Text + "',KCinsiyet='" + comboBox1.Text + "',KKimlikSeriNo='" + txtKimlikSeriNo.Text + "',KDogumYeri='" + txtDogumYeri.Text + "',KDogumTarihi='" + txtDogumTarihi.Text + "',KDogumili='" + txtKimlikil.Text + "',KDogumilce='" + txtKimlikilce.Text + "',KMahalle='" + txtMahalle.Text + "',KKoy='" + txtKoy.Text + "',KCilt='" + txtCilt.Text + "',KAile='" + txtAile.Text + "',KSiraNo='" + txtSiraNo.Text + "',KVerilisYeri='" + txtVerYeri.Text + "',KKayitNo='" + txtKayitNo.Text + "'", cnn);
             cmd.ExecuteNonQuery();
             cnn.Close();
             prskayit.PersonelGetir();
