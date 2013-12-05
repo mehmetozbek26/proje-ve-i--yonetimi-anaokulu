@@ -79,11 +79,13 @@ namespace AnaOkuluWebService
 
         #region DEMİRBAS
         [OperationContract]
-        List<Demirbaslar> TumDemirbaslar(string userid, string userpass, string departman);
+        IList<DemirbaslarDB> TumDemirbaslar(string userid, string userpass, string departman);
         [OperationContract]
-        bool DemirbasEkle(string userid, string userpass, string departman, Demirbaslar demirbas);
+        bool DemirbasEkle(string userid, string userpass, string departman, DemirbaslarDB demirbas);
         [OperationContract]
         bool DemirbasGunceller(string userid, string userpass, string departman, Demirbaslar demirbas);
+        [OperationContract]
+        bool DemirbasSil(string userid, string userpass, string departman,int demirbasid);
         #endregion
 
         #region YOKLAMA
@@ -96,7 +98,11 @@ namespace AnaOkuluWebService
 
         #region DEMİRBAS MEKANLARI
         [OperationContract]
-        IList<DemirbasMekanlari> TumDemirbasMekanlari();
+        IList<DemirbasMekanlariDB> TumDemirbasMekanlari(string userid, string userpass, string departman);
+        [OperationContract]
+        bool DemirbasMekanlariSil(string userid, string userpass, string departman, int id);
+        [OperationContract]
+        bool DemirbasMekanlariEkle(string userid, string userpass, string departman, DemirbasMekanlariDB demirbasmekanlari);
         #endregion
     }
 
@@ -177,18 +183,85 @@ namespace AnaOkuluWebService
     [DataContract]
     public class UcuncuSahisDB
     {
-        [DataMember] public int Id;
-        [DataMember] public  string Adi;
-        [DataMember] public  string Soyadi;
-        [DataMember] public string TcNo;
-        [DataMember] public string Ceptel;
-        [DataMember] public string EvTel;
-        [DataMember] public string YakinlikDerecesi;
-        [DataMember] public 
-    [Meslek]           NVARCHAR (50) NULL,
-    [OgrenciId]        INT           NOT NULL,
-    [Email]            NVARCHAR (50) NOT NULL,
+        [DataMember]
+        public int Id;
+        [DataMember]
+        public string Adi;
+        [DataMember]
+        public string Soyadi;
+        [DataMember]
+        public string TcNo;
+        [DataMember]
+        public string Ceptel;
+        [DataMember]
+        public string EvTel;
+        [DataMember]
+        public string YakinlikDerecesi;
+        [DataMember]
+        public string Meslek;
+        [DataMember]
+        public int OgrenciId;
+        [DataMember]
+        public string Email;
+    }
 
+    [DataContract]
+    public class DemirbaslarDB
+    {
+        [DataMember]
+        public int DEMIRBASID;
+        [DataMember]
+        public string Adi;
+        [DataMember]
+        public string Turu;
+        [DataMember]
+        public string Cinsi;
+        [DataMember]
+        public int Adet;
+        [DataMember]
+        public string Birim;
+        [DataMember]
+        public string AlindigiYer;
+        [DataMember]
+        public DateTime AlisTarihi;
+        [DataMember]
+        public decimal GirisTutari;
+        [DataMember]
+        public string AlisFaturaNo;
+        [DataMember]
+        public int KdvOrani;
+        [DataMember]
+        public decimal KdvTutari;
+        [DataMember]
+        public string SatisYeri;
+        [DataMember]
+        public DateTime SatisTarihi;
+        [DataMember]
+        public decimal SatisTutari;
+        [DataMember]
+        public string SatisFaturaNo;
+        [DataMember]
+        public decimal SatisKdvTutari;
+        [DataMember]
+        public string SatisNedeni;
+    }
+
+    [DataContract]
+    public class DemirbasMekanlariDB
+    {
+        [DataMember]
+        public int MekanId;
+        [DataMember]
+        public int DemirbasId;
+        [DataMember]
+        public string BulunduguYer;
+        [DataMember]
+        public string Adet;
+        [DataMember]
+        public string Sorumlusu;
+        [DataMember]
+        public DateTime TeslimTarihi;
+    }
 
 
 

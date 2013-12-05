@@ -253,7 +253,7 @@ namespace AnaOkuluWebService
                 return false;
             }
         }
-        public List<Demirbaslar> TumDemirbaslar(string userid, string userpass, string departman)
+        public IList<DemirbaslarDB> TumDemirbaslar(string userid, string userpass, string departman)
         {
             try
             {
@@ -261,7 +261,28 @@ namespace AnaOkuluWebService
                 {
                     using(AnaOkuluDBEntities db=new AnaOkuluDBEntities())
                     {
-                        var item=db.Demirbaslar.ToList<Demirbaslar>();
+                        var item = (from i in db.Demirbaslar
+                                    select new DemirbaslarDB
+                                    {
+                                        Adet = i.Adet.Value,
+                                        Adi = i.Adi,
+                                        AlindigiYer = i.AlindigiYer,
+                                        AlisFaturaNo = i.AlisFaturaNo,
+                                        AlisTarihi = i.AlisTarihi.Value,
+                                        Birim = i.Birim,
+                                        Cinsi = i.Cinsi,
+                                        DEMIRBASID = i.DEMIRBASID,
+                                        GirisTutari = i.GirisTutari.Value,
+                                        KdvOrani = i.KdvOrani.Value,
+                                        KdvTutari = i.KdvTutari.Value,
+                                        SatisFaturaNo = i.SatisFaturaNo,
+                                        SatisKdvTutari = i.SatisKdvTutari.Value ,
+                                        SatisNedeni = i.SatisNedeni,
+                                        SatisTarihi = i.SatisTarihi.Value ,
+                                        SatisTutari = i.SatisTutari.Value,
+                                        SatisYeri = i.SatisYeri,
+                                        Turu=i.Turu
+                                    }).ToList();
                         return item;
                     }
                 }
@@ -270,24 +291,72 @@ namespace AnaOkuluWebService
             }
             catch (Exception err)
             {
-                Demirbaslar dem = new Demirbaslar();
+                DemirbaslarDB dem = new DemirbaslarDB();
                 dem.Adi = err.Message;
-                var item = new List<Demirbaslar>();
+                var item = new List<DemirbaslarDB>();
                 item.Add(dem);
                 return item;
             }
         }
-        public bool DemirbasEkle(string userid, string userpass, string departman, Demirbaslar demirbas)
+        public bool DemirbasEkle(string userid, string userpass, string departman, DemirbaslarDB demirbas)
         {
             try
             {
                 if (GirisKontrol(userid, userpass, departman))
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
-                    {                       
-                        db.Demirbaslar.Add(demirbas);
+                    {
+                        Demirbaslar temp = new Demirbaslar
+                        {
+                            Adet = demirbas.Adet,
+                            Adi=demirbas.Adi,
+                            AlindigiYer=demirbas.AlindigiYer,
+                            AlisFaturaNo=demirbas.AlisFaturaNo,
+                            AlisTarihi=demirbas.AlisTarihi,
+                            Birim=demirbas.Birim,
+                            Cinsi=demirbas.Cinsi,
+                            DEMIRBASID=demirbas.DEMIRBASID,
+                            GirisTutari=demirbas.GirisTutari,
+                            KdvOrani=demirbas.KdvOrani,
+                            KdvTutari=demirbas.KdvTutari,
+                            SatisFaturaNo=demirbas.SatisFaturaNo,
+                            SatisKdvTutari=demirbas.SatisKdvTutari,
+                            SatisNedeni=demirbas.SatisNedeni,
+                            SatisTarihi=demirbas.SatisTarihi,
+                            SatisTutari=demirbas.SatisTutari,
+                            SatisYeri=demirbas.SatisYeri,
+                            Turu=demirbas.Turu
+                        };
+                        db.Demirbaslar.Add(temp);
                         db.SaveChanges();
                         return true;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
+        public bool DemirbasSil(string userid, string userpass, string departman, int demirbasid)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        var item = db.Demirbaslar.FirstOrDefault(f => f.DEMIRBASID == demirbasid);
+                        if (item != null)
+                        {
+                            db.Demirbaslar.Remove(item);
+                            db.SaveChanges();
+                            return true;
+                        }
+                        else
+                            throw new Exception("Veri Bulunamadi");
                     }
                 }
                 else
@@ -557,29 +626,92 @@ namespace AnaOkuluWebService
 
         #region DEMİRBAS MEKANLARI
 
-        public IList<DemirbasMekanlari> TumDemirbasMekanlari()
+        public IList<DemirbasMekanlariDB> TumDemirbasMekanlari(string userid, string userpass, string departman)
         {
             try
             {
-
-                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                 if (GirisKontrol(userid, userpass, departman))
                 {
-                    var list = (from item in db.DemirbasMekanlari
-                                select new DemirbasMekanlari
-                                {
-                                    MekanId = item.MekanId,
-                                    Adet=item.Adet,
-                                    BulunduguYer=item.BulunduguYer,
-                                    DemirbasId=item.DemirbasId,
-                                    Sorumlusu=item.Sorumlusu,
-                                    TeslimTarihi=item.TeslimTarihi
-                                }).ToList<DemirbasMekanlari>();
-                    return list;
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        var list = (from item in db.DemirbasMekanlari
+                                    select new DemirbasMekanlariDB
+                                    {
+                                        Adet = item.Adet,
+                                        BulunduguYer = item.BulunduguYer,
+                                        DemirbasId = item.DemirbasId,
+                                        MekanId = item.MekanId,
+                                        Sorumlusu = item.Sorumlusu,
+                                        TeslimTarihi = item.TeslimTarihi
+                                    }).ToList();
+                        return list;
+                    }
                 }
+                 else
+                     throw new Exception("Kullanici Dogrulanmıyor");
             }
             catch (Exception err)
             {
+
                 return null;
+            }
+        }
+        public bool DemirbasMekanlariSil(string userid, string userpass, string departman, int id)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        var item = db.DemirbasMekanlari.FirstOrDefault(f => f.MekanId == id);
+                        if (item != null)
+                        {
+                            db.DemirbasMekanlari.Remove(item);
+                            db.SaveChanges();
+                            return true;
+                        }
+                        else
+                            throw new Exception("Veri Bulunamadi");
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
+
+        public bool DemirbasMekanlariEkle(string userid, string userpass, string departman, DemirbasMekanlariDB demirbasmekanlari)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        DemirbasMekanlari temp = new DemirbasMekanlari
+                        {
+                            Adet=demirbasmekanlari.Adet,
+                            BulunduguYer=demirbasmekanlari.BulunduguYer,
+                            DemirbasId=demirbasmekanlari.DemirbasId,
+                            MekanId=demirbasmekanlari.MekanId,
+                            Sorumlusu=demirbasmekanlari.Sorumlusu,
+                            TeslimTarihi=demirbasmekanlari.TeslimTarihi
+                        };
+                        db.DemirbasMekanlari.Add(temp);
+                        db.SaveChanges();
+                        return true;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
             }
         }
         #endregion
@@ -605,5 +737,11 @@ namespace AnaOkuluWebService
                 return db.Yoklama.First(f=>f.OgrenciId==ogrenciid);
             }
         }
+
+
+
+
+
+        
     }
 }
