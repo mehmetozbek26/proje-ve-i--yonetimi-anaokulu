@@ -19,7 +19,7 @@ namespace AnaOkuluWebService
         public string BulunduguYer { get; set; }
         public string Adet { get; set; }
         public string Sorumlusu { get; set; }
-        public string TeslimTarihi { get; set; }
+        public System.DateTime TeslimTarihi { get; set; }
     
         public virtual Demirbaslar Demirbaslar { get; set; }
     }

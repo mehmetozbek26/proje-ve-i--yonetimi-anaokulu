@@ -16,17 +16,17 @@ namespace AnaOkuluWebService
     {
         public Siniflar()
         {
-            this.Ogrencilers = new HashSet<Ogrenciler>();
-            this.Yoklamas = new HashSet<Yoklama>();
+            this.Ogrenciler = new HashSet<Ogrenciler>();
+            this.Yoklama = new HashSet<Yoklama>();
         }
     
         public int sinifId { get; set; }
         public string sinifAdi { get; set; }
-        public Nullable<int> sinifkapasite { get; set; }
-        public Nullable<int> ögretmenId { get; set; }
+        public string sinifkapasite { get; set; }
+        public int ögretmenId { get; set; }
     
-        public virtual ICollection<Ogrenciler> Ogrencilers { get; set; }
-        public virtual Personeller Personeller { get; set; }
-        public virtual ICollection<Yoklama> Yoklamas { get; set; }
+        public virtual ICollection<Ogrenciler> Ogrenciler { get; set; }
+        public virtual Ogretmenler Ogretmenler { get; set; }
+        public virtual ICollection<Yoklama> Yoklama { get; set; }
     }
 }

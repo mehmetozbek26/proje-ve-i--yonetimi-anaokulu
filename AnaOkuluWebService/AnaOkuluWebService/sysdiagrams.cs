@@ -12,16 +12,12 @@ namespace AnaOkuluWebService
     using System;
     using System.Collections.Generic;
     
-    public partial class Servisler
+    public partial class sysdiagrams
     {
-        public Servisler()
-        {
-            this.Ogrenciler = new HashSet<Ogrenciler>();
-        }
-    
-        public int ServisID { get; set; }
-        public string ServisAdi { get; set; }
-    
-        public virtual ICollection<Ogrenciler> Ogrenciler { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

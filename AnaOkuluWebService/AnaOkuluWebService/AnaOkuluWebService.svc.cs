@@ -14,8 +14,12 @@ namespace AnaOkuluWebService
     // NOTE: In order to launch WCF Test Client for testing this service, please select AnaOkuluWebService.svc or AnaOkuluWebService.svc.cs at the Solution Explorer and start debugging.
     public class AnaOkuluWebService : IAnaOkuluWebService
     {
-
+        #region DEĞİŞKENLER
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ToString());
+        #endregion
+
+        #region KULLANICILAR
+
         public bool GirisKontrol(string userid, string userpass, string departman)
         {
             try
@@ -75,6 +79,77 @@ namespace AnaOkuluWebService
 
 
         }
+        public List<pwd> TumKullanicilar(string userid, string userpass, string departman)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using(AnaOkuluDBEntities db=new AnaOkuluDBEntities())
+                    {
+                        return db.pwd.ToList();
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                pwd temp = new pwd();
+                temp.firstname = err.Message;
+                var temp2 = new List<pwd>();
+                temp2.Add(temp);
+                return temp2;
+            }
+        }
+        public bool KullaniciEkle(string userid, string userpass, string departman, pwd pwd)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        db.pwd.Add(pwd);
+                        db.SaveChanges();
+                        return true;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
+        public bool KontrolAdVeSoyad(string userid, string userpass, string departman, string ad, string soyad)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        var item = db.pwd.FirstOrDefault(f => f.firstname == ad && f.lastname == soyad);
+                        if (item == null)
+                            return true;
+                        else
+                            return false;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
+
+        #endregion
+
+        #region YEMEKLER
         public List<Yemekler> TumYemekler(string userid, string userpass, string departman)
         {
             try
@@ -83,7 +158,7 @@ namespace AnaOkuluWebService
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
-                        var list = (from item in db.Yemeklers select item).ToList<Yemekler>();
+                        var list = (from item in db.Yemekler select item).ToList<Yemekler>();
                         return list;
                     }
                 }
@@ -99,32 +174,9 @@ namespace AnaOkuluWebService
                 return list;
             }
         }
-        public List<string> VeliEmailler(string userid, string userpass, string departman)
-        {
-             try
-            {
-                if (GirisKontrol(userid, userpass, departman))
-                {
-                    using(AnaOkuluDBEntities db=new AnaOkuluDBEntities())
-                    {
-                        var list=(from item in db.Velilers select item.Email).ToList<string>();
-                        return list;
-                    }
-                }
-                else
-                    throw new Exception("Kullanici Dogrulanmıyor");
-            }
-             catch (Exception err)
-             {
-                 
-                 var list = new List<String>();
-                 list.Add(err.Message);
-                 return list;
-             }
-        }
         public bool YemekEkle(string userid, string userpass, string departman, string corba, string anayemek, string tatli, string tarih)
         {
-             try
+            try
             {
                 if (GirisKontrol(userid, userpass, departman))
                 {
@@ -137,12 +189,12 @@ namespace AnaOkuluWebService
                 else
                     throw new Exception("Kullanici Dogrulanmıyor");
             }
-             catch (Exception err)
-             {
+            catch (Exception err)
+            {
 
-                 
-                 return false;
-             }
+
+                return false;
+            }
         }
         public bool YemekSil(string userid, string userpass, string departman, int id)
         {
@@ -152,10 +204,10 @@ namespace AnaOkuluWebService
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
-                        var item = db.Yemeklers.FirstOrDefault(f => f.YemekId == id);
+                        var item = db.Yemekler.FirstOrDefault(f => f.YemekId == id);
                         if (item != null)
                         {
-                            db.Yemeklers.Remove(item);
+                            db.Yemekler.Remove(item);
                             db.SaveChanges();
                             return true;
                         }
@@ -171,30 +223,170 @@ namespace AnaOkuluWebService
                 return false;
             }
         }
-        public List<Siniflar> TumSiniflar(string userid, string userpass, string departman)
+        #endregion
+
+        #region DEMİRBAS
+        public bool DemirbasGunceller(string userid, string userpass, string departman,Demirbaslar demirbas)
         {
-             try
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using(AnaOkuluDBEntities db=new AnaOkuluDBEntities())
+                    {
+                        var item = db.Demirbaslar.FirstOrDefault(f => f.DEMIRBASID == demirbas.DEMIRBASID);
+                        if (item != null)
+                        {
+                            item = demirbas;
+                            db.SaveChanges();
+                            return true;
+                        }
+                        else
+                            throw new Exception("Kayit Bulunamadı.");
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
+        public List<Demirbaslar> TumDemirbaslar(string userid, string userpass, string departman)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using(AnaOkuluDBEntities db=new AnaOkuluDBEntities())
+                    {
+                        var item=db.Demirbaslar.ToList<Demirbaslar>();
+                        return item;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                Demirbaslar dem = new Demirbaslar();
+                dem.Adi = err.Message;
+                var item = new List<Demirbaslar>();
+                item.Add(dem);
+                return item;
+            }
+        }
+        public bool DemirbasEkle(string userid, string userpass, string departman, Demirbaslar demirbas)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {                       
+                        db.Demirbaslar.Add(demirbas);
+                        db.SaveChanges();
+                        return true;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region SERVİSLER
+        public IList<ServislerDB> TumServisler()
+        {
+            try
+            {
+                
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        var item = (from temp in db.Servisler
+                                    select new ServislerDB
+                                    {
+                                        AD = temp.ServisAdi,
+                                        ID = temp.ServisID
+                                    }).ToList();
+                        return item;
+                    }               
+            }
+            catch (Exception err)
+            {          
+                return null;
+            }
+        }
+        #endregion
+
+        #region UCUNCU SAHIS
+
+        public List<UcuncuSahislar> TumUcuncuSahis()
+        {
+            try
+            {
+
+                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                {
+                    var list = (from item in db.UcuncuSahislar select item).ToList<UcuncuSahislar>();
+                    return list;
+                }
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region VELİLER
+        public List<string> VeliEmailler(string userid, string userpass, string departman)
+        {
+            try
             {
                 if (GirisKontrol(userid, userpass, departman))
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
-                        var list = (from item in db.Siniflars select item).ToList<Siniflar>();
+                        var list = (from item in db.Veliler select item.Email).ToList<string>();
                         return list;
                     }
                 }
                 else
                     throw new Exception("Kullanici Dogrulanmıyor");
             }
-             catch (Exception err)
-             {
-                 var s =new Siniflar();
-                 s.sinifAdi = err.Message;
-                 var list = new List<Siniflar>();
-                 list.Add(s);
-                 return list;
-             }
+            catch (Exception err)
+            {
+
+                var list = new List<String>();
+                list.Add(err.Message);
+                return list;
+            }
         }
+        public List<Veliler> TumVeliler()
+        {
+            try
+            {
+
+                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                {
+                    var list = (from item in db.Veliler select item).ToList<Veliler>();
+                    return list;
+                }
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region OGRETMENLER
         public List<OgretmelerDB> TumOgretmenler(string userid, string userpass, string departman)
         {
             try
@@ -203,14 +395,14 @@ namespace AnaOkuluWebService
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
-                        var list = (from item in db.Personellers
-                                    join item1 in db.Ogretmenlers on item.PersonelId equals item1.PersonelID
+                        var list = (from item in db.Personeller
+                                    join item1 in db.Ogretmenler on item.PersonelId equals item1.PersonelID
                                     select new OgretmelerDB
                                     {
-                                        AD=item1.Adi,
-                                        SOYAD=item1.Soyadi,
-                                        ID=item1.PersonelID,
-                                        TC=item.TcNo
+                                        AD = item1.Adi,
+                                        SOYAD = item1.Soyadi,
+                                        ID = item1.PersonelID,
+                                        TC = item.TcNo
                                     }).ToList<OgretmelerDB>();
                         return list;
                     }
@@ -225,7 +417,72 @@ namespace AnaOkuluWebService
                 var list = new List<OgretmelerDB>();
                 list.Add(s);
                 return list;
-            } 
+            }
+        }
+        #endregion
+
+        #region OGRENCİLER
+        public List<Ogrenciler> TumOgrenciler()
+        {
+            try
+            {
+
+                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                {
+                    var list = (from item in db.Ogrenciler select item).ToList<Ogrenciler>();
+                    return list;
+                }
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region    PERSONEL
+        public List<Personeller> TumPersoneller()
+        {
+            try
+            {
+
+                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                {
+                    var list = (from item in db.Personeller select item).ToList<Personeller>();
+                    return list;
+                }
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region SINIF
+        public List<Siniflar> TumSiniflar(string userid, string userpass, string departman)
+        {
+            try
+            {
+                if (GirisKontrol(userid, userpass, departman))
+                {
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        var list = (from item in db.Siniflar select item).ToList<Siniflar>();
+                        return list;
+                    }
+                }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
+            }
+            catch (Exception err)
+            {
+                var s = new Siniflar();
+                s.sinifAdi = err.Message;
+                var list = new List<Siniflar>();
+                list.Add(s);
+                return list;
+            }
         }
         public bool SinifSil(string userid, string userpass, string departman, int sinifid)
         {
@@ -235,10 +492,10 @@ namespace AnaOkuluWebService
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
-                        var item = db.Siniflars.FirstOrDefault(f => f.sinifId == sinifid);
+                        var item = db.Siniflar.FirstOrDefault(f => f.sinifId == sinifid);
                         if (item != null)
                         {
-                            db.Siniflars.Remove(item);
+                            db.Siniflar.Remove(item);
                             db.ChangeTracker.DetectChanges();
                             db.SaveChanges();
                             return true;
@@ -264,7 +521,7 @@ namespace AnaOkuluWebService
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
 
-                        
+
                         db.sp_SinifEkle(sinifadi, sinifkapasitesi, ogretmenid);
                         return true;
                     }
@@ -277,28 +534,75 @@ namespace AnaOkuluWebService
                 return false;
             }
         }
+        #endregion
 
-
-        public bool DemirbasGunceller(string userid, string userpass, string departman,int demirbasid, string DemirbasAdi, string DemirbasTuru, string DemirbasCinsi, string DemirbasAdeti, string DemirbasBirimi, string AlindigiYer, string AlisTarihi, string GirisTutari, string AlisFaturaNo, string KdvOrani, string KdvTutari, string SatisYeri, string SatisTarihi, string SatisTutari, string SatisFaturaNo, string SatisKdvTutari, string SatisNedeni)
+        #region YOKLAMA
+        public IEnumerable<Yoklama> TumYoklama()
         {
             try
             {
-                if (GirisKontrol(userid, userpass, departman))
+
+                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(" update Demirbaslar set Adi='" + DemirbasAdi + "',Turu='" + DemirbasTuru + "',Cinsi='" + DemirbasCinsi + "',Adet='" + DemirbasAdeti + "',Birim='" + DemirbasBirimi + "',AlindigiYer='" + AlindigiYer + "',AlisTarihi='" + AlisTarihi + "',GirisTutari='" + GirisTutari + "',AlisFaturaNo='" + AlisFaturaNo + "',KdvOrani='" + KdvOrani + "',KdvTutari='" + KdvTutari + "',SatisYeri='" + SatisYeri + "',SatisTarihi='" + SatisTarihi + "',SatisTutari='" + SatisTutari + "',SatisFaturaNo='" + SatisFaturaNo + "',SatisKdvTutari='" + SatisKdvTutari + "',SatisNedeni='" + SatisNedeni + "' where DEMIRBASID='"+demirbasid+"'", conn))
-                    {
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                        return true;
-                    }
+                    var list = db.Yoklama.AsEnumerable<Yoklama>();                                      
+                    return list;
                 }
-                else
-                    throw new Exception("Kullanici Dogrulanmıyor");
             }
             catch (Exception err)
             {
-                return false;
+                return null;
+            }
+        }
+        #endregion
+
+        #region DEMİRBAS MEKANLARI
+
+        public IList<DemirbasMekanlari> TumDemirbasMekanlari()
+        {
+            try
+            {
+
+                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                {
+                    var list = (from item in db.DemirbasMekanlari
+                                select new DemirbasMekanlari
+                                {
+                                    MekanId = item.MekanId,
+                                    Adet=item.Adet,
+                                    BulunduguYer=item.BulunduguYer,
+                                    DemirbasId=item.DemirbasId,
+                                    Sorumlusu=item.Sorumlusu,
+                                    TeslimTarihi=item.TeslimTarihi
+                                }).ToList<DemirbasMekanlari>();
+                    return list;
+                }
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public Yoklama Yoklama(int ogrenciid)
+        {
+            using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+            {
+                return db.Yoklama.First(f=>f.OgrenciId==ogrenciid);
             }
         }
     }

@@ -14,9 +14,17 @@ namespace AnaOkuluWebService
     
     public partial class Ogretmenler
     {
+        public Ogretmenler()
+        {
+            this.Siniflar = new HashSet<Siniflar>();
+        }
+    
         public int KayitId { get; set; }
         public int PersonelID { get; set; }
         public string Adi { get; set; }
         public string Soyadi { get; set; }
+    
+        public virtual Personeller Personeller { get; set; }
+        public virtual ICollection<Siniflar> Siniflar { get; set; }
     }
 }

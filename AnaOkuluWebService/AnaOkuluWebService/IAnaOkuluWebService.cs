@@ -11,40 +11,95 @@ namespace AnaOkuluWebService
     [ServiceContract]
     public interface IAnaOkuluWebService
     {
+        #region KULLANICI
+
         [OperationContract]
         bool GirisKontrol(string userid, string userpass, string departman);
-
         [OperationContract]
         bool ParolaDegistir(string oldpassword, string createpassword, string userid, string departman);
-
         [OperationContract]
-        List<Yemekler> TumYemekler(string userid, string userpass, string departman);
+        bool KullaniciEkle(string userid, string userpass, string departman, pwd pwd);
+        [OperationContract]
+        List<pwd> TumKullanicilar(string userid, string userpass, string departman);
+        [OperationContract]
+        bool KontrolAdVeSoyad(string userid, string userpass, string departman, string ad, string soyad);
 
+        #endregion
+
+        #region SERVİSLER
+        [OperationContract]
+        IList<ServislerDB> TumServisler();
+        #endregion
+
+        #region UCUNCU SAHIS
+        [OperationContract]
+        List<UcuncuSahislar> TumUcuncuSahis();
+        #endregion
+
+        #region VELİLER
         [OperationContract]
         List<string> VeliEmailler(string userid, string userpass, string departman);
-
         [OperationContract]
-        bool YemekEkle(string userid, string userpass, string departman, string corba, string anayemek, string tatli, string tarih);
+        List<Veliler> TumVeliler();
+        #endregion
 
-        [OperationContract]
-        bool YemekSil(string userid, string userpass, string departman, int id);
-
-        [OperationContract]
-        List<Siniflar> TumSiniflar(string userid, string userpass, string departman);
-
+        #region OGRETMENLER
         [OperationContract]
         List<OgretmelerDB> TumOgretmenler(string userid, string userpass, string departman);
+        #endregion
 
+        #region OGRENCİLER
         [OperationContract]
-        bool SinifSil(string userid, string userpass, string departman, int sinifid);
+        List<Ogrenciler> TumOgrenciler();
+        #endregion
 
+        #region    PERSONEL
+        [OperationContract]
+        List<Personeller> TumPersoneller();
+
+        #endregion
+
+        #region SINIF
         [OperationContract]
         bool SinifEkle(string userid, string userpass, string departman, string sinifadi, int sinifkapasitesi, int ogretmenid);
+        [OperationContract]
+        bool SinifSil(string userid, string userpass, string departman, int sinifid);
+        [OperationContract]
+        List<Siniflar> TumSiniflar(string userid, string userpass, string departman);
+        #endregion
+
+        #region YEMEK
+        [OperationContract]
+        bool YemekEkle(string userid, string userpass, string departman, string corba, string anayemek, string tatli, string tarih);
+        [OperationContract]
+        List<Yemekler> TumYemekler(string userid, string userpass, string departman);
+        [OperationContract]
+        bool YemekSil(string userid, string userpass, string departman, int id);
+        #endregion
+
+        #region DEMİRBAS
+        [OperationContract]
+        List<Demirbaslar> TumDemirbaslar(string userid, string userpass, string departman);
+        [OperationContract]
+        bool DemirbasEkle(string userid, string userpass, string departman, Demirbaslar demirbas);
+        [OperationContract]
+        bool DemirbasGunceller(string userid, string userpass, string departman, Demirbaslar demirbas);
+        #endregion
+
+        #region YOKLAMA
 
         [OperationContract]
-        bool DemirbasGunceller(string userid, string userpass, string departman,int demirbasid,string DemirbasAdi,string DemirbasTuru,string DemirbasCinsi,string DemirbasAdeti,string DemirbasBirimi,string AlindigiYer,string AlisTarihi,string GirisTutari,string AlisFaturaNo,string KdvOrani,string KdvTutari,string SatisYeri,string SatisTarihi,string SatisTutari,string SatisFaturaNo,string SatisKdvTutari,string SatisNedeni);
+        IEnumerable<Yoklama> TumYoklama();
+        [OperationContract]
+        Yoklama Yoklama(int ogrenciid);
+        #endregion
 
+        #region DEMİRBAS MEKANLARI
+        [OperationContract]
+        IList<DemirbasMekanlari> TumDemirbasMekanlari();
+        #endregion
     }
+
     [DataContract]
     public class OgretmelerDB
     {
@@ -57,4 +112,88 @@ namespace AnaOkuluWebService
         [DataMember]
         public int ID;
     }
+
+    [DataContract]
+    public class ServislerDB
+    {
+        [DataMember]
+        public int ID;
+        [DataMember]
+        public string AD;
+    }
+
+    [DataContract]
+    public class YoklamaDB
+    {
+        [DataMember]
+        public int ID;
+        [DataMember]
+        public int OgrenciId;
+        [DataMember]
+        public int SinifId;
+        [DataMember]
+        public DateTime Tarih;
+        [DataMember]
+        public string DevamsizlikTuru;
+        [DataMember]
+        public string Aciklama;   
+    }
+
+    [DataContract]
+    public class YemeklerDB
+    {
+        [DataMember] public int  YemekId;
+        [DataMember] public string Corba;
+        [DataMember] public string AnaYemek;
+        [DataMember] public string Tatli;
+        [DataMember] public DateTime Tarih;
+    }
+
+    [DataContract]
+    public class VelilerDB
+    {
+        [DataMember]
+        public int Id;
+        [DataMember]
+        public string TcNo;
+        [DataMember]
+        public string Adi;
+        [DataMember]
+        public string Soyadi;
+        [DataMember]
+        public string Ceptel;
+        [DataMember]
+        public string EvTel;
+        [DataMember]
+        public string YakinlikDerecesi;
+        [DataMember]
+        public string Meslek;
+        [DataMember]
+        public int OgrenciId;
+        [DataMember]
+        public string Email;
+    }
+
+    [DataContract]
+    public class UcuncuSahisDB
+    {
+        [DataMember] public int Id;
+        [DataMember] public  string Adi;
+        [DataMember] public  string Soyadi;
+        [DataMember] public string TcNo;
+        [DataMember] public string Ceptel;
+        [DataMember] public string EvTel;
+        [DataMember] public string YakinlikDerecesi;
+        [DataMember] public 
+    [Meslek]           NVARCHAR (50) NULL,
+    [OgrenciId]        INT           NOT NULL,
+    [Email]            NVARCHAR (50) NOT NULL,
+
+
+
+
+
+
+    
+
 }

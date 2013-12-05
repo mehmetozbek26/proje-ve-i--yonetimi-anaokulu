@@ -10,18 +10,13 @@
 namespace AnaOkuluWebService
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Servisler
+    public partial class sp_helpdiagrams_Result
     {
-        public Servisler()
-        {
-            this.Ogrenciler = new HashSet<Ogrenciler>();
-        }
-    
-        public int ServisID { get; set; }
-        public string ServisAdi { get; set; }
-    
-        public virtual ICollection<Ogrenciler> Ogrenciler { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

@@ -17,7 +17,8 @@ namespace AnaOkuluWebService
         public Ogrenciler()
         {
             this.UcuncuSahislar = new HashSet<UcuncuSahislar>();
-            this.Velilers = new HashSet<Veliler>();
+            this.Veliler = new HashSet<Veliler>();
+            this.Yoklama = new HashSet<Yoklama>();
         }
     
         public int OgrenciId { get; set; }
@@ -68,6 +69,7 @@ namespace AnaOkuluWebService
         public virtual Servisler Servisler { get; set; }
         public virtual Siniflar Siniflar { get; set; }
         public virtual ICollection<UcuncuSahislar> UcuncuSahislar { get; set; }
-        public virtual ICollection<Veliler> Velilers { get; set; }
+        public virtual ICollection<Veliler> Veliler { get; set; }
+        public virtual ICollection<Yoklama> Yoklama { get; set; }
     }
 }

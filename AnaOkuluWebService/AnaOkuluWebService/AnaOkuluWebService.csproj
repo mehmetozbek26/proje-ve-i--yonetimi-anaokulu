@@ -73,80 +73,89 @@
       <DependentUpon>AnaOkuluWebService.svc</DependentUpon>
     </Compile>
     <Compile Include="Demirbaslar.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="DemirbasMekanlari.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="IAnaOkuluWebService.cs" />
     <Compile Include="Ogrenciler.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Ogretmenler.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Personeller.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="pwd.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Servisler.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Siniflar.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="UcuncuSahislar.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Veliler.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="VeriTabaniModel.Context.cs">
+    <Compile Include="VeriTabaniModel1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VeriTabaniModel.Context.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="VeriTabaniModel.cs">
+    <Compile Include="VeriTabaniModel1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="VeriTabaniModel.Designer.cs">
+    <Compile Include="VeriTabaniModel1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VeriTabaniModel.edmx</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Yemekler.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
     <Compile Include="Yoklama.cs">
-      <DependentUpon>VeriTabaniModel.tt</DependentUpon>
+      <DependentUpon>VeriTabaniModel1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="VeriTabaniModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VeriTabaniModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="packages.config" />
-    <Content Include="VeriTabaniModel.Context.tt">
+    <EntityDeploy Include="VeriTabaniModel1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VeriTabaniModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="VeriTabaniModel1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VeriTabaniModel.edmx</DependentUpon>
-      <LastGenOutput>VeriTabaniModel.Context.cs</LastGenOutput>
+      <DependentUpon>VeriTabaniModel1.edmx</DependentUpon>
+      <LastGenOutput>VeriTabaniModel1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="VeriTabaniModel.edmx.diagram">
-      <DependentUpon>VeriTabaniModel.edmx</DependentUpon>
+    <Content Include="VeriTabaniModel1.edmx.diagram">
+      <DependentUpon>VeriTabaniModel1.edmx</DependentUpon>
     </Content>
-    <Content Include="VeriTabaniModel.tt">
+    <Content Include="VeriTabaniModel1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VeriTabaniModel.edmx</DependentUpon>
-      <LastGenOutput>VeriTabaniModel.cs</LastGenOutput>
+      <DependentUpon>VeriTabaniModel1.edmx</DependentUpon>
+      <LastGenOutput>VeriTabaniModel1.cs</LastGenOutput>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

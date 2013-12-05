@@ -16,7 +16,7 @@ namespace AnaOkuluWebService
     {
         public Personeller()
         {
-            this.Siniflars = new HashSet<Siniflar>();
+            this.Ogretmenler = new HashSet<Ogretmenler>();
         }
     
         public int PersonelId { get; set; }
@@ -40,9 +40,7 @@ namespace AnaOkuluWebService
         public string EgitimDurumu { get; set; }
         public Nullable<System.DateTime> AyrilisTarihi { get; set; }
         public string Departman { get; set; }
-        public string KtcNo { get; set; }
         public string Kuyruk { get; set; }
-        public string Kcinsiyet { get; set; }
         public string KkimlikSeriNo { get; set; }
         public string KdogumYeri { get; set; }
         public Nullable<System.DateTime> KdogumTarihi { get; set; }
@@ -56,6 +54,6 @@ namespace AnaOkuluWebService
         public string KVerilisYeri { get; set; }
         public string KKayitNo { get; set; }
     
-        public virtual ICollection<Siniflar> Siniflars { get; set; }
+        public virtual ICollection<Ogretmenler> Ogretmenler { get; set; }
     }
 }

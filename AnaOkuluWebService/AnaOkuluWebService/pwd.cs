@@ -18,16 +18,14 @@ namespace AnaOkuluWebService
         public string createpassword { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
-        public Nullable<int> yaş { get; set; }
-        public string cinsiyet { get; set; }
-        public Nullable<int> yıl { get; set; }
-        public string adres { get; set; }
-        public string irtibatno { get; set; }
-        public string şifre { get; set; }
-        public string şifredoğrula { get; set; }
+        public Nullable<int> age { get; set; }
+        public string gender { get; set; }
+        public Nullable<int> year { get; set; }
+        public string address { get; set; }
+        public string tel { get; set; }
         public string comdepart { get; set; }
-        public Nullable<int> gun { get; set; }
-        public Nullable<int> ay { get; set; }
+        public Nullable<int> day { get; set; }
+        public Nullable<int> mount { get; set; }
         public string confirmpassword { get; set; }
     }
 }

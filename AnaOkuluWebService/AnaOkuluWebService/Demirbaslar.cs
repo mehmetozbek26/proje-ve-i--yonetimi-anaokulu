@@ -16,7 +16,7 @@ namespace AnaOkuluWebService
     {
         public Demirbaslar()
         {
-            this.DemirbasMekanlaris = new HashSet<DemirbasMekanlari>();
+            this.DemirbasMekanlari = new HashSet<DemirbasMekanlari>();
         }
     
         public int DEMIRBASID { get; set; }
@@ -38,6 +38,6 @@ namespace AnaOkuluWebService
         public Nullable<decimal> SatisKdvTutari { get; set; }
         public string SatisNedeni { get; set; }
     
-        public virtual ICollection<DemirbasMekanlari> DemirbasMekanlaris { get; set; }
+        public virtual ICollection<DemirbasMekanlari> DemirbasMekanlari { get; set; }
     }
 }
