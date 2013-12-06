@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/AnaOkuluWebService/AnaOkuluWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" />
+  <xs:import schemaLocation="http://localhost/AnaOkuluWebService/AnaOkuluWebService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GirisKontrol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GirisKontrolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GirisKontrolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParolaDegistir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oldpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParolaDegistirResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ParolaDegistirResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KullaniciEkle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="pwd" nillable="true" type="q1:pwd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KullaniciEkleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KullaniciEkleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumKullanicilar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumKullanicilarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumKullanicilarResult" nillable="true" type="q2:ArrayOfpwd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KontrolAdVeSoyad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soyad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KontrolAdVeSoyadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KontrolAdVeSoyadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumServisler">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumServislerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumServislerResult" nillable="true" type="q3:ArrayOfServislerDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumUcuncuSahis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumUcuncuSahisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumUcuncuSahisResult" nillable="true" type="q4:ArrayOfUcuncuSahislar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VeliEmailler">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VeliEmaillerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="VeliEmaillerResult" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumVeliler">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumVelilerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumVelilerResult" nillable="true" type="q6:ArrayOfVeliler" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumOgretmenler">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumOgretmenlerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumOgretmenlerResult" nillable="true" type="q7:ArrayOfOgretmelerDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumOgrenciler">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumOgrencilerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumOgrencilerResult" nillable="true" type="q8:ArrayOfOgrenciler" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumPersoneller">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumPersonellerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumPersonellerResult" nillable="true" type="q9:ArrayOfPersoneller" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SinifEkle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sinifadi" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sinifkapasitesi" type="xs:int" />
+        <xs:element minOccurs="0" name="ogretmenid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SinifEkleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SinifEkleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SinifSil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sinifid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SinifSilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SinifSilResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumSiniflar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumSiniflarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumSiniflarResult" nillable="true" type="q10:ArrayOfSiniflar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="YemekEkle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="corba" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="anayemek" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tatli" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tarih" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="YemekEkleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="YemekEkleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumYemekler">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumYemeklerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumYemeklerResult" nillable="true" type="q11:ArrayOfYemekler" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="YemekSil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="YemekSilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="YemekSilResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumDemirbaslar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumDemirbaslarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumDemirbaslarResult" nillable="true" type="q12:ArrayOfDemirbaslarDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasEkle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="demirbas" nillable="true" type="q13:DemirbaslarDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasEkleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemirbasEkleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasGunceller">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="demirbas" nillable="true" type="q14:Demirbaslar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasGuncellerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemirbasGuncellerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasSil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="demirbasid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasSilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemirbasSilResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumYoklama">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumYoklamaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumYoklamaResult" nillable="true" type="q15:ArrayOfYoklama" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Yoklama">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ogrenciid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="YoklamaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="YoklamaResult" nillable="true" type="q16:Yoklama" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumDemirbasMekanlari">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TumDemirbasMekanlariResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="TumDemirbasMekanlariResult" nillable="true" type="q17:ArrayOfDemirbasMekanlariDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasMekanlariSil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasMekanlariSilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemirbasMekanlariSilResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasMekanlariEkle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userpass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departman" nillable="true" type="xs:string" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" minOccurs="0" name="demirbasmekanlari" nillable="true" type="q18:DemirbasMekanlariDB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemirbasMekanlariEkleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DemirbasMekanlariEkleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

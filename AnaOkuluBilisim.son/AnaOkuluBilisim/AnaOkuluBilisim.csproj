@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9579217-441B-4856-B1CE-C0B54652F9C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnaOkuluBilisim</RootNamespace>
+    <AssemblyName>AnaOkuluBilisim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="DemirBasGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemirBasGuncelle.Designer.cs">
+      <DependentUpon>DemirBasGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemirbasKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemirbasKayit.Designer.cs">
+      <DependentUpon>DemirbasKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmnewaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmnewaccount.Designer.cs">
+      <DependentUpon>frmnewaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeForm.Designer.cs">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parola.cs" />
+    <Compile Include="Models\Personel.cs" />
+    <Compile Include="Models\Sinif.cs" />
+    <Compile Include="OgrDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrDuzenle.Designer.cs">
+      <DependentUpon>OgrDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciKayit.Designer.cs">
+      <DependentUpon>OgrenciKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogrenciler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogrenciler.Designer.cs">
+      <DependentUpon>Ogrenciler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGuncelle.Designer.cs">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayit.Designer.cs">
+      <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AnaOkuluService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SinifEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinifEkle.Designer.cs">
+      <DependentUpon>SinifEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YemekList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YemekList.Designer.cs">
+      <DependentUpon>YemekList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoklamaDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoklamaDurum.designer.cs">
+      <DependentUpon>YoklamaDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoklamaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoklamaEkle.Designer.cs">
+      <DependentUpon>YoklamaEkle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemirBasGuncelle.resx">
+      <DependentUpon>DemirBasGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemirbasKayit.resx">
+      <DependentUpon>DemirbasKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmnewaccount.resx">
+      <DependentUpon>frmnewaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeForm.resx">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrDuzenle.resx">
+      <DependentUpon>OgrDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciKayit.resx">
+      <DependentUpon>OgrenciKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogrenciler.resx">
+      <DependentUpon>Ogrenciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGuncelle.resx">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayit.resx">
+      <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SinifEkle.resx">
+      <DependentUpon>SinifEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YemekList.resx">
+      <DependentUpon>YemekList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoklamaDurum.resx">
+      <DependentUpon>YoklamaDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoklamaEkle.resx">
+      <DependentUpon>YoklamaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Thumbs.db" />
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.DemirbaslarDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.DemirbasMekanlariDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Ogrenciler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.OgretmelerDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Personeller.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.pwd.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.ServislerDB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Siniflar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.UcuncuSahislar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Veliler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Yemekler.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Yoklama.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluWebService.wsdl" />
+    <None Include="Service References\AnaOkuluService\AnaOkuluWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AnaOkuluService\AnaOkuluWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\b.gif" />
+    <None Include="Service References\AnaOkuluService\AnaOkuluWebService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AnaOkuluService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AnaOkuluService\configuration.svcinfo" />
+    <None Include="Service References\AnaOkuluService\configuration91.svcinfo" />
+    <None Include="Service References\AnaOkuluService\AnaOkuluWebService.disco" />
+    <None Include="Resources\cancel1.png" />
+    <None Include="Resources\can11.png" />
+    <None Include="Resources\can2.png" />
+    <None Include="Resources\ca21.png" />
+    <None Include="Resources\ca11.png" />
+    <None Include="Resources\ca3.png" />
+    <None Include="Resources\buuu1.gif" />
+    <None Include="Resources\butt1.png" />
+    <None Include="Resources\blue1.gif" />
+    <None Include="Resources\bllll1.png" />
+    <None Include="Resources\bc1.gif" />
+    <None Include="Resources\bbbb1.png" />
+    <None Include="Resources\b1.gif" />
+    <Content Include="Resources\bbbb.png" />
+    <Content Include="Resources\bc.gif" />
+    <Content Include="Resources\bllll.png" />
+    <Content Include="Resources\blue.gif" />
+    <Content Include="Resources\butt.png" />
+    <Content Include="Resources\buuu.gif" />
+    <Content Include="Resources\ca.png" />
+    <Content Include="Resources\ca1.png" />
+    <Content Include="Resources\ca2.png" />
+    <Content Include="Resources\can.png" />
+    <Content Include="Resources\can1.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\com.jpg" />
+    <Content Include="Resources\dfdfdf.gif" />
+    <Content Include="Resources\f1.png" />
+    <Content Include="Resources\fdgd.gif" />
+    <Content Include="Resources\fg.gif" />
+    <Content Include="Resources\fghfj.png" />
+    <Content Include="Resources\fv.gif" />
+    <Content Include="Resources\g5.png" />
+    <Content Include="Resources\g6.png" />
+    <Content Include="Resources\g7.png" />
+    <Content Include="Resources\gfff.png" />
+    <Content Include="Resources\gg.png" />
+    <Content Include="Resources\gggg.png" />
+    <Content Include="Resources\himmel.jpg" />
+    <None Include="Resources\largeTransparent.gif" />
+    <Content Include="Resources\lggg.png" />
+    <Content Include="Resources\lime.png" />
+    <Content Include="Resources\rrrr.png" />
+    <Content Include="Resources\Shivam4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AnaOkuluService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
