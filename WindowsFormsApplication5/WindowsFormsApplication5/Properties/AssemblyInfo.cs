@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ChanceThePassword")]
+[assembly: AssemblyTitle("WindowsFormsApplication5")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ChanceThePassword")]
+[assembly: AssemblyProduct("WindowsFormsApplication5")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("be33a993-c015-4ebc-9c3c-8971a6e8d5d9")]
+[assembly: Guid("44132251-86ab-46a8-a7bc-58e4d904cb5d")]
 
 // Version information for an assembly consists of the following four values:
 //

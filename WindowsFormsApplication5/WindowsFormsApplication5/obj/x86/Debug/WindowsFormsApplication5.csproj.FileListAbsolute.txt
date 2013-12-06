@@ -1,0 +1,9 @@
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.Form1.resources
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.exe
+C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.pdb

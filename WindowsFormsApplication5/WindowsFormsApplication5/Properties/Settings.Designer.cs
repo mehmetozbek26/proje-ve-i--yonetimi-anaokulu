@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChanceThePassword.Properties
+namespace WindowsFormsApplication5.Properties
 {
 
 
