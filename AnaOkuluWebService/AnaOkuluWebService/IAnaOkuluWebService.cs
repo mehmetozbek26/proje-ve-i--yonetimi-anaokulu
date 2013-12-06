@@ -50,12 +50,14 @@ namespace AnaOkuluWebService
 
         #region OGRENCİLER
         [OperationContract]
-        List<Ogrenciler> TumOgrenciler();
+        IList<OgrencilerDB> TumOgrenciler(string userid, string userpass, string departman);
+        [OperationContract]
+        IList<OgrencilerDB> OgrecilerSinifaGore(string userid, string userpass, string departman, int sinifid);
         #endregion
 
         #region    PERSONEL
         [OperationContract]
-        List<Personeller> TumPersoneller();
+        List<PersonellerDB> TumPersoneller();
 
         #endregion
 
@@ -65,7 +67,7 @@ namespace AnaOkuluWebService
         [OperationContract]
         bool SinifSil(string userid, string userpass, string departman, int sinifid);
         [OperationContract]
-        List<Siniflar> TumSiniflar(string userid, string userpass, string departman);
+        List<SiniflarDB> TumSiniflar(string userid, string userpass, string departman);
         #endregion
 
         #region YEMEK
@@ -83,7 +85,7 @@ namespace AnaOkuluWebService
         [OperationContract]
         bool DemirbasEkle(string userid, string userpass, string departman, DemirbaslarDB demirbas);
         [OperationContract]
-        bool DemirbasGunceller(string userid, string userpass, string departman, Demirbaslar demirbas);
+        bool DemirbasGunceller(string userid, string userpass, string departman, DemirbaslarDB demirbas);
         [OperationContract]
         bool DemirbasSil(string userid, string userpass, string departman,int demirbasid);
         #endregion
@@ -138,7 +140,7 @@ namespace AnaOkuluWebService
         [DataMember]
         public int SinifId;
         [DataMember]
-        public DateTime Tarih;
+        public DateTime? Tarih;
         [DataMember]
         public string DevamsizlikTuru;
         [DataMember]
@@ -152,7 +154,7 @@ namespace AnaOkuluWebService
         [DataMember] public string Corba;
         [DataMember] public string AnaYemek;
         [DataMember] public string Tatli;
-        [DataMember] public DateTime Tarih;
+        [DataMember] public DateTime? Tarih;
     }
 
     [DataContract]
@@ -223,7 +225,7 @@ namespace AnaOkuluWebService
         [DataMember]
         public string AlindigiYer;
         [DataMember]
-        public DateTime AlisTarihi;
+        public DateTime? AlisTarihi;
         [DataMember]
         public decimal GirisTutari;
         [DataMember]
@@ -260,12 +262,147 @@ namespace AnaOkuluWebService
         [DataMember]
         public string Sorumlusu;
         [DataMember]
-        public DateTime TeslimTarihi;
+        public DateTime? TeslimTarihi;
     }
 
 
+    [DataContract]
+    public class SiniflarDB
+    {
+        [DataMember]
+        public int sinifId;
+        [DataMember]
+        public string sinifAdi;
+        [DataMember]
+        public string sinifkapasite;
+        [DataMember]
+        public int ögretmenId;
+    }
 
+    [DataContract]
+    public class OgrencilerDB
+    {
+        [DataMember] public int OgrenciId;
+        [DataMember] public string Adi;
+        [DataMember] public string Soyadi;
+        [DataMember] public string Adres;
+        [DataMember] public string Semt;
+        [DataMember] public string ilce;
+        [DataMember] public string il;
+        [DataMember] public string PostaKodu;
+        [DataMember] public string EvTel;
+        [DataMember] public string KanGrubu;
+        [DataMember] public string TcNo;
+        [DataMember] public string Uyruk;
+        [DataMember] public string Cinsiyet;
+        [DataMember] public string KimlikSeriNo;
+        [DataMember] public string DogumYeri;
+        [DataMember] public DateTime? DogumTarihi;
+        [DataMember] public string Dogumili;
+        [DataMember] public string Dogumilce;
+        [DataMember] public string Mahalle;
+        [DataMember] public string Koy;
+        [DataMember] public string Cilt;
+        [DataMember] public string Aile;
+        [DataMember] public string SiraNo;
+        [DataMember] public string VerilisYeri;
+        [DataMember] public string KayitNo;
+        [DataMember] public byte[] Resim;
+        [DataMember] public DateTime? KayitTarihi;
+        [DataMember] public DateTime? CikisTarihi;
+        [DataMember] public int SinifId;
+        [DataMember] public int ServisId;
+        [DataMember] public string DavranisSorunu;
+        [DataMember] public string Yapilanlar;
+        [DataMember] public string YasitlariylaIliskisi;
+        [DataMember] public string Fobileri;
+        [DataMember] public string SevdigiYiyecekler;
+        [DataMember] public string Asilar;
+        [DataMember] public string GecirdigiHastaliklar;
+        [DataMember] public string Alerjiler;
+        [DataMember] public string Ameliyatlar;
+        [DataMember] public string SaglikSorunlari;
+        [DataMember] public string ilac;
+        [DataMember] public string Protez;
+        [DataMember] public string Diyet;
+        [DataMember] public string RuhsalDurum;
 
+    }
+
+    [DataContract]
+    public class PersonellerDB
+    {
+        [DataMember]
+        public int PersonelId;
+        [DataMember]
+        public string TcNo;
+        [DataMember]
+        public string Adi;
+        [DataMember]
+        public string Soyadi;
+        [DataMember]
+        public string SicilNo;
+        [DataMember]
+        public DateTime? BasvuruTarihi;
+        [DataMember]
+        public DateTime? BaslamaTarihi;
+        [DataMember]
+        public string AskerlikDurumu;
+        [DataMember]
+        public string TecilBitisYili;
+        [DataMember]
+        public string KanGrubu;
+        [DataMember]
+        public string Cinsiyet;
+        [DataMember]
+        public string Adres;
+        [DataMember]
+        public string Semt;
+        [DataMember]
+        public string Ilce;
+        [DataMember]
+        public string il;
+        [DataMember]
+        public string Mail;
+        [DataMember]
+        public string EvTel;
+        [DataMember]
+        public string CepTel;
+        [DataMember]
+        public string EgitimDurumu;
+        [DataMember]
+        public DateTime? AyrilisTarihi;
+        [DataMember]
+        public string Departman;
+        [DataMember]
+        public string Kuyruk;
+        [DataMember]
+        public string KkimlikSeriNo;
+        [DataMember]
+        public string KdogumYeri;
+        [DataMember]
+        public DateTime? KdogumTarihi;
+        [DataMember]
+        public string Kdogumili;
+        [DataMember]
+        public string Kdogumilce;
+        [DataMember]
+        public string Kmahalle;
+        [DataMember]
+        public string Kkoy;
+        [DataMember]
+        public string Kcilt;
+        [DataMember]
+        public string Kaile;
+        [DataMember]
+        public string KSiraNo;
+        [DataMember]
+        public string KVerilisYeri;
+        [DataMember]
+        public string KKayitNo;
+    }
+
+ 
 
     
 

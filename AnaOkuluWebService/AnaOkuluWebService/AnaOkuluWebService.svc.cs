@@ -226,7 +226,7 @@ namespace AnaOkuluWebService
         #endregion
 
         #region DEMİRBAS
-        public bool DemirbasGunceller(string userid, string userpass, string departman,Demirbaslar demirbas)
+        public bool DemirbasGunceller(string userid, string userpass, string departman,DemirbaslarDB demirbas)
         {
             try
             {
@@ -237,7 +237,24 @@ namespace AnaOkuluWebService
                         var item = db.Demirbaslar.FirstOrDefault(f => f.DEMIRBASID == demirbas.DEMIRBASID);
                         if (item != null)
                         {
-                            item = demirbas;
+                            item.Adet = demirbas.Adet;
+                            item.Adi = demirbas.Adi;
+                            item.AlindigiYer = demirbas.AlindigiYer;
+                            item.AlisFaturaNo = demirbas.AlisFaturaNo;
+                            item.AlisTarihi = demirbas.AlisTarihi;
+                            item.Birim = demirbas.Birim;
+                            item.Cinsi = demirbas.Cinsi;
+                            item.DEMIRBASID = demirbas.DEMIRBASID;
+                            item.GirisTutari = demirbas.GirisTutari;
+                            item.KdvOrani = demirbas.KdvOrani;
+                            item.KdvTutari = demirbas.KdvTutari;
+                            item.SatisFaturaNo = demirbas.SatisFaturaNo;
+                            item.SatisKdvTutari = demirbas.SatisKdvTutari;
+                            item.SatisNedeni = demirbas.SatisNedeni;
+                            item.SatisTarihi = demirbas.SatisTarihi;
+                            item.SatisTutari = demirbas.SatisTutari;
+                            item.SatisYeri = demirbas.SatisYeri;
+                            item.Turu = demirbas.Turu;
                             db.SaveChanges();
                             return true;
                         }
@@ -491,33 +508,137 @@ namespace AnaOkuluWebService
         #endregion
 
         #region OGRENCİLER
-        public List<Ogrenciler> TumOgrenciler()
+        public IList<OgrencilerDB> TumOgrenciler(string userid, string userpass, string departman)
         {
             try
             {
-
-                using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                if (GirisKontrol(userid, userpass, departman))
                 {
-                    var list = (from item in db.Ogrenciler select item).ToList<Ogrenciler>();
-                    return list;
+                    using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
+                    {
+                        ;
+                        DateTime? dt = Convert.ToDateTime(null ?? null);
+
+                        
+                        var list = (from item in db.Ogrenciler
+                                    select new OgrencilerDB
+                                    {
+                                        Adi = item.Adi,
+                                        Adres = item.Adres,
+                                        Aile = item.Aile,
+                                        Alerjiler = item.Alerjiler,
+                                        Ameliyatlar = item.Ameliyatlar,
+                                        Asilar = item.Asilar,
+                                        CikisTarihi = Convert.ToDateTime(item.CikisTarihi.Value.ToShortDateString() ?? null),
+                                        Cilt = item.Cilt,
+                                        Cinsiyet = item.Cinsiyet,
+                                        DavranisSorunu = item.DavranisSorunu,
+                                        Diyet = item.Diyet,
+                                        Dogumilce = item.Dogumilce,
+                                        Dogumili = item.Dogumili,
+                                        DogumTarihi = item.DogumTarihi.Value,
+                                        DogumYeri = item.DogumYeri,
+                                        EvTel = item.EvTel,
+                                        Fobileri = item.Fobileri,
+                                        GecirdigiHastaliklar=item.GecirdigiHastaliklar,
+                                        il=item.il,
+                                        ilac=item.ilac,
+                                        ilce=item.ilce,
+                                        KanGrubu=item.KanGrubu,
+                                        KayitNo=item.KayitNo,
+                                        KayitTarihi=item.KayitTarihi.Value,
+                                        KimlikSeriNo=item.KimlikSeriNo,
+                                        Koy=item.Koy,
+                                        Mahalle=item.Mahalle,
+                                        OgrenciId=item.OgrenciId,
+                                        PostaKodu=item.PostaKodu,
+                                        Protez=item.Protez,
+                                        Resim=item.Resim,
+                                        RuhsalDurum=item.RuhsalDurum,
+                                        SaglikSorunlari=item.SaglikSorunlari,
+                                        Semt=item.Semt,
+                                        ServisId=item.ServisId,
+                                        SevdigiYiyecekler=item.SevdigiYiyecekler,
+                                        SinifId=item.SinifId,
+                                        SiraNo=item.SiraNo,
+                                        Soyadi=item.Soyadi,
+                                        TcNo=item.TcNo,
+                                        Uyruk=item.Uyruk,
+                                        VerilisYeri=item.VerilisYeri,
+                                        Yapilanlar=item.Yapilanlar,
+                                        YasitlariylaIliskisi=item.YasitlariylaIliskisi
+                                    }).ToList();
+                        return list;
+                    }
                 }
+                else
+                    throw new Exception("Kullanici Dogrulanmıyor");
             }
             catch (Exception err)
             {
+
+                var list = new List<String>();
+                list.Add(err.Message);
                 return null;
             }
+        }
+
+        public IList<OgrencilerDB> OgrecilerSinifaGore(string userid, string userpass, string departman, int sinifid)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 
         #region    PERSONEL
-        public List<Personeller> TumPersoneller()
+        public List<PersonellerDB> TumPersoneller()
         {
             try
             {
 
                 using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                 {
-                    var list = (from item in db.Personeller select item).ToList<Personeller>();
+                    var list = db.Personeller.Select(item => new PersonellerDB
+                    {
+                        Adi = item.Adi,
+                        Adres = item.Adres,
+                        AskerlikDurumu = item.AskerlikDurumu,
+                        AyrilisTarihi = item.AyrilisTarihi,
+                        BaslamaTarihi = item.BaslamaTarihi,
+                        BasvuruTarihi = item.BasvuruTarihi,
+                        CepTel = item.CepTel,
+                        Cinsiyet = item.Cinsiyet,
+                        Departman = item.Departman,
+                        EgitimDurumu = item.EgitimDurumu,
+                        EvTel = item.EvTel,
+                        il = item.il,
+                        Ilce = item.Ilce,
+                        Kaile = item.Kaile,
+                        KanGrubu = item.KanGrubu,
+                        Kcilt = item.Kcilt,
+                        Kdogumilce = item.Kdogumilce,
+                        Kdogumili = item.Kdogumili,
+                        KdogumTarihi = item.KdogumTarihi,
+                        KdogumYeri = item.KdogumYeri,
+                        KKayitNo = item.KKayitNo,
+                        KkimlikSeriNo = item.KkimlikSeriNo,
+                        Kkoy = item.Kkoy,
+                        Kmahalle = item.Kmahalle,
+                        KSiraNo = item.KSiraNo,
+                        Kuyruk = item.Kuyruk,
+                        KVerilisYeri = item.KVerilisYeri,
+                        Mail = item.Mail,
+                        PersonelId = item.PersonelId,
+                        Semt = item.Semt,
+                        SicilNo = item.SicilNo,
+                        Soyadi = item.Soyadi,
+                        TcNo = item.TcNo,
+                        TecilBitisYili = item.TecilBitisYili,
+       
+
+
+
+
+                    }).ToList();
                     return list;
                 }
             }
@@ -529,7 +650,7 @@ namespace AnaOkuluWebService
         #endregion
 
         #region SINIF
-        public List<Siniflar> TumSiniflar(string userid, string userpass, string departman)
+        public List<SiniflarDB> TumSiniflar(string userid, string userpass, string departman)
         {
             try
             {
@@ -537,7 +658,14 @@ namespace AnaOkuluWebService
                 {
                     using (AnaOkuluDBEntities db = new AnaOkuluDBEntities())
                     {
-                        var list = (from item in db.Siniflar select item).ToList<Siniflar>();
+                        var list = (from item in db.Siniflar
+                                    select new SiniflarDB
+                                    {
+                                        ögretmenId=item.ögretmenId,
+                                        sinifAdi=item.sinifAdi,
+                                        sinifId=item.sinifId,
+                                        sinifkapasite=item.sinifkapasite 
+                                    }).ToList();
                         return list;
                     }
                 }
@@ -546,9 +674,9 @@ namespace AnaOkuluWebService
             }
             catch (Exception err)
             {
-                var s = new Siniflar();
+                var s = new SiniflarDB();
                 s.sinifAdi = err.Message;
-                var list = new List<Siniflar>();
+                var list = new List<SiniflarDB>();
                 list.Add(s);
                 return list;
             }
@@ -699,7 +827,7 @@ namespace AnaOkuluWebService
                             DemirbasId=demirbasmekanlari.DemirbasId,
                             MekanId=demirbasmekanlari.MekanId,
                             Sorumlusu=demirbasmekanlari.Sorumlusu,
-                            TeslimTarihi=demirbasmekanlari.TeslimTarihi
+                            TeslimTarihi=Convert.ToDateTime(demirbasmekanlari.TeslimTarihi.Value.ToShortDateString() ?? null)
                         };
                         db.DemirbasMekanlari.Add(temp);
                         db.SaveChanges();
@@ -737,6 +865,9 @@ namespace AnaOkuluWebService
                 return db.Yoklama.First(f=>f.OgrenciId==ogrenciid);
             }
         }
+
+
+
 
 
 
