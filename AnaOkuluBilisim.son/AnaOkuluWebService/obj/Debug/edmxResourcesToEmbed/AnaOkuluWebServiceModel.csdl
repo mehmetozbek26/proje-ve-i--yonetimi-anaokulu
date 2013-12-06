@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AnaOkuluDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AnaOkuluDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Demirbaslars" EntityType="AnaOkuluDBModel.Demirbaslar" />
+    <EntitySet Name="DemirbasMekanlaris" EntityType="AnaOkuluDBModel.DemirbasMekanlari" />
+    <EntitySet Name="Ogrencilers" EntityType="AnaOkuluDBModel.Ogrenciler" />
+    <EntitySet Name="Ogretmenlers" EntityType="AnaOkuluDBModel.Ogretmenler" />
+    <EntitySet Name="Personellers" EntityType="AnaOkuluDBModel.Personeller" />
+    <EntitySet Name="pwds" EntityType="AnaOkuluDBModel.pwd" />
+    <EntitySet Name="Servislers" EntityType="AnaOkuluDBModel.Servisler" />
+    <EntitySet Name="Siniflars" EntityType="AnaOkuluDBModel.Siniflar" />
+    <EntitySet Name="Yemeklers" EntityType="AnaOkuluDBModel.Yemekler" />
+    <EntitySet Name="Yoklamas" EntityType="AnaOkuluDBModel.Yoklama" />
+    <AssociationSet Name="FK_Table_ToTable_Deid" Association="AnaOkuluDBModel.FK_Table_ToTable_Deid">
+      <End Role="Demirbaslar" EntitySet="Demirbaslars" />
+      <End Role="DemirbasMekanlari" EntitySet="DemirbasMekanlaris" />
+    </AssociationSet>
+    <AssociationSet Name="ServisId" Association="AnaOkuluDBModel.ServisId">
+      <End Role="Servisler" EntitySet="Servislers" />
+      <End Role="Ogrenciler" EntitySet="Ogrencilers" />
+    </AssociationSet>
+    <AssociationSet Name="SinifId" Association="AnaOkuluDBModel.SinifId">
+      <End Role="Siniflar" EntitySet="Siniflars" />
+      <End Role="Ogrenciler" EntitySet="Ogrencilers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_ToTable" Association="AnaOkuluDBModel.FK_Table_ToTable">
+      <End Role="Personeller" EntitySet="Personellers" />
+      <End Role="Siniflar" EntitySet="Siniflars" />
+    </AssociationSet>
+    <AssociationSet Name="YokSinifid" Association="AnaOkuluDBModel.YokSinifid">
+      <End Role="Siniflar" EntitySet="Siniflars" />
+      <End Role="Yoklama" EntitySet="Yoklamas" />
+    </AssociationSet>
+    <FunctionImport Name="ParolaDegistir">
+      <Parameter Name="confirmpassword" Mode="In" Type="String" />
+      <Parameter Name="createpassword" Mode="In" Type="String" />
+      <Parameter Name="userid" Mode="In" Type="String" />
+      <Parameter Name="returnbit" Mode="InOut" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DemirbasEkle">
+      <Parameter Name="Adi" Mode="In" Type="String" />
+      <Parameter Name="Turu" Mode="In" Type="String" />
+      <Parameter Name="Cinsi" Mode="In" Type="String" />
+      <Parameter Name="Adet" Mode="In" Type="Int32" />
+      <Parameter Name="Birim" Mode="In" Type="String" />
+      <Parameter Name="AlindigiYer" Mode="In" Type="String" />
+      <Parameter Name="AlisTarihi" Mode="In" Type="String" />
+      <Parameter Name="GirisTutari" Mode="In" Type="Decimal" />
+      <Parameter Name="AlisFaturaNo" Mode="In" Type="String" />
+      <Parameter Name="KdvOrani" Mode="In" Type="Int32" />
+      <Parameter Name="KdvTutari" Mode="In" Type="Decimal" />
+      <Parameter Name="SatisYeri" Mode="In" Type="String" />
+      <Parameter Name="SatisTarihi" Mode="In" Type="DateTime" />
+      <Parameter Name="SatisTutari" Mode="In" Type="Decimal" />
+      <Parameter Name="SatisFaturaNo" Mode="In" Type="String" />
+      <Parameter Name="SatisKdvTutari" Mode="In" Type="Decimal" />
+      <Parameter Name="SatisNedeni" Mode="In" Type="String" />
+      <Parameter Name="DemirbasID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DemirbasMekaniEkle">
+      <Parameter Name="DemirbasId" Mode="In" Type="Int32" />
+      <Parameter Name="BulunduguYer" Mode="In" Type="String" />
+      <Parameter Name="Adet" Mode="In" Type="String" />
+      <Parameter Name="Sorumlusu" Mode="In" Type="String" />
+      <Parameter Name="TeslimTarihi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_OgrenciKayitEkle">
+      <Parameter Name="Adi" Mode="In" Type="String" />
+      <Parameter Name="Soyadi" Mode="In" Type="String" />
+      <Parameter Name="Adres" Mode="In" Type="String" />
+      <Parameter Name="Semt" Mode="In" Type="String" />
+      <Parameter Name="ilce" Mode="In" Type="String" />
+      <Parameter Name="il" Mode="In" Type="String" />
+      <Parameter Name="PostaKodu" Mode="In" Type="String" />
+      <Parameter Name="EvTel" Mode="In" Type="String" />
+      <Parameter Name="KanGrubu" Mode="In" Type="String" />
+      <Parameter Name="TcNo" Mode="In" Type="String" />
+      <Parameter Name="Uyruk" Mode="In" Type="String" />
+      <Parameter Name="Cinsiyet" Mode="In" Type="String" />
+      <Parameter Name="KimlikSeriNo" Mode="In" Type="String" />
+      <Parameter Name="DogumYeri" Mode="In" Type="String" />
+      <Parameter Name="DogumTarihi" Mode="In" Type="DateTime" />
+      <Parameter Name="Dogumili" Mode="In" Type="String" />
+      <Parameter Name="Dogumilce" Mode="In" Type="String" />
+      <Parameter Name="Mahalle" Mode="In" Type="String" />
+      <Parameter Name="Koy" Mode="In" Type="String" />
+      <Parameter Name="Cilt" Mode="In" Type="String" />
+      <Parameter Name="Aile" Mode="In" Type="String" />
+      <Parameter Name="SiraNo" Mode="In" Type="String" />
+      <Parameter Name="VerilisYeri" Mode="In" Type="String" />
+      <Parameter Name="KayitNo" Mode="In" Type="String" />
+      <Parameter Name="Resim" Mode="In" Type="Binary" />
+      <Parameter Name="SinifId" Mode="In" Type="Int32" />
+      <Parameter Name="ServisId" Mode="In" Type="Int32" />
+      <Parameter Name="KayitTarihi" Mode="In" Type="DateTime" />
+      <Parameter Name="CikisTarihi" Mode="In" Type="DateTime" />
+      <Parameter Name="DavranisSorunu" Mode="In" Type="String" />
+      <Parameter Name="Yapilanlar" Mode="In" Type="String" />
+      <Parameter Name="YasitlariylaIliskisi" Mode="In" Type="String" />
+      <Parameter Name="Fobileri" Mode="In" Type="String" />
+      <Parameter Name="SevdigiYiyecekler" Mode="In" Type="String" />
+      <Parameter Name="Asilar" Mode="In" Type="String" />
+      <Parameter Name="GecirdigiHastaliklar" Mode="In" Type="String" />
+      <Parameter Name="Alerjiler" Mode="In" Type="String" />
+      <Parameter Name="Ameliyatlar" Mode="In" Type="String" />
+      <Parameter Name="SaglikSorunlari" Mode="In" Type="String" />
+      <Parameter Name="ilac" Mode="In" Type="String" />
+      <Parameter Name="Protez" Mode="In" Type="String" />
+      <Parameter Name="Diyet" Mode="In" Type="String" />
+      <Parameter Name="RuhsalDurum" Mode="In" Type="String" />
+      <Parameter Name="ReturnId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_PersonelEkle">
+      <Parameter Name="TcNos" Mode="In" Type="String" />
+      <Parameter Name="Adis" Mode="In" Type="String" />
+      <Parameter Name="Soyadis" Mode="In" Type="String" />
+      <Parameter Name="SicilNos" Mode="In" Type="String" />
+      <Parameter Name="BasvuruTarihis" Mode="In" Type="DateTime" />
+      <Parameter Name="BaslamaTarihis" Mode="In" Type="DateTime" />
+      <Parameter Name="AskerlikDurumus" Mode="In" Type="String" />
+      <Parameter Name="TecilBitisYilis" Mode="In" Type="String" />
+      <Parameter Name="KanGrubus" Mode="In" Type="String" />
+      <Parameter Name="Cinsiyets" Mode="In" Type="String" />
+      <Parameter Name="Adress" Mode="In" Type="String" />
+      <Parameter Name="Semts" Mode="In" Type="String" />
+      <Parameter Name="Ilces" Mode="In" Type="String" />
+      <Parameter Name="ils" Mode="In" Type="String" />
+      <Parameter Name="Mails" Mode="In" Type="String" />
+      <Parameter Name="EvTels" Mode="In" Type="String" />
+      <Parameter Name="CepTels" Mode="In" Type="String" />
+      <Parameter Name="EgitimDurumus" Mode="In" Type="String" />
+      <Parameter Name="AyrilisTarihis" Mode="In" Type="DateTime" />
+      <Parameter Name="Departmans" Mode="In" Type="String" />
+      <Parameter Name="KtcNos" Mode="In" Type="String" />
+      <Parameter Name="Kuyruks" Mode="In" Type="String" />
+      <Parameter Name="Kcinsiyets" Mode="In" Type="String" />
+      <Parameter Name="KkimlikSeriNos" Mode="In" Type="String" />
+      <Parameter Name="KdogumYeris" Mode="In" Type="String" />
+      <Parameter Name="KdogumTarihis" Mode="In" Type="DateTime" />
+      <Parameter Name="Kdogumilis" Mode="In" Type="String" />
+      <Parameter Name="Kdogumilces" Mode="In" Type="String" />
+      <Parameter Name="Kmahalles" Mode="In" Type="String" />
+      <Parameter Name="Kkoys" Mode="In" Type="String" />
+      <Parameter Name="Kcilts" Mode="In" Type="String" />
+      <Parameter Name="Kailes" Mode="In" Type="String" />
+      <Parameter Name="KSiraNos" Mode="In" Type="String" />
+      <Parameter Name="KVerilisYeris" Mode="In" Type="String" />
+      <Parameter Name="KKayitNos" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_SinifEkle">
+      <Parameter Name="SinifAdi" Mode="In" Type="String" />
+      <Parameter Name="KapaSitesi" Mode="In" Type="Int32" />
+      <Parameter Name="OgretmenId" Mode="In" Type="Int32" />
+      <Parameter Name="Returnid" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UcuncuSahisEkle">
+      <Parameter Name="Adi" Mode="In" Type="String" />
+      <Parameter Name="Soyadi" Mode="In" Type="String" />
+      <Parameter Name="CepTel" Mode="In" Type="String" />
+      <Parameter Name="EvTel" Mode="In" Type="String" />
+      <Parameter Name="TcNo" Mode="In" Type="String" />
+      <Parameter Name="YakinlikDerecesi" Mode="In" Type="String" />
+      <Parameter Name="Meslek" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="OgrenciId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_VeliEkle">
+      <Parameter Name="VeliAdi" Mode="In" Type="String" />
+      <Parameter Name="VeliSoyadi" Mode="In" Type="String" />
+      <Parameter Name="VeliCeptel" Mode="In" Type="String" />
+      <Parameter Name="VeliEvTel" Mode="In" Type="String" />
+      <Parameter Name="VeliTcNo" Mode="In" Type="String" />
+      <Parameter Name="YakinlikDerecesi" Mode="In" Type="String" />
+      <Parameter Name="Meslek" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="OgrenciId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_YemekYukle">
+      <Parameter Name="Corba" Mode="In" Type="String" />
+      <Parameter Name="AnaYemek" Mode="In" Type="String" />
+      <Parameter Name="Tatli" Mode="In" Type="String" />
+      <Parameter Name="Tarih" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Demirbaslar">
+    <Key>
+      <PropertyRef Name="DEMIRBASID" />
+    </Key>
+    <Property Name="DEMIRBASID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Turu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Cinsi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Adet" Type="Int32" />
+    <Property Name="Birim" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AlindigiYer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AlisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="GirisTutari" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AlisFaturaNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KdvOrani" Type="Int32" />
+    <Property Name="KdvTutari" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SatisYeri" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SatisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SatisTutari" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SatisFaturaNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SatisKdvTutari" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SatisNedeni" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="DemirbasMekanlaris" Relationship="AnaOkuluDBModel.FK_Table_ToTable_Deid" FromRole="Demirbaslar" ToRole="DemirbasMekanlari" />
+  </EntityType>
+  <EntityType Name="DemirbasMekanlari">
+    <Key>
+      <PropertyRef Name="MekanId" />
+    </Key>
+    <Property Name="MekanId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DemirbasId" Type="Int32" Nullable="false" />
+    <Property Name="BulunduguYer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Adet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Sorumlusu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TeslimTarihi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Demirbaslar" Relationship="AnaOkuluDBModel.FK_Table_ToTable_Deid" FromRole="DemirbasMekanlari" ToRole="Demirbaslar" />
+  </EntityType>
+  <EntityType Name="Ogrenciler">
+    <Key>
+      <PropertyRef Name="OgrenciId" />
+    </Key>
+    <Property Name="OgrenciId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Soyadi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Adres" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Semt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ilce" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="il" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PostaKodu" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="EvTel" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="KanGrubu" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="TcNo" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="false" />
+    <Property Name="Uyruk" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Cinsiyet" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="KimlikSeriNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DogumYeri" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Dogumili" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Dogumilce" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Mahalle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Koy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Cilt" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Aile" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="SiraNo" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="VerilisYeri" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KayitNo" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="0" />
+    <Property Name="CikisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="SinifId" Type="Int32" Nullable="false" />
+    <Property Name="ServisId" Type="Int32" Nullable="false" />
+    <Property Name="DavranisSorunu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Yapilanlar" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YasitlariylaIliskisi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Fobileri" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SevdigiYiyecekler" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Asilar" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GecirdigiHastaliklar" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Alerjiler" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ameliyatlar" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SaglikSorunlari" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ilac" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Protez" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Diyet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RuhsalDurum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Servisler" Relationship="AnaOkuluDBModel.ServisId" FromRole="Ogrenciler" ToRole="Servisler" />
+    <NavigationProperty Name="Siniflar" Relationship="AnaOkuluDBModel.SinifId" FromRole="Ogrenciler" ToRole="Siniflar" />
+  </EntityType>
+  <EntityType Name="Ogretmenler">
+    <Key>
+      <PropertyRef Name="KayitId" />
+    </Key>
+    <Property Name="KayitId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelID" Type="Int32" Nullable="false" />
+    <Property Name="Adi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Soyadi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="PersonelId" />
+    </Key>
+    <Property Name="PersonelId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TcNo" Type="String" MaxLength="11" Unicode="true" FixedLength="false" />
+    <Property Name="Adi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Soyadi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SicilNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BasvuruTarihi" Type="DateTime" Precision="0" />
+    <Property Name="BaslamaTarihi" Type="DateTime" Precision="0" />
+    <Property Name="AskerlikDurumu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TecilBitisYili" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+    <Property Name="KanGrubu" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Adres" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Semt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ilce" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="il" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EvTel" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="CepTel" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="EgitimDurumu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AyrilisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Departman" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KtcNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kuyruk" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kcinsiyet" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="KkimlikSeriNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KdogumYeri" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KdogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="Kdogumili" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kdogumilce" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kmahalle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kkoy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kcilt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kaile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KSiraNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KVerilisYeri" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KKayitNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Siniflars" Relationship="AnaOkuluDBModel.FK_Table_ToTable" FromRole="Personeller" ToRole="Siniflar" />
+  </EntityType>
+  <EntityType Name="pwd">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="createpassword" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="firstname" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="lastname" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="yaş" Type="Int32" />
+    <Property Name="cinsiyet" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="yıl" Type="Int32" />
+    <Property Name="adres" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="irtibatno" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="şifre" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="şifredoğrula" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="comdepart" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="gun" Type="Int32" />
+    <Property Name="ay" Type="Int32" />
+    <Property Name="confirmpassword" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Servisler">
+    <Key>
+      <PropertyRef Name="ServisID" />
+    </Key>
+    <Property Name="ServisID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ServisAdi" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Ogrencilers" Relationship="AnaOkuluDBModel.ServisId" FromRole="Servisler" ToRole="Ogrenciler" />
+  </EntityType>
+  <EntityType Name="Siniflar">
+    <Key>
+      <PropertyRef Name="sinifId" />
+    </Key>
+    <Property Name="sinifId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="sinifAdi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="sinifkapasite" Type="Int32" />
+    <Property Name="ögretmenId" Type="Int32" />
+    <NavigationProperty Name="Ogrencilers" Relationship="AnaOkuluDBModel.SinifId" FromRole="Siniflar" ToRole="Ogrenciler" />
+    <NavigationProperty Name="Personeller" Relationship="AnaOkuluDBModel.FK_Table_ToTable" FromRole="Siniflar" ToRole="Personeller" />
+    <NavigationProperty Name="Yoklamas" Relationship="AnaOkuluDBModel.YokSinifid" FromRole="Siniflar" ToRole="Yoklama" />
+  </EntityType>
+  <EntityType Name="Yemekler">
+    <Key>
+      <PropertyRef Name="YemekId" />
+    </Key>
+    <Property Name="YemekId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Corba" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="AnaYemek" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="Tatli" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Yoklama">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="OgrenciId" Type="Int32" />
+    <Property Name="SinifID" Type="Int32" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="DevamsizlikTuru" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Siniflar" Relationship="AnaOkuluDBModel.YokSinifid" FromRole="Yoklama" ToRole="Siniflar" />
+  </EntityType>
+  <Association Name="FK_Table_ToTable_Deid">
+    <End Role="Demirbaslar" Type="AnaOkuluDBModel.Demirbaslar" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DemirbasMekanlari" Type="AnaOkuluDBModel.DemirbasMekanlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demirbaslar">
+        <PropertyRef Name="DEMIRBASID" />
+      </Principal>
+      <Dependent Role="DemirbasMekanlari">
+        <PropertyRef Name="DemirbasId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServisId">
+    <End Role="Servisler" Type="AnaOkuluDBModel.Servisler" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Ogrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servisler">
+        <PropertyRef Name="ServisID" />
+      </Principal>
+      <Dependent Role="Ogrenciler">
+        <PropertyRef Name="ServisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SinifId">
+    <End Role="Siniflar" Type="AnaOkuluDBModel.Siniflar" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ogrenciler" Type="AnaOkuluDBModel.Ogrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="sinifId" />
+      </Principal>
+      <Dependent Role="Ogrenciler">
+        <PropertyRef Name="SinifId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_ToTable">
+    <End Role="Personeller" Type="AnaOkuluDBModel.Personeller" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Siniflar" Type="AnaOkuluDBModel.Siniflar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelId" />
+      </Principal>
+      <Dependent Role="Siniflar">
+        <PropertyRef Name="ögretmenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YokSinifid">
+    <End Role="Siniflar" Type="AnaOkuluDBModel.Siniflar" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Yoklama" Type="AnaOkuluDBModel.Yoklama" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="sinifId" />
+      </Principal>
+      <Dependent Role="Yoklama">
+        <PropertyRef Name="SinifID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

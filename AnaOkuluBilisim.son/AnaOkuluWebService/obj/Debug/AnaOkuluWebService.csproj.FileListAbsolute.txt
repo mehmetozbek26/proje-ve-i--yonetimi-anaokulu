@@ -1,0 +1,11 @@
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\AnaOkuluWebService.dll
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\AnaOkuluWebService.pdb
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.csprojResolveAssemblyReference.cache
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.dll
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\obj\Debug\AnaOkuluWebService.pdb
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\EntityFramework.dll
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\EntityFramework.SqlServer.dll
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\Newtonsoft.Json.dll
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\EntityFramework.xml
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\EntityFramework.SqlServer.xml
+J:\AnaOkuluBilisim.son\AnaOkuluWebService\bin\Newtonsoft.Json.xml

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8223d540ce854702b659fb642ee3d02a" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Demirbaslar" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.DemirbasMekanlari" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Ogrenciler" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Ogretmenler" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Personeller" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.pwd" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Servisler" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Siniflar" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.UcuncuSahislar" Width="1.5" PointX="9.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Veliler" Width="1.5" PointX="9.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Yemekler" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnaOkuluDBModel.Yoklama" Width="1.5" PointX="12.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="AnaOkuluDBModel.DemirBasFor" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Ogrenciler_Servisler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Ogrenciler_Siniflar" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_UcuncuSahislar_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Veliler_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Yoklama_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Ogretmenler_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Siniflar_Ogretmenler" ManuallyRouted="false" />
+        <AssociationConnector Association="AnaOkuluDBModel.FK_Yoklama_Siniflar" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
