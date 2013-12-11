@@ -1,9 +1,0 @@
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\bin\Debug\DemirbaşKayıtDesigner.exe
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\bin\Debug\DemirbaşKayıtDesigner.pdb
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\DemirbaşKayıtDesigner.Form1.resources
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\DemirbaşKayıtDesigner.Properties.Resources.resources
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\DemirbaşKayıtDesigner.exe
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\DemirbaşKayıtDesigner\DemirbaşKayıtDesigner\obj\x86\Debug\DemirbaşKayıtDesigner.pdb
