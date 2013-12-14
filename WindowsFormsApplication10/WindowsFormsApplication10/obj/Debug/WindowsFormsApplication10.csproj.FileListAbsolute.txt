@@ -1,0 +1,9 @@
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\bin\Debug\WindowsFormsApplication10.exe
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\bin\Debug\WindowsFormsApplication10.pdb
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.csprojResolveAssemblyReference.cache
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.Form1.resources
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.Form2.resources
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.Properties.Resources.resources
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.csproj.GenerateResource.Cache
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.exe
+C:\Users\sedat\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\WindowsFormsApplication10\WindowsFormsApplication10\obj\Debug\WindowsFormsApplication10.pdb
