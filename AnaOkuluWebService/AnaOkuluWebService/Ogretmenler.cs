@@ -16,7 +16,7 @@ namespace AnaOkuluWebService
     {
         public Ogretmenler()
         {
-            this.Siniflar = new HashSet<Siniflar>();
+            this.DERSLER = new HashSet<DERSLER>();
         }
     
         public int KayitId { get; set; }
@@ -24,7 +24,7 @@ namespace AnaOkuluWebService
         public string Adi { get; set; }
         public string Soyadi { get; set; }
     
+        public virtual ICollection<DERSLER> DERSLER { get; set; }
         public virtual Personeller Personeller { get; set; }
-        public virtual ICollection<Siniflar> Siniflar { get; set; }
     }
 }

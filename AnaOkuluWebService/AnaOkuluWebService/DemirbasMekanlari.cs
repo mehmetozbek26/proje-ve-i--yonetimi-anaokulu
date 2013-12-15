@@ -17,7 +17,7 @@ namespace AnaOkuluWebService
         public int MekanId { get; set; }
         public int DemirbasId { get; set; }
         public string BulunduguYer { get; set; }
-        public string Adet { get; set; }
+        public int Adet { get; set; }
         public string Sorumlusu { get; set; }
         public System.DateTime TeslimTarihi { get; set; }
     

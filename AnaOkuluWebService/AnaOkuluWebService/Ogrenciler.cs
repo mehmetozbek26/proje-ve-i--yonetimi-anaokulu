@@ -36,7 +36,7 @@ namespace AnaOkuluWebService
         public string Cinsiyet { get; set; }
         public string KimlikSeriNo { get; set; }
         public string DogumYeri { get; set; }
-        public Nullable<System.DateTime> DogumTarihi { get; set; }
+        public System.DateTime DogumTarihi { get; set; }
         public string Dogumili { get; set; }
         public string Dogumilce { get; set; }
         public string Mahalle { get; set; }
@@ -47,8 +47,7 @@ namespace AnaOkuluWebService
         public string VerilisYeri { get; set; }
         public string KayitNo { get; set; }
         public byte[] Resim { get; set; }
-        public Nullable<System.DateTime> KayitTarihi { get; set; }
-        public Nullable<System.DateTime> CikisTarihi { get; set; }
+        public System.DateTime KayitTarihi { get; set; }
         public int SinifId { get; set; }
         public int ServisId { get; set; }
         public string DavranisSorunu { get; set; }

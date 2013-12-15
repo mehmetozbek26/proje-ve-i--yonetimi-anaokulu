@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AnaOkuluDatabaseModelStoreContainer" CdmEntityContainer="AnaOkuluDBEntities">
+    <EntitySetMapping Name="Demirbaslars">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Demirbaslar">
+        <MappingFragment StoreEntitySet="Demirbaslar">
+          <ScalarProperty Name="DEMIRBASID" ColumnName="DEMIRBASID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Turu" ColumnName="Turu" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="Birim" ColumnName="Birim" />
+          <ScalarProperty Name="AlindigiYer" ColumnName="AlindigiYer" />
+          <ScalarProperty Name="AlisTarihi" ColumnName="AlisTarihi" />
+          <ScalarProperty Name="GirisTutari" ColumnName="GirisTutari" />
+          <ScalarProperty Name="AlisFaturaNo" ColumnName="AlisFaturaNo" />
+          <ScalarProperty Name="KdvOrani" ColumnName="KdvOrani" />
+          <ScalarProperty Name="KdvTutari" ColumnName="KdvTutari" />
+          <ScalarProperty Name="SatisYeri" ColumnName="SatisYeri" />
+          <ScalarProperty Name="SatisTarihi" ColumnName="SatisTarihi" />
+          <ScalarProperty Name="SatisTutari" ColumnName="SatisTutari" />
+          <ScalarProperty Name="SatisFaturaNo" ColumnName="SatisFaturaNo" />
+          <ScalarProperty Name="SatisKdvTutari" ColumnName="SatisKdvTutari" />
+          <ScalarProperty Name="SatisNedeni" ColumnName="SatisNedeni" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DemirbasMekanlaris">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.DemirbasMekanlari">
+        <MappingFragment StoreEntitySet="DemirbasMekanlari">
+          <ScalarProperty Name="MekanId" ColumnName="MekanId" />
+          <ScalarProperty Name="DemirbasId" ColumnName="DemirbasId" />
+          <ScalarProperty Name="BulunduguYer" ColumnName="BulunduguYer" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="Sorumlusu" ColumnName="Sorumlusu" />
+          <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DERSLERs">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.DERSLER">
+        <MappingFragment StoreEntitySet="DERSLER">
+          <ScalarProperty Name="DERSID" ColumnName="DERSID" />
+          <ScalarProperty Name="DERSADI" ColumnName="DERSADI" />
+          <ScalarProperty Name="OGRETMENID" ColumnName="OGRETMENID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DersTabloes">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.DersTablo">
+        <MappingFragment StoreEntitySet="DersTablo">
+          <ScalarProperty Name="SINIFID" ColumnName="SINIFID" />
+          <ScalarProperty Name="CL0" ColumnName="CL0" />
+          <ScalarProperty Name="CL1" ColumnName="CL1" />
+          <ScalarProperty Name="CL2" ColumnName="CL2" />
+          <ScalarProperty Name="CL3" ColumnName="CL3" />
+          <ScalarProperty Name="CL4" ColumnName="CL4" />
+          <ScalarProperty Name="CL5" ColumnName="CL5" />
+          <ScalarProperty Name="CL6" ColumnName="CL6" />
+          <ScalarProperty Name="CL7" ColumnName="CL7" />
+          <ScalarProperty Name="CL8" ColumnName="CL8" />
+          <ScalarProperty Name="CL9" ColumnName="CL9" />
+          <ScalarProperty Name="CL10" ColumnName="CL10" />
+          <ScalarProperty Name="CL11" ColumnName="CL11" />
+          <ScalarProperty Name="CL12" ColumnName="CL12" />
+          <ScalarProperty Name="CL13" ColumnName="CL13" />
+          <ScalarProperty Name="CL14" ColumnName="CL14" />
+          <ScalarProperty Name="CL15" ColumnName="CL15" />
+          <ScalarProperty Name="CL16" ColumnName="CL16" />
+          <ScalarProperty Name="CL17" ColumnName="CL17" />
+          <ScalarProperty Name="CL18" ColumnName="CL18" />
+          <ScalarProperty Name="CL19" ColumnName="CL19" />
+          <ScalarProperty Name="CL20" ColumnName="CL20" />
+          <ScalarProperty Name="CL21" ColumnName="CL21" />
+          <ScalarProperty Name="CL22" ColumnName="CL22" />
+          <ScalarProperty Name="CL23" ColumnName="CL23" />
+          <ScalarProperty Name="CL24" ColumnName="CL24" />
+          <ScalarProperty Name="CL25" ColumnName="CL25" />
+          <ScalarProperty Name="CL26" ColumnName="CL26" />
+          <ScalarProperty Name="CL27" ColumnName="CL27" />
+          <ScalarProperty Name="CL28" ColumnName="CL28" />
+          <ScalarProperty Name="CL29" ColumnName="CL29" />
+          <ScalarProperty Name="CL30" ColumnName="CL30" />
+          <ScalarProperty Name="CL31" ColumnName="CL31" />
+          <ScalarProperty Name="CL32" ColumnName="CL32" />
+          <ScalarProperty Name="CL33" ColumnName="CL33" />
+          <ScalarProperty Name="CL34" ColumnName="CL34" />
+          <ScalarProperty Name="CL35" ColumnName="CL35" />
+          <ScalarProperty Name="CL36" ColumnName="CL36" />
+          <ScalarProperty Name="CL37" ColumnName="CL37" />
+          <ScalarProperty Name="CL38" ColumnName="CL38" />
+          <ScalarProperty Name="CL39" ColumnName="CL39" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ogrencilers">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Ogrenciler">
+        <MappingFragment StoreEntitySet="Ogrenciler">
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Semt" ColumnName="Semt" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+          <ScalarProperty Name="il" ColumnName="il" />
+          <ScalarProperty Name="PostaKodu" ColumnName="PostaKodu" />
+          <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+          <ScalarProperty Name="KanGrubu" ColumnName="KanGrubu" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="Uyruk" ColumnName="Uyruk" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="KimlikSeriNo" ColumnName="KimlikSeriNo" />
+          <ScalarProperty Name="DogumYeri" ColumnName="DogumYeri" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Dogumili" ColumnName="Dogumili" />
+          <ScalarProperty Name="Dogumilce" ColumnName="Dogumilce" />
+          <ScalarProperty Name="Mahalle" ColumnName="Mahalle" />
+          <ScalarProperty Name="Koy" ColumnName="Koy" />
+          <ScalarProperty Name="Cilt" ColumnName="Cilt" />
+          <ScalarProperty Name="Aile" ColumnName="Aile" />
+          <ScalarProperty Name="SiraNo" ColumnName="SiraNo" />
+          <ScalarProperty Name="VerilisYeri" ColumnName="VerilisYeri" />
+          <ScalarProperty Name="KayitNo" ColumnName="KayitNo" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="SinifId" ColumnName="SinifId" />
+          <ScalarProperty Name="ServisId" ColumnName="ServisId" />
+          <ScalarProperty Name="DavranisSorunu" ColumnName="DavranisSorunu" />
+          <ScalarProperty Name="Yapilanlar" ColumnName="Yapilanlar" />
+          <ScalarProperty Name="YasitlariylaIliskisi" ColumnName="YasitlariylaIliskisi" />
+          <ScalarProperty Name="Fobileri" ColumnName="Fobileri" />
+          <ScalarProperty Name="SevdigiYiyecekler" ColumnName="SevdigiYiyecekler" />
+          <ScalarProperty Name="Asilar" ColumnName="Asilar" />
+          <ScalarProperty Name="GecirdigiHastaliklar" ColumnName="GecirdigiHastaliklar" />
+          <ScalarProperty Name="Alerjiler" ColumnName="Alerjiler" />
+          <ScalarProperty Name="Ameliyatlar" ColumnName="Ameliyatlar" />
+          <ScalarProperty Name="SaglikSorunlari" ColumnName="SaglikSorunlari" />
+          <ScalarProperty Name="ilac" ColumnName="ilac" />
+          <ScalarProperty Name="Protez" ColumnName="Protez" />
+          <ScalarProperty Name="Diyet" ColumnName="Diyet" />
+          <ScalarProperty Name="RuhsalDurum" ColumnName="RuhsalDurum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ogretmenlers">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Ogretmenler">
+        <MappingFragment StoreEntitySet="Ogretmenler">
+          <ScalarProperty Name="KayitId" ColumnName="KayitId" />
+          <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personellers">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Personeller">
+        <MappingFragment StoreEntitySet="Personeller">
+          <ScalarProperty Name="PersonelId" ColumnName="PersonelId" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="BasvuruTarihi" ColumnName="BasvuruTarihi" />
+          <ScalarProperty Name="BaslamaTarihi" ColumnName="BaslamaTarihi" />
+          <ScalarProperty Name="AskerlikDurumu" ColumnName="AskerlikDurumu" />
+          <ScalarProperty Name="TecilBitisYili" ColumnName="TecilBitisYili" />
+          <ScalarProperty Name="KanGrubu" ColumnName="KanGrubu" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Semt" ColumnName="Semt" />
+          <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+          <ScalarProperty Name="il" ColumnName="il" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+          <ScalarProperty Name="CepTel" ColumnName="CepTel" />
+          <ScalarProperty Name="EgitimDurumu" ColumnName="EgitimDurumu" />
+          <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+          <ScalarProperty Name="Departman" ColumnName="Departman" />
+          <ScalarProperty Name="Kuyruk" ColumnName="Kuyruk" />
+          <ScalarProperty Name="KkimlikSeriNo" ColumnName="KkimlikSeriNo" />
+          <ScalarProperty Name="KdogumYeri" ColumnName="KdogumYeri" />
+          <ScalarProperty Name="KdogumTarihi" ColumnName="KdogumTarihi" />
+          <ScalarProperty Name="Kdogumili" ColumnName="Kdogumili" />
+          <ScalarProperty Name="Kdogumilce" ColumnName="Kdogumilce" />
+          <ScalarProperty Name="Kmahalle" ColumnName="Kmahalle" />
+          <ScalarProperty Name="Kkoy" ColumnName="Kkoy" />
+          <ScalarProperty Name="Kcilt" ColumnName="Kcilt" />
+          <ScalarProperty Name="Kaile" ColumnName="Kaile" />
+          <ScalarProperty Name="KSiraNo" ColumnName="KSiraNo" />
+          <ScalarProperty Name="KVerilisYeri" ColumnName="KVerilisYeri" />
+          <ScalarProperty Name="KKayitNo" ColumnName="KKayitNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pwds">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.pwd">
+        <MappingFragment StoreEntitySet="pwd">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="createpassword" ColumnName="createpassword" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="comdepart" ColumnName="comdepart" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="mount" ColumnName="mount" />
+          <ScalarProperty Name="confirmpassword" ColumnName="confirmpassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servislers">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Servisler">
+        <MappingFragment StoreEntitySet="Servisler">
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="ServisAdi" ColumnName="ServisAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Siniflars">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Siniflar">
+        <MappingFragment StoreEntitySet="Siniflar">
+          <ScalarProperty Name="sinifId" ColumnName="sinifId" />
+          <ScalarProperty Name="sinifAdi" ColumnName="sinifAdi" />
+          <ScalarProperty Name="sinifkapasite" ColumnName="sinifkapasite" />
+          <ScalarProperty Name="ögretmenId" ColumnName="ögretmenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UcuncuSahislars">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.UcuncuSahislar">
+        <MappingFragment StoreEntitySet="UcuncuSahislar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="Ceptel" ColumnName="Ceptel" />
+          <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+          <ScalarProperty Name="YakinlikDerecesi" ColumnName="YakinlikDerecesi" />
+          <ScalarProperty Name="Meslek" ColumnName="Meslek" />
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Velilers">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Veliler">
+        <MappingFragment StoreEntitySet="Veliler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="Ceptel" ColumnName="Ceptel" />
+          <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+          <ScalarProperty Name="YakinlikDerecesi" ColumnName="YakinlikDerecesi" />
+          <ScalarProperty Name="Meslek" ColumnName="Meslek" />
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yemeklers">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Yemekler">
+        <MappingFragment StoreEntitySet="Yemekler">
+          <ScalarProperty Name="YemekId" ColumnName="YemekId" />
+          <ScalarProperty Name="Corba" ColumnName="Corba" />
+          <ScalarProperty Name="AnaYemek" ColumnName="AnaYemek" />
+          <ScalarProperty Name="Tatli" ColumnName="Tatli" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yoklamas">
+      <EntityTypeMapping TypeName="AnaOkuluDatabaseModel.Yoklama">
+        <MappingFragment StoreEntitySet="Yoklama">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="SinifId" ColumnName="SinifId" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="DevamsizlikTuru" ColumnName="DevamsizlikTuru" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="AnaOkuluDatabaseModel.Store.sp_YoklamaGoster" FunctionImportName="sp_YoklamaGoster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnaOkuluDatabaseModel.sp_YoklamaGoster_Result">
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="VeliAdi" ColumnName="VeliAdi" />
+          <ScalarProperty Name="VeliSoyadi" ColumnName="VeliSoyadi" />
+          <ScalarProperty Name="OgretmenAdi" ColumnName="OgretmenAdi" />
+          <ScalarProperty Name="OgretmenSoyadi" ColumnName="OgretmenSoyadi" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="SinifAfi" ColumnName="SinifAfi" />
+          <ScalarProperty Name="DevamsizlikTuru" ColumnName="DevamsizlikTuru" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ParolaDegistir" FunctionName="AnaOkuluDatabaseModel.Store.ParolaDegistir" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AnaOkuluDatabaseModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AnaOkuluDatabaseModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_DemirbasEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_DemirbasEkle" />
+    <FunctionImportMapping FunctionImportName="sp_DemirbasMekaniEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_DemirbasMekaniEkle" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AnaOkuluDatabaseModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AnaOkuluDatabaseModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnaOkuluDatabaseModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AnaOkuluDatabaseModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnaOkuluDatabaseModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_OgrenciKayitEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_OgrenciKayitEkle" />
+    <FunctionImportMapping FunctionImportName="sp_PersonelEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_PersonelEkle" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AnaOkuluDatabaseModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_SinifEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_SinifEkle" />
+    <FunctionImportMapping FunctionImportName="sp_UcuncuSahisEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_UcuncuSahisEkle" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AnaOkuluDatabaseModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_VeliEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_VeliEkle" />
+    <FunctionImportMapping FunctionImportName="sp_YemekYukle" FunctionName="AnaOkuluDatabaseModel.Store.sp_YemekYukle" />
+    <FunctionImportMapping FunctionImportName="sp_YoklamaEkle" FunctionName="AnaOkuluDatabaseModel.Store.sp_YoklamaEkle" />
+  </EntityContainerMapping>
+</Mapping>
