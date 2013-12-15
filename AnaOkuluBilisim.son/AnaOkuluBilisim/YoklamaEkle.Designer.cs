@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSinif = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtOgrenciSoyad = new System.Windows.Forms.TextBox();
@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbSinif);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.txtOgrenciSoyad);
@@ -121,6 +121,9 @@
             this.cmbDurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbDurum.FormattingEnabled = true;
+            this.cmbDurum.Items.AddRange(new object[] {
+            "Katıldı",
+            "Katılmadı"});
             this.cmbDurum.Location = new System.Drawing.Point(198, 334);
             this.cmbDurum.Name = "cmbDurum";
             this.cmbDurum.Size = new System.Drawing.Size(200, 21);
@@ -176,15 +179,15 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Sınıf Seçiniz";
             // 
-            // comboBox1
+            // cmbSinif
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(198, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbSinif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSinif.FormattingEnabled = true;
+            this.cmbSinif.Location = new System.Drawing.Point(198, 177);
+            this.cmbSinif.Name = "cmbSinif";
+            this.cmbSinif.Size = new System.Drawing.Size(200, 21);
+            this.cmbSinif.TabIndex = 6;
+            this.cmbSinif.SelectedIndexChanged += new System.EventHandler(this.cmbSinif_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -254,7 +257,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSinif;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtOgrenciSoyad;

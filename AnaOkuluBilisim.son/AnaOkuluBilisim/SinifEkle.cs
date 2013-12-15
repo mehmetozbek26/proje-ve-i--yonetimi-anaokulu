@@ -9,75 +9,70 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
 using System.Configuration;
+using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
 
 namespace AnaOkuluBilisim
 {
     public partial class SinifEkle : Form
     {
-        
+        AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
+        Parola par = Parola.GET();
         public SinifEkle()
         {
-            InitializeComponent();
-           
-
+            InitializeComponent();        
         }
         int ogrId = 0;
-        SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["MERKANVERTB"].ToString());
-        //SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
+        
         public void sinifbilgileri()
         {
-            DataTable dtt = new DataTable();
-            cnn.Open();
-            SqlDataAdapter dat = new SqlDataAdapter("Select * from Siniflar", cnn);
-            dat.Fill(dtt);
-            dataGridView2.DataSource = dtt;
-            cnn.Close();
+            try
+            {
+                dataGridView2.DataSource = client.TumSiniflar(par.KullaniciAdi, par.Sifre, par.Departman);
+                dataGridView2.Columns["sinifId"].Visible = false;
+                dataGridView2.Columns["ögretmenId"].Visible = false;
+                dataGridView2.Columns["sinifAdi"].DisplayIndex = 0;
+                dataGridView2.Columns["sinifkapasite"].DisplayIndex = 1;
+            }
+            catch (Exception err)
+            {
+
+            }
         }
         private void SinifEkle_Load(object sender, EventArgs e)
         {
+            try
+            {
 
-            DataTable dt = new DataTable();
-            cnn.Open();
-            SqlDataAdapter da = new SqlDataAdapter("Select o.PersonelID, o.Adi,o.Soyadi,p.TcNo from Ogretmenler o,Personeller p where o.PersonelID=p.PersonelId", cnn);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            cnn.Close();
+                dataGridView1.DataSource = client.TumOgretmenler(par.KullaniciAdi, par.Sifre, par.Departman);
+                dataGridView1.Columns["ID"].Visible = false;
+                dataGridView1.Columns["KAYITID"].Visible = false;
+                dataGridView1.Columns["TC"].Visible = false;
+                dataGridView1.Columns["AD"].DisplayIndex = 0;
+                dataGridView1.Columns["SOYAD"].DisplayIndex = 1;
+                sinifbilgileri();
+                txtOgretmenAdi.Enabled = false;
+                txtOgretmenSoyAdi.Enabled = false;
+            }
+            catch (Exception err)
+            {
 
-            sinifbilgileri();
+            }
 
-
-
-            txtOgretmenAdi.Enabled = false;
-            txtOgretmenSoyAdi.Enabled = false;
-
-        }
-
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            txtOgretmenAdi.Text = dataGridView1.CurrentRow.Cells["Adi"].Value.ToString();
-            txtOgretmenSoyAdi.Text = dataGridView1.CurrentRow.Cells["Soyadi"].Value.ToString();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dataGridView1.CurrentRow.Cells["PersonelID"].Value == null || dataGridView1.CurrentRow.Cells["PersonelID"].Value == "")
-                    throw new Exception("Öğtermen Seçilmedi");
-                SqlCommand cmd = new SqlCommand("sp_SinifEkle", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@SinifAdi", txtSinifAdi.Text);
-                cmd.Parameters.Add("@KapaSitesi", txtKapasite.Text);
-                cmd.Parameters.Add("@OgretmenId", dataGridView1.CurrentRow.Cells["PersonelID"].Value.ToString());
-                cmd.Parameters.Add(new SqlParameter("@Returnid", SqlDbType.Int));
-                cmd.Parameters["@Returnid"].Direction = ParameterDirection.Output;
-                cnn.Open();
-                cmd.ExecuteNonQuery();
-
-                ogrId = Convert.ToInt32(cmd.Parameters["@Returnid"].Value.ToString());
-
-                MessageBox.Show("Sinif Eklendi." + ogrId);
-                cnn.Close();
+                if (txtSinifAdi.Text == "" || txtSinifAdi.Text == null) throw new Exception("Sınıf Adını Giriniz");
+                if (txtKapasite.Text == "" || txtKapasite.Text == null) throw new Exception("Sınıf Kapasite Giriniz");
+                if (txtOgretmenAdi.Text == "" || txtOgretmenAdi.Text == null) throw new Exception("Ogretmen Adını Giriniz");
+                if (txtOgretmenSoyAdi.Text == "" || txtOgretmenSoyAdi.Text == null) throw new Exception("Ogretmen Soyadını Giriniz");              
+                if (client.SinifEkle(par.KullaniciAdi, par.Sifre, par.Departman, txtSinifAdi.Text.ToUpper(), Convert.ToInt32(txtKapasite.Text), Convert.ToInt32(dataGridView1.CurrentRow.Cells["KAYITID"].Value)))
+                    MessageBox.Show("Kayıt Eklendi");
+                else
+                    MessageBox.Show("Kayıt Eklenemedi");
                 sinifbilgileri();
             }
             catch (Exception err)
@@ -88,16 +83,26 @@ namespace AnaOkuluBilisim
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand();
-            cnn.Open();
-            cmd.Connection = cnn;
-            cmd.CommandText = "Delete from Siniflar where sinifId='" + dataGridView2.CurrentRow.Cells[0].Value.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            cnn.Close();
-            sinifbilgileri();
-            MessageBox.Show("Sinif Silindi");
+            try
+            {
+                if (client.SinifSil(par.KullaniciAdi, par.Sifre, par.Departman, Convert.ToInt32(dataGridView2.CurrentRow.Cells["sinifId"].Value)))
+                {
+                    sinifbilgileri();
+                    MessageBox.Show("Kayıt Silindi");
+                }
+                else
+                    MessageBox.Show("Kayıt Silinemedi");
+            }
+            catch (Exception err)
+            {
 
+            }
+        }
 
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtOgretmenAdi.Text = dataGridView1.CurrentRow.Cells["AD"].Value.ToString();
+            txtOgretmenSoyAdi.Text = dataGridView1.CurrentRow.Cells["SOYAD"].Value.ToString();
         }
 
      

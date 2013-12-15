@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -82,11 +84,12 @@
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.btnMekanSil = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnMekanKaydet = new System.Windows.Forms.Button();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -155,14 +158,14 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(742, 68);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker2.TabIndex = 46;
+            this.dateTimePicker2.TabIndex = 13;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(379, 74);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 45;
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // btnDuzenle
             // 
@@ -170,7 +173,7 @@
             this.btnDuzenle.Location = new System.Drawing.Point(369, 188);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(112, 53);
-            this.btnDuzenle.TabIndex = 44;
+            this.btnDuzenle.TabIndex = 22;
             this.btnDuzenle.Text = "DÜZENLE";
             this.btnDuzenle.UseVisualStyleBackColor = true;
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
@@ -181,7 +184,7 @@
             this.btnSil.Location = new System.Drawing.Point(251, 188);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(112, 53);
-            this.btnSil.TabIndex = 43;
+            this.btnSil.TabIndex = 21;
             this.btnSil.Text = "SİL";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -192,18 +195,34 @@
             this.btnTemizle.Location = new System.Drawing.Point(133, 188);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(112, 53);
-            this.btnTemizle.TabIndex = 42;
+            this.btnTemizle.TabIndex = 20;
             this.btnTemizle.Text = "TEMİZLE";
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click_1);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 247);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(974, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1011, 150);
             this.dataGridView1.TabIndex = 41;
             // 
             // button1
@@ -212,7 +231,7 @@
             this.button1.Location = new System.Drawing.Point(15, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 53);
-            this.button1.TabIndex = 39;
+            this.button1.TabIndex = 19;
             this.button1.Text = "KAYDET";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -233,7 +252,7 @@
             this.txtSatisNedeni.Multiline = true;
             this.txtSatisNedeni.Name = "txtSatisNedeni";
             this.txtSatisNedeni.Size = new System.Drawing.Size(252, 85);
-            this.txtSatisNedeni.TabIndex = 37;
+            this.txtSatisNedeni.TabIndex = 18;
             // 
             // label15
             // 
@@ -249,8 +268,10 @@
             // 
             this.txtSatisKdvTutari.Location = new System.Drawing.Point(742, 126);
             this.txtSatisKdvTutari.Name = "txtSatisKdvTutari";
+            this.txtSatisKdvTutari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSatisKdvTutari.Size = new System.Drawing.Size(102, 20);
-            this.txtSatisKdvTutari.TabIndex = 35;
+            this.txtSatisKdvTutari.TabIndex = 17;
+            this.txtSatisKdvTutari.Text = "0";
             // 
             // label16
             // 
@@ -266,8 +287,11 @@
             // 
             this.txtSatisKdvOrani.Location = new System.Drawing.Point(928, 97);
             this.txtSatisKdvOrani.Name = "txtSatisKdvOrani";
+            this.txtSatisKdvOrani.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSatisKdvOrani.Size = new System.Drawing.Size(86, 20);
-            this.txtSatisKdvOrani.TabIndex = 33;
+            this.txtSatisKdvOrani.TabIndex = 16;
+            this.txtSatisKdvOrani.Text = "0";
+            this.txtSatisKdvOrani.Leave += new System.EventHandler(this.txtSatisKdvOrani_Leave);
             // 
             // label17
             // 
@@ -284,7 +308,7 @@
             this.txtSatisFaturaNo.Location = new System.Drawing.Point(742, 100);
             this.txtSatisFaturaNo.Name = "txtSatisFaturaNo";
             this.txtSatisFaturaNo.Size = new System.Drawing.Size(102, 20);
-            this.txtSatisFaturaNo.TabIndex = 31;
+            this.txtSatisFaturaNo.TabIndex = 15;
             // 
             // label18
             // 
@@ -300,8 +324,10 @@
             // 
             this.txtSatisTutari.Location = new System.Drawing.Point(928, 68);
             this.txtSatisTutari.Name = "txtSatisTutari";
+            this.txtSatisTutari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSatisTutari.Size = new System.Drawing.Size(86, 20);
-            this.txtSatisTutari.TabIndex = 29;
+            this.txtSatisTutari.TabIndex = 14;
+            this.txtSatisTutari.Text = "0";
             // 
             // label19
             // 
@@ -328,7 +354,7 @@
             this.txtSatisYeri.Location = new System.Drawing.Point(742, 42);
             this.txtSatisYeri.Name = "txtSatisYeri";
             this.txtSatisYeri.Size = new System.Drawing.Size(272, 20);
-            this.txtSatisYeri.TabIndex = 25;
+            this.txtSatisYeri.TabIndex = 12;
             // 
             // label14
             // 
@@ -374,8 +400,10 @@
             // 
             this.txtKdvTutari.Location = new System.Drawing.Point(379, 126);
             this.txtKdvTutari.Name = "txtKdvTutari";
+            this.txtKdvTutari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtKdvTutari.Size = new System.Drawing.Size(102, 20);
-            this.txtKdvTutari.TabIndex = 20;
+            this.txtKdvTutari.TabIndex = 11;
+            this.txtKdvTutari.Text = "0";
             // 
             // label10
             // 
@@ -391,8 +419,11 @@
             // 
             this.txtKdvOrani.Location = new System.Drawing.Point(562, 97);
             this.txtKdvOrani.Name = "txtKdvOrani";
+            this.txtKdvOrani.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtKdvOrani.Size = new System.Drawing.Size(86, 20);
-            this.txtKdvOrani.TabIndex = 18;
+            this.txtKdvOrani.TabIndex = 10;
+            this.txtKdvOrani.Text = "0";
+            this.txtKdvOrani.Leave += new System.EventHandler(this.txtKdvOrani_Leave);
             // 
             // label9
             // 
@@ -409,7 +440,7 @@
             this.txtAlisFaturaNo.Location = new System.Drawing.Point(379, 100);
             this.txtAlisFaturaNo.Name = "txtAlisFaturaNo";
             this.txtAlisFaturaNo.Size = new System.Drawing.Size(102, 20);
-            this.txtAlisFaturaNo.TabIndex = 16;
+            this.txtAlisFaturaNo.TabIndex = 9;
             // 
             // label8
             // 
@@ -425,8 +456,10 @@
             // 
             this.txtGirisTutari.Location = new System.Drawing.Point(562, 71);
             this.txtGirisTutari.Name = "txtGirisTutari";
+            this.txtGirisTutari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtGirisTutari.Size = new System.Drawing.Size(86, 20);
-            this.txtGirisTutari.TabIndex = 14;
+            this.txtGirisTutari.TabIndex = 8;
+            this.txtGirisTutari.Text = "0";
             // 
             // label7
             // 
@@ -453,7 +486,7 @@
             this.txtAlindigiYer.Location = new System.Drawing.Point(379, 48);
             this.txtAlindigiYer.Name = "txtAlindigiYer";
             this.txtAlindigiYer.Size = new System.Drawing.Size(269, 20);
-            this.txtAlindigiYer.TabIndex = 10;
+            this.txtAlindigiYer.TabIndex = 6;
             // 
             // label5
             // 
@@ -510,35 +543,37 @@
             this.txtDemirbasTuru.Location = new System.Drawing.Point(112, 71);
             this.txtDemirbasTuru.Name = "txtDemirbasTuru";
             this.txtDemirbasTuru.Size = new System.Drawing.Size(184, 20);
-            this.txtDemirbasTuru.TabIndex = 4;
+            this.txtDemirbasTuru.TabIndex = 2;
             // 
             // txtDemirbasAdeti
             // 
             this.txtDemirbasAdeti.Location = new System.Drawing.Point(112, 123);
             this.txtDemirbasAdeti.Name = "txtDemirbasAdeti";
+            this.txtDemirbasAdeti.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDemirbasAdeti.Size = new System.Drawing.Size(100, 20);
-            this.txtDemirbasAdeti.TabIndex = 3;
+            this.txtDemirbasAdeti.TabIndex = 4;
+            this.txtDemirbasAdeti.Text = "0";
             // 
             // txtDemirbasCinsi
             // 
             this.txtDemirbasCinsi.Location = new System.Drawing.Point(112, 97);
             this.txtDemirbasCinsi.Name = "txtDemirbasCinsi";
             this.txtDemirbasCinsi.Size = new System.Drawing.Size(184, 20);
-            this.txtDemirbasCinsi.TabIndex = 2;
+            this.txtDemirbasCinsi.TabIndex = 3;
             // 
             // txtDemirbasBirimi
             // 
             this.txtDemirbasBirimi.Location = new System.Drawing.Point(112, 149);
             this.txtDemirbasBirimi.Name = "txtDemirbasBirimi";
             this.txtDemirbasBirimi.Size = new System.Drawing.Size(100, 20);
-            this.txtDemirbasBirimi.TabIndex = 1;
+            this.txtDemirbasBirimi.TabIndex = 5;
             // 
             // txtDemirbasAdi
             // 
             this.txtDemirbasAdi.Location = new System.Drawing.Point(112, 45);
             this.txtDemirbasAdi.Name = "txtDemirbasAdi";
             this.txtDemirbasAdi.Size = new System.Drawing.Size(184, 20);
-            this.txtDemirbasAdi.TabIndex = 0;
+            this.txtDemirbasAdi.TabIndex = 1;
             // 
             // label22
             // 
@@ -555,7 +590,7 @@
             this.txtBulunduguYer.Location = new System.Drawing.Point(113, 50);
             this.txtBulunduguYer.Name = "txtBulunduguYer";
             this.txtBulunduguYer.Size = new System.Drawing.Size(180, 20);
-            this.txtBulunduguYer.TabIndex = 41;
+            this.txtBulunduguYer.TabIndex = 24;
             // 
             // label23
             // 
@@ -571,8 +606,8 @@
             // 
             this.txtAdeti.Location = new System.Drawing.Point(113, 76);
             this.txtAdeti.Name = "txtAdeti";
-            this.txtAdeti.Size = new System.Drawing.Size(100, 20);
-            this.txtAdeti.TabIndex = 43;
+            this.txtAdeti.Size = new System.Drawing.Size(180, 20);
+            this.txtAdeti.TabIndex = 25;
             // 
             // label24
             // 
@@ -588,8 +623,8 @@
             // 
             this.txtSorumlusu.Location = new System.Drawing.Point(113, 102);
             this.txtSorumlusu.Name = "txtSorumlusu";
-            this.txtSorumlusu.Size = new System.Drawing.Size(100, 20);
-            this.txtSorumlusu.TabIndex = 45;
+            this.txtSorumlusu.Size = new System.Drawing.Size(180, 20);
+            this.txtSorumlusu.TabIndex = 26;
             // 
             // label25
             // 
@@ -603,9 +638,24 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(419, 10);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(558, 150);
             this.dataGridView2.TabIndex = 44;
             // 
@@ -613,7 +663,6 @@
             // 
             this.panel2.Controls.Add(this.dateTimePicker3);
             this.panel2.Controls.Add(this.btnMekanSil);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label25);
@@ -622,6 +671,8 @@
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.txtAdeti);
             this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.txtBulunduguYer);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Location = new System.Drawing.Point(0, 414);
@@ -629,35 +680,31 @@
             this.panel2.Size = new System.Drawing.Size(987, 172);
             this.panel2.TabIndex = 43;
             // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(110, 128);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(183, 20);
+            this.dateTimePicker3.TabIndex = 27;
+            // 
             // btnMekanSil
             // 
             this.btnMekanSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMekanSil.Location = new System.Drawing.Point(305, 82);
+            this.btnMekanSil.Location = new System.Drawing.Point(305, 105);
             this.btnMekanSil.Name = "btnMekanSil";
             this.btnMekanSil.Size = new System.Drawing.Size(108, 30);
-            this.btnMekanSil.TabIndex = 49;
+            this.btnMekanSil.TabIndex = 30;
             this.btnMekanSil.Text = "SİL";
             this.btnMekanSil.UseVisualStyleBackColor = true;
             this.btnMekanSil.Click += new System.EventHandler(this.btnMekanSil_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(305, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 30);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "DÜZENLE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(305, 46);
+            this.button4.Location = new System.Drawing.Point(305, 69);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(108, 30);
-            this.button4.TabIndex = 46;
+            this.button4.TabIndex = 29;
             this.button4.Text = "TEMİZLE";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -665,20 +712,30 @@
             // btnMekanKaydet
             // 
             this.btnMekanKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMekanKaydet.Location = new System.Drawing.Point(305, 10);
+            this.btnMekanKaydet.Location = new System.Drawing.Point(305, 33);
             this.btnMekanKaydet.Name = "btnMekanKaydet";
             this.btnMekanKaydet.Size = new System.Drawing.Size(108, 30);
-            this.btnMekanKaydet.TabIndex = 45;
+            this.btnMekanKaydet.TabIndex = 28;
             this.btnMekanKaydet.Text = "KAYDET";
             this.btnMekanKaydet.UseVisualStyleBackColor = true;
             this.btnMekanKaydet.Click += new System.EventHandler(this.btnMekanKaydet_Click);
             // 
-            // dateTimePicker3
+            // textBox1
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(110, 128);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker3.TabIndex = 50;
+            this.textBox1.Location = new System.Drawing.Point(113, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label26.Location = new System.Drawing.Point(12, 24);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(85, 13);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "DemirBas ID :";
             // 
             // DemirbasKayit
             // 
@@ -690,8 +747,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DemirbasKayit";
             this.Text = "DemirbasKayit";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DemirbasKayit_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -756,7 +815,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnMekanKaydet;
         private System.Windows.Forms.Button btnMekanSil;
@@ -764,5 +822,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox txtGirisTutari;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label26;
     }
 }

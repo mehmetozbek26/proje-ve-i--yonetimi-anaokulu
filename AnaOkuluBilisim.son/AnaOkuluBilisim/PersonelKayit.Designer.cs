@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.baslamatarih = new System.Windows.Forms.DateTimePicker();
+            this.basvurutarih = new System.Windows.Forms.DateTimePicker();
             this.txtTecilBitisYili = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtTcNo = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.cmbKayitDurumu = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cmbOgrenimDurumu = new System.Windows.Forms.ComboBox();
@@ -77,7 +78,8 @@
             this.txtAd = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.cmbUyruk = new System.Windows.Forms.ComboBox();
+            this.datedogumtarihi = new System.Windows.Forms.DateTimePicker();
             this.txtKoy = new System.Windows.Forms.TextBox();
             this.txtKayitNo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -101,17 +103,13 @@
             this.txtKimlikSeriNo = new System.Windows.Forms.TextBox();
             this.txtDogumYeri = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtUyruk = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -122,6 +120,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.btnDuzenle);
@@ -132,6 +131,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1018, 413);
             this.panel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(876, 322);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(133, 64);
+            this.button3.TabIndex = 87;
+            this.button3.Text = "Kapat";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -176,18 +187,17 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(864, 407);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
             this.tabPage1.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.dateTimePicker4);
-            this.tabPage1.Controls.Add(this.dateTimePicker2);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.baslamatarih);
+            this.tabPage1.Controls.Add(this.basvurutarih);
             this.tabPage1.Controls.Add(this.txtTecilBitisYili);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.txtTcNo);
-            this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.cmbKayitDurumu);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.cmbOgrenimDurumu);
@@ -232,26 +242,26 @@
             this.tabPage1.Text = "Personel Ön Bilgilierl";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // baslamatarih
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(131, 148);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker2.TabIndex = 88;
+            this.baslamatarih.Location = new System.Drawing.Point(131, 148);
+            this.baslamatarih.Name = "baslamatarih";
+            this.baslamatarih.Size = new System.Drawing.Size(121, 20);
+            this.baslamatarih.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // basvurutarih
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 122);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker1.TabIndex = 87;
+            this.basvurutarih.Location = new System.Drawing.Point(131, 122);
+            this.basvurutarih.Name = "basvurutarih";
+            this.basvurutarih.Size = new System.Drawing.Size(121, 20);
+            this.basvurutarih.TabIndex = 4;
             // 
             // txtTecilBitisYili
             // 
             this.txtTecilBitisYili.Location = new System.Drawing.Point(131, 229);
             this.txtTecilBitisYili.Name = "txtTecilBitisYili";
             this.txtTecilBitisYili.Size = new System.Drawing.Size(121, 20);
-            this.txtTecilBitisYili.TabIndex = 86;
+            this.txtTecilBitisYili.TabIndex = 8;
             // 
             // label23
             // 
@@ -268,17 +278,7 @@
             this.txtTcNo.Location = new System.Drawing.Point(131, 96);
             this.txtTcNo.Name = "txtTcNo";
             this.txtTcNo.Size = new System.Drawing.Size(121, 20);
-            this.txtTcNo.TabIndex = 84;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(284, 266);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 13);
-            this.label20.TabIndex = 81;
-            this.label20.Text = "Ayrılış Tarihi";
+            this.txtTcNo.TabIndex = 3;
             // 
             // cmbKayitDurumu
             // 
@@ -290,7 +290,7 @@
             this.cmbKayitDurumu.Location = new System.Drawing.Point(398, 240);
             this.cmbKayitDurumu.Name = "cmbKayitDurumu";
             this.cmbKayitDurumu.Size = new System.Drawing.Size(121, 21);
-            this.cmbKayitDurumu.TabIndex = 79;
+            this.cmbKayitDurumu.TabIndex = 19;
             // 
             // label19
             // 
@@ -313,7 +313,7 @@
             this.cmbOgrenimDurumu.Location = new System.Drawing.Point(398, 212);
             this.cmbOgrenimDurumu.Name = "cmbOgrenimDurumu";
             this.cmbOgrenimDurumu.Size = new System.Drawing.Size(121, 21);
-            this.cmbOgrenimDurumu.TabIndex = 77;
+            this.cmbOgrenimDurumu.TabIndex = 18;
             // 
             // label18
             // 
@@ -340,7 +340,7 @@
             this.txtEvTel.Location = new System.Drawing.Point(398, 158);
             this.txtEvTel.Name = "txtEvTel";
             this.txtEvTel.Size = new System.Drawing.Size(121, 20);
-            this.txtEvTel.TabIndex = 74;
+            this.txtEvTel.TabIndex = 16;
             // 
             // label16
             // 
@@ -357,7 +357,7 @@
             this.txtCepTel.Location = new System.Drawing.Point(398, 185);
             this.txtCepTel.Name = "txtCepTel";
             this.txtCepTel.Size = new System.Drawing.Size(121, 20);
-            this.txtCepTel.TabIndex = 72;
+            this.txtCepTel.TabIndex = 17;
             // 
             // label15
             // 
@@ -374,7 +374,7 @@
             this.txtSemt.Location = new System.Drawing.Point(398, 80);
             this.txtSemt.Name = "txtSemt";
             this.txtSemt.Size = new System.Drawing.Size(121, 20);
-            this.txtSemt.TabIndex = 70;
+            this.txtSemt.TabIndex = 12;
             // 
             // label14
             // 
@@ -391,7 +391,7 @@
             this.txtilce.Location = new System.Drawing.Point(398, 106);
             this.txtilce.Name = "txtilce";
             this.txtilce.Size = new System.Drawing.Size(121, 20);
-            this.txtilce.TabIndex = 68;
+            this.txtilce.TabIndex = 13;
             // 
             // label13
             // 
@@ -408,7 +408,7 @@
             this.txtMail.Location = new System.Drawing.Point(398, 132);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(287, 20);
-            this.txtMail.TabIndex = 66;
+            this.txtMail.TabIndex = 15;
             // 
             // label12
             // 
@@ -424,7 +424,7 @@
             this.txtil.Location = new System.Drawing.Point(564, 106);
             this.txtil.Name = "txtil";
             this.txtil.Size = new System.Drawing.Size(121, 20);
-            this.txtil.TabIndex = 64;
+            this.txtil.TabIndex = 14;
             // 
             // label11
             // 
@@ -442,7 +442,7 @@
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(441, 46);
-            this.txtAdres.TabIndex = 62;
+            this.txtAdres.TabIndex = 11;
             // 
             // cmbCinsiyet
             // 
@@ -454,7 +454,7 @@
             this.cmbCinsiyet.Location = new System.Drawing.Point(131, 283);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(121, 21);
-            this.cmbCinsiyet.TabIndex = 61;
+            this.cmbCinsiyet.TabIndex = 10;
             // 
             // label10
             // 
@@ -482,7 +482,7 @@
             this.cmbKanGrubu.Location = new System.Drawing.Point(131, 256);
             this.cmbKanGrubu.Name = "cmbKanGrubu";
             this.cmbKanGrubu.Size = new System.Drawing.Size(121, 21);
-            this.cmbKanGrubu.TabIndex = 59;
+            this.cmbKanGrubu.TabIndex = 9;
             // 
             // label9
             // 
@@ -505,7 +505,8 @@
             this.cmbAskerlikDurumu.Location = new System.Drawing.Point(131, 202);
             this.cmbAskerlikDurumu.Name = "cmbAskerlikDurumu";
             this.cmbAskerlikDurumu.Size = new System.Drawing.Size(121, 21);
-            this.cmbAskerlikDurumu.TabIndex = 56;
+            this.cmbAskerlikDurumu.TabIndex = 7;
+            this.cmbAskerlikDurumu.SelectedIndexChanged += new System.EventHandler(this.cmbAskerlikDurumu_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -538,7 +539,7 @@
             this.cmbDepartman.Location = new System.Drawing.Point(131, 175);
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(121, 21);
-            this.cmbDepartman.TabIndex = 53;
+            this.cmbDepartman.TabIndex = 6;
             // 
             // label6
             // 
@@ -605,21 +606,22 @@
             this.txtSoyad.Location = new System.Drawing.Point(131, 44);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(121, 20);
-            this.txtSoyad.TabIndex = 46;
+            this.txtSoyad.TabIndex = 1;
             // 
             // txtSicilNo
             // 
             this.txtSicilNo.Location = new System.Drawing.Point(131, 70);
             this.txtSicilNo.Name = "txtSicilNo";
             this.txtSicilNo.Size = new System.Drawing.Size(121, 20);
-            this.txtSicilNo.TabIndex = 45;
+            this.txtSicilNo.TabIndex = 2;
             // 
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(131, 18);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(121, 20);
-            this.txtAd.TabIndex = 42;
+            this.txtAd.TabIndex = 0;
+            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
             // 
             // tabPage2
             // 
@@ -636,7 +638,8 @@
             // 
             this.panel2.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.dateTimePicker3);
+            this.panel2.Controls.Add(this.cmbUyruk);
+            this.panel2.Controls.Add(this.datedogumtarihi);
             this.panel2.Controls.Add(this.txtKoy);
             this.panel2.Controls.Add(this.txtKayitNo);
             this.panel2.Controls.Add(this.label25);
@@ -660,37 +663,45 @@
             this.panel2.Controls.Add(this.txtKimlikSeriNo);
             this.panel2.Controls.Add(this.txtDogumYeri);
             this.panel2.Controls.Add(this.label34);
-            this.panel2.Controls.Add(this.label35);
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label36);
             this.panel2.Controls.Add(this.label37);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.txtUyruk);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(853, 375);
             this.panel2.TabIndex = 0;
             // 
-            // dateTimePicker3
+            // cmbUyruk
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(450, 142);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(187, 20);
-            this.dateTimePicker3.TabIndex = 88;
+            this.cmbUyruk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUyruk.Items.AddRange(new object[] {
+            "T.C.",
+            "YABANCI UYRUK"});
+            this.cmbUyruk.Location = new System.Drawing.Point(220, 87);
+            this.cmbUyruk.Name = "cmbUyruk";
+            this.cmbUyruk.Size = new System.Drawing.Size(187, 21);
+            this.cmbUyruk.TabIndex = 0;
+            // 
+            // datedogumtarihi
+            // 
+            this.datedogumtarihi.Location = new System.Drawing.Point(450, 142);
+            this.datedogumtarihi.Name = "datedogumtarihi";
+            this.datedogumtarihi.Size = new System.Drawing.Size(187, 20);
+            this.datedogumtarihi.TabIndex = 8;
             // 
             // txtKoy
             // 
             this.txtKoy.Location = new System.Drawing.Point(450, 194);
             this.txtKoy.Name = "txtKoy";
             this.txtKoy.Size = new System.Drawing.Size(187, 20);
-            this.txtKoy.TabIndex = 57;
+            this.txtKoy.TabIndex = 10;
             // 
             // txtKayitNo
             // 
             this.txtKayitNo.Location = new System.Drawing.Point(450, 243);
             this.txtKayitNo.Name = "txtKayitNo";
             this.txtKayitNo.Size = new System.Drawing.Size(187, 20);
-            this.txtKayitNo.TabIndex = 65;
+            this.txtKayitNo.TabIndex = 13;
             // 
             // label25
             // 
@@ -706,7 +717,7 @@
             this.txtVerYeri.Location = new System.Drawing.Point(220, 243);
             this.txtVerYeri.Name = "txtVerYeri";
             this.txtVerYeri.Size = new System.Drawing.Size(187, 20);
-            this.txtVerYeri.TabIndex = 62;
+            this.txtVerYeri.TabIndex = 6;
             // 
             // label21
             // 
@@ -731,35 +742,35 @@
             this.txtSiraNo.Location = new System.Drawing.Point(520, 217);
             this.txtSiraNo.Name = "txtSiraNo";
             this.txtSiraNo.Size = new System.Drawing.Size(117, 20);
-            this.txtSiraNo.TabIndex = 61;
+            this.txtSiraNo.TabIndex = 12;
             // 
             // txtAile
             // 
             this.txtAile.Location = new System.Drawing.Point(363, 217);
             this.txtAile.Name = "txtAile";
             this.txtAile.Size = new System.Drawing.Size(117, 20);
-            this.txtAile.TabIndex = 60;
+            this.txtAile.TabIndex = 11;
             // 
             // txtCilt
             // 
             this.txtCilt.Location = new System.Drawing.Point(220, 220);
             this.txtCilt.Name = "txtCilt";
             this.txtCilt.Size = new System.Drawing.Size(117, 20);
-            this.txtCilt.TabIndex = 58;
+            this.txtCilt.TabIndex = 5;
             // 
             // txtMahalle
             // 
             this.txtMahalle.Location = new System.Drawing.Point(220, 194);
             this.txtMahalle.Name = "txtMahalle";
             this.txtMahalle.Size = new System.Drawing.Size(187, 20);
-            this.txtMahalle.TabIndex = 55;
+            this.txtMahalle.TabIndex = 4;
             // 
             // txtKimlikilce
             // 
             this.txtKimlikilce.Location = new System.Drawing.Point(450, 170);
             this.txtKimlikilce.Name = "txtKimlikilce";
             this.txtKimlikilce.Size = new System.Drawing.Size(187, 20);
-            this.txtKimlikilce.TabIndex = 54;
+            this.txtKimlikilce.TabIndex = 9;
             // 
             // label26
             // 
@@ -820,7 +831,7 @@
             this.txtKimlikil.Location = new System.Drawing.Point(220, 168);
             this.txtKimlikil.Name = "txtKimlikil";
             this.txtKimlikil.Size = new System.Drawing.Size(187, 20);
-            this.txtKimlikil.TabIndex = 53;
+            this.txtKimlikil.TabIndex = 3;
             // 
             // label32
             // 
@@ -845,14 +856,15 @@
             this.txtKimlikSeriNo.Location = new System.Drawing.Point(450, 116);
             this.txtKimlikSeriNo.Name = "txtKimlikSeriNo";
             this.txtKimlikSeriNo.Size = new System.Drawing.Size(187, 20);
-            this.txtKimlikSeriNo.TabIndex = 50;
+            this.txtKimlikSeriNo.TabIndex = 7;
             // 
             // txtDogumYeri
             // 
             this.txtDogumYeri.Location = new System.Drawing.Point(220, 142);
             this.txtDogumYeri.Name = "txtDogumYeri";
             this.txtDogumYeri.Size = new System.Drawing.Size(187, 20);
-            this.txtDogumYeri.TabIndex = 51;
+            this.txtDogumYeri.TabIndex = 2;
+            this.txtDogumYeri.TextChanged += new System.EventHandler(this.txtDogumYeri_TextChanged);
             // 
             // label34
             // 
@@ -862,26 +874,6 @@
             this.label34.Size = new System.Drawing.Size(98, 13);
             this.label34.TabIndex = 64;
             this.label34.Text = "Uyruk";
-            // 
-            // label35
-            // 
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label35.Location = new System.Drawing.Point(447, 90);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(70, 13);
-            this.label35.TabIndex = 63;
-            this.label35.Text = "Cinsiyet";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Items.AddRange(new object[] {
-            "KIZ",
-            "ERKEK"});
-            this.comboBox1.Location = new System.Drawing.Point(533, 89);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(104, 21);
-            this.comboBox1.TabIndex = 48;
             // 
             // label36
             // 
@@ -906,15 +898,9 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(220, 116);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 49;
-            // 
-            // txtUyruk
-            // 
-            this.txtUyruk.Location = new System.Drawing.Point(220, 90);
-            this.txtUyruk.Name = "txtUyruk";
-            this.txtUyruk.Size = new System.Drawing.Size(187, 20);
-            this.txtUyruk.TabIndex = 47;
+            this.textBox1.TabIndex = 1;
             // 
             // button2
             // 
@@ -946,19 +932,26 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 420);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1011, 229);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(398, 267);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker4.TabIndex = 89;
             // 
             // PersonelKayit
             // 
@@ -967,6 +960,7 @@
             this.ClientSize = new System.Drawing.Size(1029, 641);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonelKayit";
             this.Text = "PersonelKayit";
             this.Load += new System.EventHandler(this.PersonelKayit_Load);
@@ -990,7 +984,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox cmbKayitDurumu;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cmbOgrenimDurumu;
@@ -1059,15 +1052,13 @@
         private System.Windows.Forms.TextBox txtKimlikSeriNo;
         private System.Windows.Forms.TextBox txtDogumYeri;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtUyruk;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker baslamatarih;
+        private System.Windows.Forms.DateTimePicker basvurutarih;
+        private System.Windows.Forms.DateTimePicker datedogumtarihi;
+        private System.Windows.Forms.ComboBox cmbUyruk;
+        private System.Windows.Forms.Button button3;
     }
 }

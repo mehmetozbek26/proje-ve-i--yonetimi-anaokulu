@@ -1,0 +1,1 @@
+﻿select * from DersTablo where SINIFID=1005

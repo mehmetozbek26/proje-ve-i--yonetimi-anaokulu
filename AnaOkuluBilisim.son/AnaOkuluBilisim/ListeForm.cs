@@ -103,16 +103,21 @@ namespace AnaOkuluBilisim
         private void hesabımToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            ChangePassword changePassword = new ChangePassword();
+            SifreDegistir changePassword = new SifreDegistir();
             changePassword.MdiParent = this;
             changePassword.Show();
         }
 
         private void hesapEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmnewaccount hesapekle = new frmnewaccount();
+            KullaniciEkle hesapekle = new KullaniciEkle();
             hesapekle.MdiParent = this;
             hesapekle.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -9,92 +9,81 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using AnaOkuluBilisim.Models;
+using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
+
 
 namespace AnaOkuluBilisim
 {
     
     public partial class PersonelKayit : Form
     {
-        public PersonelGuncelle prsguncelle;    
+        public PersonelGuncelle prsguncelle;
+        AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
+        Parola par = Parola.GET();
         public PersonelKayit()
         {
             InitializeComponent();        
             prsguncelle = new PersonelGuncelle();
             prsguncelle.prskayit = this;    
         }
-        bool kimlikbilgileri = true;
-        SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");  
+        bool kimlikbilgileri = true; 
         private void PersonelKayit_Load(object sender, EventArgs e)
         {               
             PersonelGetir();
         }   
         private void button1_Click(object sender, EventArgs e)
         {
-            if (kimlikbilgileri)
+            try
             {
-                tabControl1.SelectedIndex = 1;
-                kimlikbilgileri = false;
+                if(client.PersonelKayit(par.KullaniciAdi,par.Sifre,par.Departman,new PersonellerDB{
+                    Adi=txtAd.Text.ToUpper(),
+                    Soyadi=txtSoyad.Text.ToUpper(),
+                    SicilNo=txtSicilNo.Text.ToUpper(),
+                    TcNo=txtTcNo.Text.ToUpper(),
+                    BasvuruTarihi=basvurutarih.Value,
+                    BaslamaTarihi=baslamatarih.Value,
+                    Departman = cmbDepartman.SelectedItem.ToString(),
+                    AskerlikDurumu=cmbAskerlikDurumu.SelectedItem.ToString(),
+                    TecilBitisYili=txtTecilBitisYili.Text.ToUpper(),
+                    KanGrubu=cmbKanGrubu.SelectedItem.ToString(),
+                    Cinsiyet=cmbCinsiyet.SelectedItem.ToString(),
+                    Adres=txtAdres.Text.ToUpper(),
+                    Semt=txtSemt.Text.ToUpper(),
+                    Ilce=txtilce.Text.ToUpper(),
+                    il=txtil.Text.ToUpper(),
+                    Mail=txtMail.Text,
+                    EvTel=txtEvTel.Text.ToUpper(),
+                    CepTel=txtCepTel.Text.ToUpper(),
+                    EgitimDurumu=cmbOgrenimDurumu.SelectedItem.ToString(),
+                    Durumu=cmbKayitDurumu.SelectedItem.ToString(),
+                    Kuyruk=cmbUyruk.SelectedItem.ToString(),
+                    KkimlikSeriNo=txtKimlikSeriNo.Text.ToUpper(),
+                    KdogumYeri=txtDogumYeri.Text.ToUpper(),
+                    KdogumTarihi=datedogumtarihi.Value,
+                    Kdogumili=txtKimlikil.Text.ToUpper(),
+                    Kdogumilce=txtKimlikilce.Text.ToUpper(),
+                    Kmahalle=txtMahalle.Text.ToUpper(),
+                    Kkoy=txtKoy.Text.ToUpper(),
+                    Kcilt=txtCilt.Text.ToUpper(),
+                    Kaile=txtAile.Text.ToUpper(),
+                    KSiraNo=txtSiraNo.Text.ToUpper(),
+                    KVerilisYeri=txtVerYeri.Text.ToUpper(),
+                    KKayitNo=txtKayitNo.Text.ToUpper()
+                }))
+                    MessageBox.Show("Personel Kaydedildi");
+                else
+                    MessageBox.Show("Personel Kaydedilemedi");
+                PersonelGetir();
+
+
             }
-            else
+            catch (Exception err)
             {
-                SqlCommand cmd = new SqlCommand("sp_PersonelEkle", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@Adis", txtAd.Text);
-                cmd.Parameters.Add("@SoyAdis", txtSoyad.Text);
-                cmd.Parameters.Add("@SicilNos", txtSicilNo.Text);
-                cmd.Parameters.Add("@BasvuruTarihis", dateTimePicker1.Value);
-                cmd.Parameters.Add("@BaslamaTarihis", dateTimePicker2.Value);
-                cmd.Parameters.Add("@AskerlikDurumus", cmbAskerlikDurumu.Text);
-                cmd.Parameters.Add("@TecilBitisYilis", txtTecilBitisYili.Text);
-                cmd.Parameters.Add("@Kangrubus", cmbKanGrubu.Text);
-                cmd.Parameters.Add("@Cinsiyets", cmbCinsiyet.Text);
-                cmd.Parameters.Add("@Adress", txtAdres.Text);
-                cmd.Parameters.Add("@Semts", txtSemt.Text);
-                cmd.Parameters.Add("@Ilces", txtilce.Text);
-                cmd.Parameters.Add("@ils", txtil.Text);
-                cmd.Parameters.Add("@Mails", txtMail.Text);
-                cmd.Parameters.Add("@EvTels", txtEvTel.Text);
-                cmd.Parameters.Add("@CepTels", txtCepTel.Text);
-                cmd.Parameters.Add("@EgitimDurumus", cmbOgrenimDurumu.Text);
-                cmd.Parameters.Add("@AyrilisTarihis", dateTimePicker4.Value.ToShortDateString());
-                cmd.Parameters.Add("@TcNos", txtTcNo.Text);
-                cmd.Parameters.Add("@Departmans", cmbDepartman.Text);
 
-                cmd.Parameters.Add("@KTcNos", textBox1.Text);
-                cmd.Parameters.Add("@KUyruks", txtUyruk.Text);
-                cmd.Parameters.Add("@KCinsiyets", comboBox1.Text);
-                cmd.Parameters.Add("@KKimlikSeriNos", txtKimlikSeriNo.Text);
-                cmd.Parameters.Add("@KDogumYeris", txtDogumYeri.Text);
-                cmd.Parameters.Add("@KDogumTarihis", dateTimePicker3.Value);
-                cmd.Parameters.Add("@KDogumilis", txtKimlikil.Text);
-                cmd.Parameters.Add("@KDogumilces", txtKimlikilce.Text);
-                cmd.Parameters.Add("@KMahalles", txtMahalle.Text);
-                cmd.Parameters.Add("@KKoys", txtKoy.Text);
-                cmd.Parameters.Add("@KCilts", txtCilt.Text);
-                cmd.Parameters.Add("@KAiles", txtAile.Text);
-                cmd.Parameters.Add("@KSiraNos", txtSiraNo.Text);
-                cmd.Parameters.Add("@KVerilisYeris", txtVerYeri.Text);
-                cmd.Parameters.Add("@KKayitNos", txtKayitNo.Text);
-                try
-                {
-                    cnn.Open();
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt Eklendi.");
-                    kimlikbilgileri = true;
 
-                }
-                catch
-                { MessageBox.Show("Hata Oluştu"); }
-                finally
-                {
-                    cnn.Close();
-                    DataTable tablo = new DataTable();
-                    tablo.Clear();
-                    SqlDataAdapter da = new SqlDataAdapter("Select * from Personeller", cnn);
-                    da.Fill(tablo);
-                    dataGridView1.DataSource = tablo;
-                }
             }
+            
         }
         public void ClearTextBoxes(Control parent)
         {
@@ -112,12 +101,27 @@ namespace AnaOkuluBilisim
         }
         public void PersonelGetir()
         {
-            DataTable tablo = new DataTable();
-            tablo.Clear();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Personeller", cnn);
-            da.Fill(tablo);
-            dataGridView1.DataSource = tablo;
-            dataGridView1.Refresh();
+            try
+            {
+                var item = client.TumPersoneller();
+                if (item.Length > 0)
+                {
+                    dataGridView1.DataSource = item;
+                    for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                        dataGridView1.Columns[i].Visible = false;
+                    dataGridView1.Columns["Adi"].DisplayIndex = 0;
+                    dataGridView1.Columns["Soyadi"].DisplayIndex = 1;
+                    dataGridView1.Columns["Mail"].DisplayIndex = 2;
+                    dataGridView1.Columns["Adi"].Visible = true;
+                    dataGridView1.Columns["Soyadi"].Visible = true;
+                    dataGridView1.Columns["Mail"].Visible = true;
+                }
+
+            }
+            catch (Exception err)
+            {
+
+            }
 
         }
         private void button4_Click(object sender, EventArgs e)
@@ -135,14 +139,71 @@ namespace AnaOkuluBilisim
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand();
-            cnn.Open();
-            cmd.Connection = cnn;
-            cmd.CommandText = "Delete from Personeller where PersonelId='" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'";            
-            cmd.ExecuteNonQuery();
-            cnn.Close();
-            PersonelGetir();
-            MessageBox.Show("Kayıt Silindi.");
+            try
+            {
+                if (client.PersonelSil(par.KullaniciAdi, par.Sifre, par.Departman, Convert.ToInt32(dataGridView1.CurrentRow.Cells["PersonelId"].Value)))
+                    MessageBox.Show("Personel Kayıt Silindi");
+                else
+                    MessageBox.Show("Personel Kayıt Silinemedi");
+                    PersonelGetir();
+
+
+
+
+            }
+            catch (Exception err)
+            {
+
+
+
+            }
+           
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                textBox1.Text = txtTcNo.Text;
+               
+
+            }
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDogumYeri_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAskerlikDurumu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbAskerlikDurumu.SelectedText == "Tecilli")
+            {
+                label8.Text="Tecil Bitiş YIlı";
+                txtTecilBitisYili.Enabled = true;
+            }
+            else if (cmbAskerlikDurumu.SelectedText == "Yapıldı")
+            {
+                label8.Text = "Yapılış Tarihi";
+                txtTecilBitisYili.Enabled = true;
+            }
+            else
+            {
+                label8.Text = "Tecil Bitiş YIlı";
+                txtTecilBitisYili.Enabled = false;
+            }
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
       

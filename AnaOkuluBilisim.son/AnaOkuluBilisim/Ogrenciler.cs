@@ -25,9 +25,7 @@ namespace AnaOkuluBilisim
             //System.Windows.Forms.MouseEventHandler(dataGridView1_MouseClick);
         }
 
-        //SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
-        SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["MERKANVERTB"].ToString());
-        DataTable tablo = new DataTable();
+       
         private void Ogrenciler_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'anaOkuluDBDataSet.Ogrenciler' table. You can move, or remove it, as needed.
@@ -47,6 +45,7 @@ namespace AnaOkuluBilisim
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            
             if (textBox1.Text.Trim() == "")
             {
                 tablo.Clear();
@@ -64,6 +63,7 @@ namespace AnaOkuluBilisim
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            cnn.Open();
             if (textBox2.Text.Trim() == "")
             {
                 tablo.Clear();
@@ -78,6 +78,7 @@ namespace AnaOkuluBilisim
                 da.Fill(tablo);
                 dataGridView1.DataSource = tablo;
             }
+            cnn.Close();
         }
         //private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         //{

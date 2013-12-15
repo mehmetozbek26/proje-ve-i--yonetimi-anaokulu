@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtKoy = new System.Windows.Forms.TextBox();
             this.txtKayitNo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtKimlikil = new System.Windows.Forms.TextBox();
-            this.txtDogumTarihi = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtKimlikSeriNo = new System.Windows.Forms.TextBox();
@@ -78,7 +78,6 @@
             this.txtTcNo = new System.Windows.Forms.TextBox();
             this.txtPostaKodu = new System.Windows.Forms.TextBox();
             this.txtEvTel = new System.Windows.Forms.TextBox();
-            this.txtUyruk = new System.Windows.Forms.TextBox();
             this.txtOgrenciAd = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label61 = new System.Windows.Forms.Label();
@@ -156,9 +155,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.txtCikisTarihi = new System.Windows.Forms.TextBox();
-            this.label59 = new System.Windows.Forms.Label();
-            this.txtKayitTarihi = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label58 = new System.Windows.Forms.Label();
             this.cmbSinif = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
@@ -173,6 +170,7 @@
             this.lblDosyaAdi = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -214,6 +212,8 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.txtKoy);
             this.tabPage1.Controls.Add(this.txtKayitNo);
             this.tabPage1.Controls.Add(this.label25);
@@ -232,7 +232,6 @@
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.txtKimlikil);
-            this.tabPage1.Controls.Add(this.txtDogumTarihi);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.txtKimlikSeriNo);
@@ -261,7 +260,6 @@
             this.tabPage1.Controls.Add(this.txtTcNo);
             this.tabPage1.Controls.Add(this.txtPostaKodu);
             this.tabPage1.Controls.Add(this.txtEvTel);
-            this.tabPage1.Controls.Add(this.txtUyruk);
             this.tabPage1.Controls.Add(this.txtOgrenciAd);
             this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -271,6 +269,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ön Kayıt Bilgileri";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(375, 298);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker1.TabIndex = 49;
             // 
             // txtKoy
             // 
@@ -416,13 +421,6 @@
             this.txtKimlikil.Size = new System.Drawing.Size(187, 20);
             this.txtKimlikil.TabIndex = 30;
             // 
-            // txtDogumTarihi
-            // 
-            this.txtDogumTarihi.Location = new System.Drawing.Point(374, 304);
-            this.txtDogumTarihi.Name = "txtDogumTarihi";
-            this.txtDogumTarihi.Size = new System.Drawing.Size(187, 20);
-            this.txtDogumTarihi.TabIndex = 29;
-            // 
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -443,7 +441,7 @@
             // 
             // txtKimlikSeriNo
             // 
-            this.txtKimlikSeriNo.Location = new System.Drawing.Point(374, 276);
+            this.txtKimlikSeriNo.Location = new System.Drawing.Point(374, 272);
             this.txtKimlikSeriNo.Name = "txtKimlikSeriNo";
             this.txtKimlikSeriNo.Size = new System.Drawing.Size(187, 20);
             this.txtKimlikSeriNo.TabIndex = 26;
@@ -476,7 +474,7 @@
             // cmbCinsiyet
             // 
             this.cmbCinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCinsiyet.Location = new System.Drawing.Point(457, 249);
+            this.cmbCinsiyet.Location = new System.Drawing.Point(454, 243);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(104, 21);
             this.cmbCinsiyet.TabIndex = 22;
@@ -655,13 +653,6 @@
             this.txtEvTel.Name = "txtEvTel";
             this.txtEvTel.Size = new System.Drawing.Size(187, 20);
             this.txtEvTel.TabIndex = 2;
-            // 
-            // txtUyruk
-            // 
-            this.txtUyruk.Location = new System.Drawing.Point(144, 250);
-            this.txtUyruk.Name = "txtUyruk";
-            this.txtUyruk.Size = new System.Drawing.Size(187, 20);
-            this.txtUyruk.TabIndex = 1;
             // 
             // txtOgrenciAd
             // 
@@ -1395,9 +1386,7 @@
             this.tabPage6.BackColor = System.Drawing.Color.Transparent;
             this.tabPage6.BackgroundImage = global::AnaOkuluBilisim.Properties.Resources.gfff;
             this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage6.Controls.Add(this.txtCikisTarihi);
-            this.tabPage6.Controls.Add(this.label59);
-            this.tabPage6.Controls.Add(this.txtKayitTarihi);
+            this.tabPage6.Controls.Add(this.dateTimePicker2);
             this.tabPage6.Controls.Add(this.label58);
             this.tabPage6.Controls.Add(this.cmbSinif);
             this.tabPage6.Controls.Add(this.label57);
@@ -1408,28 +1397,12 @@
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Kurum Bilgileri";
             // 
-            // txtCikisTarihi
+            // dateTimePicker2
             // 
-            this.txtCikisTarihi.Location = new System.Drawing.Point(94, 74);
-            this.txtCikisTarihi.Name = "txtCikisTarihi";
-            this.txtCikisTarihi.Size = new System.Drawing.Size(117, 20);
-            this.txtCikisTarihi.TabIndex = 43;
-            // 
-            // label59
-            // 
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label59.Location = new System.Drawing.Point(8, 77);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(80, 13);
-            this.label59.TabIndex = 42;
-            this.label59.Text = "Çıkış Tarihi";
-            // 
-            // txtKayitTarihi
-            // 
-            this.txtKayitTarihi.Location = new System.Drawing.Point(94, 50);
-            this.txtKayitTarihi.Name = "txtKayitTarihi";
-            this.txtKayitTarihi.Size = new System.Drawing.Size(117, 20);
-            this.txtKayitTarihi.TabIndex = 41;
+            this.dateTimePicker2.Location = new System.Drawing.Point(94, 48);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(107, 20);
+            this.dateTimePicker2.TabIndex = 49;
             // 
             // label58
             // 
@@ -1446,7 +1419,7 @@
             this.cmbSinif.FormattingEnabled = true;
             this.cmbSinif.Location = new System.Drawing.Point(94, 21);
             this.cmbSinif.Name = "cmbSinif";
-            this.cmbSinif.Size = new System.Drawing.Size(117, 21);
+            this.cmbSinif.Size = new System.Drawing.Size(107, 21);
             this.cmbSinif.TabIndex = 20;
             // 
             // label57
@@ -1571,6 +1544,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Items.AddRange(new object[] {
+            "T.C.",
+            "YABANCI UYRUK"});
+            this.comboBox1.Location = new System.Drawing.Point(144, 244);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 21);
+            this.comboBox1.TabIndex = 50;
+            // 
             // OgrDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1606,7 +1590,6 @@
             this.panel4.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1639,7 +1622,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtKimlikil;
-        private System.Windows.Forms.TextBox txtDogumTarihi;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtKimlikSeriNo;
@@ -1668,7 +1650,6 @@
         private System.Windows.Forms.TextBox txtTcNo;
         private System.Windows.Forms.TextBox txtPostaKodu;
         private System.Windows.Forms.TextBox txtEvTel;
-        private System.Windows.Forms.TextBox txtUyruk;
         private System.Windows.Forms.TextBox txtOgrenciAd;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label61;
@@ -1746,9 +1727,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TextBox txtCikisTarihi;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox txtKayitTarihi;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.ComboBox cmbSinif;
         private System.Windows.Forms.Label label57;
@@ -1763,6 +1741,9 @@
         private System.Windows.Forms.Label lblDosyaAdi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox comboBox1;
 
 
     }

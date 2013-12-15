@@ -9,6 +9,8 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
+using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
 
 namespace AnaOkuluBilisim
 {
@@ -18,32 +20,56 @@ namespace AnaOkuluBilisim
         {
             InitializeComponent();
         }
+        Parola par = Parola.GET();
+        AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
+        IList<SiniflarDB> sinif;
 
-
-        SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
         private void YoklamaDurum_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select * from siniflar", cnn);
-            cnn.Open();
-            SqlDataReader rdr = cmd.ExecuteReader();
-            cmbDurum.Items.Insert(0, "Seçiniz");
-            while (rdr.Read())
+            try
             {
-                //comboBox1.Items.Add(rdr["SinifAdi"].ToString());
-                cmbDurum.Items.Insert(Convert.ToInt32(rdr["sinifId"].ToString()), rdr["SinifAdi"].ToString());
+                sinif = client.TumSiniflar(par.KullaniciAdi, par.Sifre, par.Departman);
+                cmbSinif.Items.Clear();
+                foreach (var item in sinif)
+                {
+                    cmbSinif.Items.Add(item.sinifAdi);
+                }
             }
-            cnn.Close();
-            rdr.Close();
+            catch (Exception err)
+            {
+
+            }
         }
          private void cmbDurum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            using (SqlDataAdapter da = new SqlDataAdapter("sp_YoklamaGoster", cnn))
+            try
             {
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = Convert.ToInt32(cmbDurum.SelectedIndex.ToString());
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                if (client.TumYoklamaById(par.KullaniciAdi, par.Sifre, par.Departman, sinif[cmbSinif.SelectedIndex].sinifId).Length > 0)
+                {
+                    dataGridView1.DataSource = client.TumYoklamaById(par.KullaniciAdi, par.Sifre, par.Departman, sinif[cmbSinif.SelectedIndex].sinifId);
+                    dataGridView1.Columns["VELIADI"].DisplayIndex = 0;
+                    dataGridView1.Columns["VELISOYADI"].DisplayIndex = 1;
+                    dataGridView1.Columns["VELIEMAIL"].DisplayIndex = 2;
+                    dataGridView1.Columns["OGRENCIADI"].DisplayIndex = 3;
+                    dataGridView1.Columns["OGRENCISOYADI"].DisplayIndex = 4;
+                    dataGridView1.Columns["TARIH"].DisplayIndex = 5;
+                    dataGridView1.Columns["VELIEMAIL"].DisplayIndex = 6;
+                    dataGridView1.Columns["DEVAMSIZLIK"].DisplayIndex = 7;
+                    dataGridView1.Columns["ACIKLAMA"].DisplayIndex = 8;
+                    dataGridView1.Columns["ID"].Visible = false;
+                    dataGridView1.Columns["SinifId"].Visible = false;
+                    dataGridView1.Columns["VeliId"].Visible = false;
+                    dataGridView1.Columns["OgrenciId"].Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Sınıf Kayıt Yok");
+                    dataGridView1.DataSource = null;
+                }
+            }
+            catch (Exception err)
+            {
+
             }
         }
 
