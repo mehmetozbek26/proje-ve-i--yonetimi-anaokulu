@@ -52,11 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangePassword.cs">
+    <Compile Include="OgrDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <Compile Include="OgrDuzenle.Designer.cs">
+      <DependentUpon>OgrDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifreDegistir.Designer.cs">
+      <DependentUpon>SifreDegistir.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalClass.cs" />
     <Compile Include="DemirBasGuncelle.cs">
@@ -71,17 +77,17 @@
     <Compile Include="DemirbasKayit.Designer.cs">
       <DependentUpon>DemirbasKayit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmnewaccount.cs">
+    <Compile Include="KullaniciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmnewaccount.Designer.cs">
-      <DependentUpon>frmnewaccount.cs</DependentUpon>
+    <Compile Include="KullaniciEkle.Designer.cs">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="ListeForm.cs">
       <SubType>Form</SubType>
@@ -92,12 +98,6 @@
     <Compile Include="Models\Parola.cs" />
     <Compile Include="Models\Personel.cs" />
     <Compile Include="Models\Sinif.cs" />
-    <Compile Include="OgrDuzenle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OgrDuzenle.Designer.cs">
-      <DependentUpon>OgrDuzenle.cs</DependentUpon>
-    </Compile>
     <Compile Include="OgrenciKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,8 +153,11 @@
     <Compile Include="YoklamaEkle.Designer.cs">
       <DependentUpon>YoklamaEkle.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="OgrDuzenle.resx">
+      <DependentUpon>OgrDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifreDegistir.resx">
+      <DependentUpon>SifreDegistir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DemirBasGuncelle.resx">
       <DependentUpon>DemirBasGuncelle.cs</DependentUpon>
@@ -162,17 +165,14 @@
     <EmbeddedResource Include="DemirbasKayit.resx">
       <DependentUpon>DemirbasKayit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmnewaccount.resx">
-      <DependentUpon>frmnewaccount.cs</DependentUpon>
+    <EmbeddedResource Include="KullaniciEkle.resx">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeForm.resx">
       <DependentUpon>ListeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OgrDuzenle.resx">
-      <DependentUpon>OgrDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciKayit.resx">
       <DependentUpon>OgrenciKayit.cs</DependentUpon>
@@ -226,13 +226,13 @@
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.DemirbasMekanlariDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Ogrenciler.datasource">
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.OgrencilerDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.OgretmelerDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Personeller.datasource">
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.PersonellerDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.pwd.datasource">
@@ -241,19 +241,19 @@
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.ServislerDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Siniflar.datasource">
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.SiniflarDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.UcuncuSahislar.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Veliler.datasource">
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.VelilerDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Yemekler.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.Yoklama.datasource">
+    <None Include="Service References\AnaOkuluService\AnaOkuluBilisim.AnaOkuluService.YoklamaDB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AnaOkuluService\AnaOkuluWebService.wsdl" />

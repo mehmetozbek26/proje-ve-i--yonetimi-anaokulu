@@ -38,7 +38,7 @@ namespace AnaOkuluWebService
         public string EvTel { get; set; }
         public string CepTel { get; set; }
         public string EgitimDurumu { get; set; }
-        public Nullable<System.DateTime> AyrilisTarihi { get; set; }
+        public string Durumu { get; set; }
         public string Departman { get; set; }
         public string Kuyruk { get; set; }
         public string KkimlikSeriNo { get; set; }

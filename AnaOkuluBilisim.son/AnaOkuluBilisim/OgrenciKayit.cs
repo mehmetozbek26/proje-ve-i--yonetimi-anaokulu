@@ -9,60 +9,58 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 using System.Configuration;
+using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
+
 
 namespace AnaOkuluBilisim
 {
     public partial class OgrenciKayit : Form
     {
-        public Form1 frm1;
+        public Giris frm1;
         double x, y, fx, fy, oranx, orany;
+        Parola par=Parola.GET();
+        AnaOkuluWebServiceClient client=new AnaOkuluWebServiceClient();
+        IList<SiniflarDB> sinif;
+        IList<ServislerDB> servis;
         public OgrenciKayit()
             
         { 
         
             InitializeComponent();
         }
-        string resimPath;
-        SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["MERKANVERTB"].ToString());
-        //SqlConnection baglan = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
+        string resimPath=null;
         private void OgrenciKayit_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Select sinifId,sinifAdi from Siniflar", baglan);
-            baglan.Open();
-            SqlDataReader rdr = cmd.ExecuteReader();
-            cmbSinif.Items.Insert(0, "Seçiniz");
-            while (rdr.Read())
+            try
             {
-                
-                cmbSinif.Items.Insert(Convert.ToInt32(rdr["sinifId"].ToString()), rdr["SinifAdi"].ToString());
-                cmbSinif.Items.Add(rdr["SinifAdi"].ToString());
+                sinif = client.TumSiniflar(par.KullaniciAdi, par.Sifre, par.Departman);
+                cmbSinif.Items.Clear();
+                foreach (var item in sinif)
+                {
+                    cmbSinif.Items.Add(item.sinifAdi);
+                }
+               servis = client.TumServisler(par.KullaniciAdi, par.Sifre, par.Departman);
+                cmbServis.Items.Clear();
+                foreach (var item in servis)
+                {
+                    cmbServis.Items.Add(item.AD);
+                }
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                x = Screen.PrimaryScreen.Bounds.Width;
+                y = Screen.PrimaryScreen.Bounds.Height;
+                fx = this.Width;
+                fy = this.Height;
+                oranx = Math.Round(1920 / x, 2);
+                orany = Math.Round(1080 / y, 2);
+                this.Width = Convert.ToInt32(1292 / oranx);
+                this.Height = Convert.ToInt32(756 / orany);
+                txtOgrenciAd.Width = Convert.ToInt32(417 / oranx);
             }
-            baglan.Close();
-            rdr.Close();
-
-            SqlCommand cmd2 = new SqlCommand("Select ServisAdi from Servisler", baglan);
-            baglan.Open();
-            SqlDataReader rdr2 = cmd2.ExecuteReader();
-            while (rdr2.Read())
+            catch (Exception err)
             {
-                cmbServis.Items.Add(rdr2["ServisAdi"].ToString());
+                this.Close();
             }
-            baglan.Close();
-            rdr2.Close();
-
-            
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
-
-            x = Screen.PrimaryScreen.Bounds.Width;
-            y = Screen.PrimaryScreen.Bounds.Height;
-            fx = this.Width;
-            fy = this.Height;
-            oranx = Math.Round(1920 / x, 2);
-            orany = Math.Round(1080 / y, 2);
-            this.Width = Convert.ToInt32(1292 / oranx);
-            this.Height = Convert.ToInt32(756 / orany);
-            txtOgrenciAd.Width = Convert.ToInt32(417 / oranx);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -81,169 +79,105 @@ namespace AnaOkuluBilisim
             int ogrid = 0;
             try
             {
-                if (txtOgrenciAd.Text == "")
-                { throw new Exception("Öğrenci Adı Giriniz."); }
-                if (txtOgrenciSoyad.Text == "")
-                { throw new Exception("Öğrenci Soyadı Giriniz."); }
-                if (txtOgrenciAdres.Text == "")
-                { throw new Exception("Adres Giriniz."); }
-                if (txtSemt.Text == "")
-                { throw new Exception("Semt Giriniz."); }
-                if (txtIlce.Text == "")
-                { throw new Exception("İlçe Giriniz."); }
-                if (txtil.Text == "")
-                { throw new Exception("İl Giriniz."); }
-                if (txtPostaKodu.Text == "")
-                { throw new Exception("Posta Kodu Giriniz."); }
-                if (txtEvTel.Text == "")
-                { throw new Exception("Ev Telofon Bilgilerini Giriniz."); }
-                if (txtUyruk.Text == "")
-                { throw new Exception("Uyruk Giriniz."); }
-                if (txtTcNo.Text == "")
-                { throw new Exception("Tc No Giriniz."); }
-                if (txtKimlikSeriNo.Text == "")
-                { throw new Exception("Seri No Giriniz."); }
-                if (txtDogumYeri.Text == "")
-                { throw new Exception("Doğum Yeri Giriniz."); }
-                if (txtKimlikil.Text == "")
-                { throw new Exception("Kimlik Bilg. İl Giriniz."); }
-                if (txtKimlikilce.Text == "")
-                { throw new Exception("Kimlik Bilg. İlçe Giriniz."); }
-                if (txtMahalle.Text == "")
-                { throw new Exception("Mahalle Giriniz."); }
-                if (txtKoy.Text == "")
-                { throw new Exception("Köy Giriniz."); }
-                if (txtCilt.Text == "")
-                { throw new Exception("Cilt Bilg. Giriniz."); }
-                if (txtAile.Text == "")
-                { throw new Exception("Kimlik Bilg. Aile Girniz."); }
-                if (txtSiraNo.Text == "")
-                { throw new Exception("Kimlik Bilg.Sıra No Giriniz."); }
-                if (txtVerYeri.Text == "")
-                { throw new Exception("Kimlik Bilg. Veriliş Yeri Giriniz."); }
-                if (txtKayitNo.Text == "")
-                { throw new Exception("Kimlik Bilg. Kayıt No Giriniz."); }
-
-                    FileStream fs = new FileStream(resimPath, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    byte[] resim = br.ReadBytes((int)fs.Length);
-                    br.Close();
-                    fs.Close();
-                    SqlCommand cmd = new SqlCommand("sp_OgrenciKayitEkle", baglan);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@Adi", txtOgrenciAd.Text);
-                    cmd.Parameters.Add("@Soyadi", txtOgrenciSoyad.Text);
-                    cmd.Parameters.Add("@Adres", txtOgrenciAdres.Text);
-                    cmd.Parameters.Add("@Semt", txtSemt.Text);
-                    cmd.Parameters.Add("@ilce", txtIlce.Text);
-                    cmd.Parameters.Add("@il", txtil.Text);
-                    cmd.Parameters.Add("@PostaKodu", txtPostaKodu.Text);
-                    cmd.Parameters.Add("@EvTel", txtEvTel.Text);
-                    cmd.Parameters.Add("@KanGrubu", cmbKanGrubu.Text);
-                    cmd.Parameters.Add("@TcNo", txtTcNo.Text);
-                    cmd.Parameters.Add("@Uyruk", txtUyruk.Text);
-                    cmd.Parameters.Add("@Cinsiyet", cmbCinsiyet.Text);
-                    cmd.Parameters.Add("@KimlikSeriNo", txtKimlikSeriNo.Text);
-                    cmd.Parameters.Add("@DogumYeri", txtDogumYeri.Text);
-                    cmd.Parameters.Add("@DogumTarihi", dateTimePicker1.Value);
-                    cmd.Parameters.Add("@Dogumili", txtKimlikil.Text);
-                    cmd.Parameters.Add("@Dogumilce", txtKimlikilce.Text);
-                    cmd.Parameters.Add("@Mahalle", txtMahalle.Text);
-                    cmd.Parameters.Add("@Koy", txtKoy.Text);
-                    cmd.Parameters.Add("@Cilt", txtCilt.Text);
-                    cmd.Parameters.Add("@Aile", txtAile.Text);
-                    cmd.Parameters.Add("@SiraNo", txtSiraNo.Text);
-                    cmd.Parameters.Add("@VerilisYeri", txtVerYeri.Text);
-                    cmd.Parameters.Add("@KayitNo", txtKayitNo.Text);
-                    cmd.Parameters.Add("@Resim", SqlDbType.Image, resim.Length).Value = resim;
-                    cmd.Parameters.Add("@SinifId", cmbSinif.SelectedIndex.ToString());
-                    cmd.Parameters.Add("@Sinifi", cmbSinif.Text);
-                    cmd.Parameters.Add("@Servisi", cmbServis.Text);
-                    cmd.Parameters.Add("@KayitTarihi", txtKayitTarihi.Text);
-                    cmd.Parameters.Add("@CikisTarihi", txtCikisTarihi.Text);
-                    cmd.Parameters.Add("@DavranisSorunu", txtDavranisSorunlari.Text);
-                    cmd.Parameters.Add("@Yapilanlar", txtYapilanlar.Text);
-                    cmd.Parameters.Add("@YasitlariylaIliskisi", txtYasitlariylailiskisi.Text);
-                    cmd.Parameters.Add("@Fobileri", txtFobileri.Text);
-                    cmd.Parameters.Add("@SevdigiYiyecekler", txtYiyecekler.Text);
-                    cmd.Parameters.Add("@Asilar", textBox9.Text);
-                    cmd.Parameters.Add("@GecirdigiHastaliklar", textBox1.Text);
-                    cmd.Parameters.Add("@Alerjiler", textBox3.Text);
-                    cmd.Parameters.Add("@Ameliyatlar", textBox4.Text);
-                    cmd.Parameters.Add("@SaglikSorunlari", textBox5.Text);
-                    cmd.Parameters.Add("@ilac", textBox6.Text);
-                    cmd.Parameters.Add("@Protez", textBox10.Text);
-                    cmd.Parameters.Add("@Diyet", txtDiyet.Text);
-                    cmd.Parameters.Add("@RuhsalDurum", textBox7.Text);
-                    cmd.Parameters.Add(new SqlParameter("@ReturnId", SqlDbType.Int));
-                    cmd.Parameters["@ReturnId"].Direction = ParameterDirection.Output;
-                    try
+                if (txtOgrenciAd.Text == "") throw new Exception("Öğrenci Adı Giriniz.");
+                if (txtOgrenciSoyad.Text == "") throw new Exception("Öğrenci Soyadı Giriniz.");
+                if (txtOgrenciAdres.Text == "") throw new Exception("Adres Giriniz.");
+                if (txtSemt.Text == "") throw new Exception("Semt Giriniz.");
+                if (txtIlce.Text == "") throw new Exception("İlçe Giriniz.");
+                if (txtil.Text == "") throw new Exception("İl Giriniz.");
+                if (txtPostaKodu.Text == "") throw new Exception("Posta Kodu Giriniz.");
+                if (txtEvTel.Text == "") throw new Exception("Ev Telofon Bilgilerini Giriniz.");
+                if (comboBox1.SelectedIndex < 0) throw new Exception("Uyruk Giriniz.");
+                if (txtTcNo.Text == "") throw new Exception("Tc No Giriniz.");
+                if (txtKimlikSeriNo.Text == "") throw new Exception("Seri No Giriniz.");
+                if (txtDogumYeri.Text == "") throw new Exception("Doğum Yeri Giriniz.");
+                if (txtKimlikil.Text == "") throw new Exception("Kimlik Bilg. İl Giriniz.");
+                if (txtKimlikilce.Text == "") throw new Exception("Kimlik Bilg. İlçe Giriniz.");
+                if (txtMahalle.Text == "") throw new Exception("Mahalle Giriniz.");
+                if (txtKoy.Text == "") throw new Exception("Köy Giriniz.");
+                if (txtCilt.Text == "") throw new Exception("Cilt Bilg. Giriniz.");
+                if (txtAile.Text == "") throw new Exception("Kimlik Bilg. Aile Girniz.");
+                if (txtSiraNo.Text == "") throw new Exception("Kimlik Bilg.Sıra No Giriniz.");
+                if (txtVerYeri.Text == "") throw new Exception("Kimlik Bilg. Veriliş Yeri Giriniz.");
+                if (txtKayitNo.Text == "") throw new Exception("Kimlik Bilg. Kayıt No Giriniz."); 
+                if (resimPath == null) throw new Exception("Resim Seçiniz");
+                FileStream fs = new FileStream(resimPath, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                byte[] resim = br.ReadBytes((int)fs.Length);
+                br.Close();
+                fs.Close();
+                ogrid = client.OgrenciEkle(par.KullaniciAdi, par.Sifre, par.Departman, new OgrencilerDB
+                {
+                    Adi = txtOgrenciAd.Text.ToUpper(),
+                    Adres = txtOgrenciAdres.Text.ToUpper(),
+                    Aile = txtAile.Text.ToUpper(),
+                    Alerjiler = textBox3.Text.ToUpper(),
+                    Ameliyatlar = textBox4.Text.ToUpper(),
+                    Asilar = textBox9.Text.ToUpper(),
+                    Cilt = txtCilt.Text.ToUpper(),
+                    Cinsiyet = cmbCinsiyet.SelectedText,
+                    DavranisSorunu = txtDavranisSorunlari.Text.ToUpper(),
+                    Diyet = txtDiyet.Text.ToUpper(),
+                    Dogumilce = txtKimlikilce.Text.ToUpper(),
+                    Dogumili = txtKimlikil.Text.ToUpper(),
+                    DogumTarihi = dateTimePicker1.Value,
+                    DogumYeri = txtDogumYeri.Text.ToUpper(),
+                    EvTel = txtEvTel.Text.ToUpper(),
+                    Fobileri = txtFobileri.Text.ToUpper(),
+                    GecirdigiHastaliklar = textBox1.Text.ToUpper(),
+                    Soyadi = txtOgrenciSoyad.Text.ToUpper(),
+                    Semt = txtSemt.Text.ToUpper(),
+                    ilce = txtIlce.Text.ToUpper(),
+                    il = txtil.Text.ToUpper(),
+                    PostaKodu = txtPostaKodu.Text.ToUpper(),
+                    KanGrubu = cmbKanGrubu.SelectedText,
+                    TcNo = txtTcNo.Text.ToUpper(),
+                    Uyruk = comboBox1.SelectedText,
+                    KimlikSeriNo = txtKimlikSeriNo.Text.ToUpper(),
+                    Mahalle = txtMahalle.Text.ToUpper(),
+                    Koy = txtKoy.Text.ToUpper(),
+                    SiraNo = txtSiraNo.Text.ToUpper(),
+                    VerilisYeri = txtVerYeri.Text.ToUpper(),
+                    KayitNo = txtKayitNo.Text.ToUpper(),
+                    Resim = resim,
+                    SinifId = sinif[cmbSinif.SelectedIndex].sinifId,
+                    ServisId = servis[cmbServis.SelectedIndex].ID,
+                    KayitTarihi = dateTimePicker2.Value,
+                    Yapilanlar = txtYapilanlar.Text.ToUpper(),
+                    YasitlariylaIliskisi = txtYasitlariylailiskisi.Text.ToUpper(),
+                    SevdigiYiyecekler = txtYiyecekler.Text.ToUpper(),
+                    SaglikSorunlari = textBox5.Text.ToUpper(),
+                    ilac = textBox6.Text.ToUpper(),
+                    Protez = textBox10.Text.ToUpper(),
+                });
+                if (ogrid == 0) throw new Exception("Ogrenci Eklenemedi");
+                if(!(textBox2.Text=="" || textBox2.Text==null))              
+                    client.VeliEkle(par.KullaniciAdi, par.Sifre, par.Departman, new VelilerDB
                     {
-                        baglan.Open();
-                        cmd.ExecuteNonQuery();
-                        ogrid = Convert.ToInt32(cmd.Parameters["@ReturnId"].Value.ToString());
-                        MessageBox.Show("Kayıt Eklendi." + ogrid);
-                    }
-                    catch (Exception err)
-                    {
-                        throw err;
-                    }
-                    finally
-                    {
-                        baglan.Close();
-                    }
-                
-                SqlCommand cmd2 = new SqlCommand("sp_VeliEkle", baglan);
-                cmd2.CommandType = CommandType.StoredProcedure;
-                cmd2.Parameters.Add("@VeliAdi", txtVeliAdi.Text);
-                cmd2.Parameters.Add("@VeliSoyadi", txtVeliSoyAdi.Text);
-                cmd2.Parameters.Add("@VeliCeptel", txtVeliCep.Text);
-                cmd2.Parameters.Add("@VeliEvTel", txtVeliEvTel.Text);
-                cmd2.Parameters.Add("@VeliTcNo", txtVeliTc.Text);
-                cmd2.Parameters.Add("@YakinlikDerecesi", txtVeliYakinlikDerecesi.Text);
-                cmd2.Parameters.Add("@Meslek", txtVeliMeslek.Text);
-                cmd2.Parameters.Add("@Email", txtVeliEmail.Text);
-                cmd2.Parameters.Add("@OgrenciId", ogrid);
-
-                try
+                        Adi=textBox2.Text.ToUpper(),
+                        Soyadi=txtVeliSoyAdi.Text.ToUpper(),
+                        Ceptel=txtVeliCep.Text.ToUpper(),
+                        EvTel=txtVeliEvTel.Text.ToUpper(),
+                        TcNo=txtVeliTc.Text.ToUpper(),
+                        YakinlikDerecesi = txtVeliYakinlikDerecesi.Text.ToUpper(),
+                        Meslek=txtVeliMeslek.Text.ToUpper(),
+                        Email=txtVeliEmail.Text.ToUpper(),
+                        OgrenciId=ogrid
+                    });
+               if(!(txtUcuncuSahisAd.Text=="" || txtUcuncuSahisAd.Text==null))
+                client.UcuncuSahisEkle(par.KullaniciAdi, par.Sifre, par.Departman, new UcuncuSahisDB
                 {
-                    baglan.Open();
-                    cmd2.ExecuteNonQuery();
-                    MessageBox.Show("Veli Bilgileri EKlendi.");
-                }
-                catch(Exception err)
-                {
-                    throw err;
-                }
-                finally
-                {
-                    baglan.Close();
-                }
-                SqlCommand cmd3 = new SqlCommand("sp_UcuncuSahisEkle", baglan);
-                cmd3.CommandType = CommandType.StoredProcedure;
-                cmd3.Parameters.Add("@Adi", txtUcuncuSahisAd.Text);
-                cmd3.Parameters.Add("@Soyadi", txtUcuncuSahisSoyad.Text);
-                cmd3.Parameters.Add("@CepTel", txtUcuncuSahisCep.Text);
-                cmd3.Parameters.Add("@EvTel", txtUcuncuSahisEvTel.Text);
-                cmd3.Parameters.Add("@TcNo", txtUcuncuSahisTc.Text);
-                cmd3.Parameters.Add("@YakinlikDerecesi", txtUcuncuSahisYakinlikDerecesi.Text);
-                cmd3.Parameters.Add("@Meslek", txtUcuncuSahisMeslek.Text);
-                cmd3.Parameters.Add("@Email", txtUcuncuSahisEmail.Text);
-                cmd3.Parameters.Add("@OgrenciId", ogrid);
-                try
-                {
-                    baglan.Open();
-                    cmd3.ExecuteNonQuery();
-                    MessageBox.Show("Üçüncü Şahıs Bilgileri Eklendi.");
-                }
-                catch(Exception err)
-                {
-                    throw err;
-                }
-                finally
-                {
-                    baglan.Close();
-                }
+                    Adi=txtUcuncuSahisAd.Text.ToUpper(),
+                    Soyadi=txtUcuncuSahisSoyad.Text.ToUpper(),
+                    EvTel=txtUcuncuSahisEvTel.Text.ToUpper(),
+                    Email=txtUcuncuSahisEmail.Text.ToUpper(),
+                    Ceptel=txtUcuncuSahisCep.Text.ToUpper(),
+                    Meslek=txtUcuncuSahisMeslek.Text.ToUpper(),
+                    OgrenciId=ogrid,
+                    TcNo=txtUcuncuSahisTc.Text.ToUpper(),
+                    YakinlikDerecesi=txtUcuncuSahisYakinlikDerecesi.Text.ToUpper()
+                });
+               
             }
             catch (Exception err)
             {
@@ -279,6 +213,12 @@ namespace AnaOkuluBilisim
 
         private void cmbSinif_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
 
         }
 

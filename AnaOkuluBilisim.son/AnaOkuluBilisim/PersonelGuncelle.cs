@@ -7,56 +7,78 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AnaOkuluBilisim.AnaOkuluService;
+using AnaOkuluBilisim.Models;
 
 namespace AnaOkuluBilisim
 {
     public partial class PersonelGuncelle : Form
     {
         public PersonelKayit prskayit;
-
+        private int id = 0;
+        private AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
+        Parola par = Parola.GET();
         public PersonelGuncelle()
         {
             InitializeComponent();
         }
-        SqlConnection cnn = new SqlConnection("Data Source=.; database=AnaOkuluDB;integrated security=true");
+       
         private void PersonelGuncelle_Load(object sender, EventArgs e)
-        {          
-            txtAd.Text = prskayit.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtSoyad.Text = prskayit.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtSicilNo.Text = prskayit.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            dateTimePicker1.Text = prskayit.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            dateTimePicker2.Text = prskayit.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            cmbAskerlikDurumu.Text = prskayit.dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            txtTecilBitisYili.Text = prskayit.dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            cmbKanGrubu.Text = prskayit.dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            cmbCinsiyet.Text = prskayit.dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            txtAdres.Text = prskayit.dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            txtSemt.Text = prskayit.dataGridView1.CurrentRow.Cells[11].Value.ToString();
-            txtilce.Text = prskayit.dataGridView1.CurrentRow.Cells[12].Value.ToString();
-            txtil.Text = prskayit.dataGridView1.CurrentRow.Cells[13].Value.ToString();
-            txtMail.Text = prskayit.dataGridView1.CurrentRow.Cells[14].Value.ToString();
-            txtEvTel.Text = prskayit.dataGridView1.CurrentRow.Cells[15].Value.ToString();
-            txtCepTel.Text = prskayit.dataGridView1.CurrentRow.Cells[16].Value.ToString();
-            cmbOgrenimDurumu.Text = prskayit.dataGridView1.CurrentRow.Cells[17].Value.ToString();
-            txtAyrilisTarihi.Text = prskayit.dataGridView1.CurrentRow.Cells[18].Value.ToString();
-            txtTcNo.Text = prskayit.dataGridView1.CurrentRow.Cells[19].Value.ToString();
-            cmbDepartman.Text = prskayit.dataGridView1.CurrentRow.Cells[20].Value.ToString();
-
-            textBox1.Text = prskayit.dataGridView1.CurrentRow.Cells[21].Value.ToString();
-            txtUyruk.Text = prskayit.dataGridView1.CurrentRow.Cells[22].Value.ToString();
-           comboBox1.Text  = prskayit.dataGridView1.CurrentRow.Cells[23].Value.ToString();
-           txtKimlikSeriNo.Text = prskayit.dataGridView1.CurrentRow.Cells[24].Value.ToString();
-            txtDogumYeri.Text = prskayit.dataGridView1.CurrentRow.Cells[25].Value.ToString();
-         txtDogumTarihi.Text= prskayit.dataGridView1.CurrentRow.Cells[26].Value.ToString();
-           txtKimlikil.Text= prskayit.dataGridView1.CurrentRow.Cells[27].Value.ToString();
-            txtKimlikilce.Text = prskayit.dataGridView1.CurrentRow.Cells[28].Value.ToString();
-        txtMahalle.Text = prskayit.dataGridView1.CurrentRow.Cells[29].Value.ToString();
-           txtKoy.Text= prskayit.dataGridView1.CurrentRow.Cells[30].Value.ToString();
-           txtCilt.Text= prskayit.dataGridView1.CurrentRow.Cells[31].Value.ToString();
-           txtAile.Text = prskayit.dataGridView1.CurrentRow.Cells[32].Value.ToString();
-           txtSiraNo.Text = prskayit.dataGridView1.CurrentRow.Cells[33].Value.ToString();
-           txtVerYeri.Text = prskayit.dataGridView1.CurrentRow.Cells[34].Value.ToString();
-            txtKayitNo.Text = prskayit.dataGridView1.CurrentRow.Cells[35].Value.ToString();
+        {
+            id = (int)prskayit.dataGridView1.CurrentRow.Cells["PersonelId"].Value;
+            txtAd.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Adi"].Value.ToString() ;
+            txtSoyad.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Soyadi"].Value;
+            txtSicilNo.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["SicilNo"].Value;
+            datebasvuru.Value = (DateTime)prskayit.dataGridView1.CurrentRow.Cells["BasvuruTarihi"].Value;
+            datebaslama.Value = (DateTime)prskayit.dataGridView1.CurrentRow.Cells["BaslamaTarihi"].Value;
+            var askerlik = (String)prskayit.dataGridView1.CurrentRow.Cells["AskerlikDurumu"].Value;
+            for (int i = 0; i < cmbAskerlikDurumu.Items.Count; i++)
+                if (cmbAskerlikDurumu.Items[i].ToString() == askerlik)
+                    cmbAskerlikDurumu.SelectedIndex = i;
+           
+            txtTecilBitisYili.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["TecilBitisYili"].Value;
+            var kan = (String)prskayit.dataGridView1.CurrentRow.Cells["KanGrubu"].Value;
+            for (int i = 0; i < cmbKanGrubu.Items.Count; i++)
+                if (cmbKanGrubu.Items[i].ToString() == kan)
+                    cmbKanGrubu.SelectedIndex = i;
+            var cin = (String)prskayit.dataGridView1.CurrentRow.Cells["Cinsiyet"].Value;
+            for (int i = 0; i < cmbCinsiyet.Items.Count; i++)
+                if (cmbCinsiyet.Items[i].ToString() == cin)
+                    cmbCinsiyet.SelectedIndex = i;        
+            txtAdres.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Adres"].Value;
+            txtSemt.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Semt"].Value;
+            txtilce.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Ilce"].Value;
+            txtil.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["il"].Value;
+            txtMail.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Mail"].Value;
+            txtEvTel.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["EvTel"].Value;
+            txtCepTel.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["CepTel"].Value;
+            var ogr = (String)prskayit.dataGridView1.CurrentRow.Cells["EgitimDurumu"].Value;
+            for (int i = 0; i < cmbOgrenimDurumu.Items.Count; i++)
+                if (cmbOgrenimDurumu.Items[i].ToString() == ogr)
+                    cmbOgrenimDurumu.SelectedIndex = i;  
+            
+            
+            txtTcNo.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["TcNo"].Value;
+            var dep = (String)prskayit.dataGridView1.CurrentRow.Cells["Departman"].Value;
+            for (int i = 0; i < cmbDepartman.Items.Count; i++)
+                if (cmbDepartman.Items[i].ToString() == dep)
+                    cmbDepartman.SelectedIndex = i;
+            var uy = (String)prskayit.dataGridView1.CurrentRow.Cells["Kuyruk"].Value;
+            for (int i = 0; i < cmbUyruk.Items.Count; i++)
+                if (cmbUyruk.Items[i].ToString() == uy)
+                    cmbUyruk.SelectedIndex = i; 
+           txtKimlikSeriNo.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["KkimlikSeriNo"].Value;
+            txtDogumYeri.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["KdogumYeri"].Value;
+            datedogum.Value = (DateTime)prskayit.dataGridView1.CurrentRow.Cells["KdogumTarihi"].Value;
+           txtKimlikil.Text= (String)prskayit.dataGridView1.CurrentRow.Cells["il"].Value;
+            txtKimlikilce.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Ilce"].Value;
+            txtMahalle.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Kmahalle"].Value;
+           txtKoy.Text= (String)prskayit.dataGridView1.CurrentRow.Cells["Kkoy"].Value;
+           txtCilt.Text= (String)prskayit.dataGridView1.CurrentRow.Cells["Kcilt"].Value;
+           txtAile.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["Kaile"].Value;
+           txtSiraNo.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["KSiraNo"].Value;
+           txtVerYeri.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["KVerilisYeri"].Value;
+           txtKayitNo.Text = (String)prskayit.dataGridView1.CurrentRow.Cells["KKayitNo"].Value;
            
 
 
@@ -65,15 +87,84 @@ namespace AnaOkuluBilisim
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("buton calisti.");
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand("update Personeller set Adi='" + txtAd.Text + "',SoyAdi='" + txtSoyad.Text + "',SicilNo='" + txtSicilNo.Text + "',IsBasvuruTarihi='" + dateTimePicker1.Value.ToShortDateString() + "',IseBaslamaTarihi='" + dateTimePicker2.Value.ToShortDateString() + "',AskerlikDurumu='" + cmbAskerlikDurumu.Text + "',TecilBitisYili='" + txtTecilBitisYili.Text + "',KanGrubu='" + cmbKanGrubu.Text + "',Cinsiyet='" + cmbCinsiyet.Text + "',Adres='" + txtAdres.Text + "',Semt='" + txtSemt.Text + "',Ilce='" + txtilce.Text + "',Il='" + txtil.Text + "',Mail='" + txtMail.Text + "',EvTel='" + txtEvTel.Text + "',CepTel='" + txtCepTel.Text + "',EgitimDurumu='" + cmbOgrenimDurumu.Text + "',AyrilisTarihi='" + txtAyrilisTarihi.Text + "',TcNo='" + txtTcNo.Text + "',Departman='" + cmbDepartman.Text + "',KTcNo='" + textBox1.Text + "',KUyruk='" + txtUyruk.Text + "',KCinsiyet='" + comboBox1.Text + "',KKimlikSeriNo='" + txtKimlikSeriNo.Text + "',KDogumYeri='" + txtDogumYeri.Text + "',KDogumTarihi='" + txtDogumTarihi.Text + "',KDogumili='" + txtKimlikil.Text + "',KDogumilce='" + txtKimlikilce.Text + "',KMahalle='" + txtMahalle.Text + "',KKoy='" + txtKoy.Text + "',KCilt='" + txtCilt.Text + "',KAile='" + txtAile.Text + "',KSiraNo='" + txtSiraNo.Text + "',KVerilisYeri='" + txtVerYeri.Text + "',KKayitNo='" + txtKayitNo.Text + "'", cnn);
-            cmd.ExecuteNonQuery();
-            cnn.Close();
-            prskayit.PersonelGetir();
-            MessageBox.Show("Güncelleme gerçekleşti.");
-            this.Close();
+            try
+            {
+                PersonellerDB per=new PersonellerDB
+                {
+                    Adi = txtAd.Text.ToUpper(),
+                    Soyadi = txtSoyad.Text.ToUpper(),
+                    SicilNo = txtSicilNo.Text.ToUpper(),
+                    TcNo = txtTcNo.Text.ToUpper(),
+                    BasvuruTarihi = datebasvuru.Value,
+                    BaslamaTarihi = datebaslama.Value,
+                    Departman = cmbDepartman.SelectedItem.ToString(),
+                    AskerlikDurumu = cmbAskerlikDurumu.SelectedItem.ToString(),
+                    TecilBitisYili = txtTecilBitisYili.Text.ToUpper(),
+                    KanGrubu = cmbKanGrubu.SelectedItem.ToString(),
+                    Cinsiyet = cmbCinsiyet.SelectedItem.ToString(),
+                    Adres = txtAdres.Text.ToUpper(),
+                    Semt = txtSemt.Text.ToUpper(),
+                    Ilce = txtilce.Text.ToUpper(),
+                    il = txtil.Text.ToUpper(),
+                    Mail = txtMail.Text,
+                    EvTel = txtEvTel.Text.ToUpper(),
+                    CepTel = txtCepTel.Text.ToUpper(),
+                    EgitimDurumu = cmbOgrenimDurumu.SelectedItem.ToString(),
+                    Durumu = cmbKayitDurumu.SelectedItem.ToString(),
+                    Kuyruk = cmbUyruk.SelectedItem.ToString(),
+                    KkimlikSeriNo = txtKimlikSeriNo.Text.ToUpper(),
+                    KdogumYeri = txtDogumYeri.Text.ToUpper(),
+                    KdogumTarihi = datedogum.Value,
+                    Kdogumili = txtKimlikil.Text.ToUpper(),
+                    Kdogumilce = txtKimlikilce.Text.ToUpper(),
+                    Kmahalle = txtMahalle.Text.ToUpper(),
+                    Kkoy = txtKoy.Text.ToUpper(),
+                    Kcilt = txtCilt.Text.ToUpper(),
+                    Kaile = txtAile.Text.ToUpper(),
+                    KSiraNo = txtSiraNo.Text.ToUpper(),
+                    KVerilisYeri = txtVerYeri.Text.ToUpper(),
+                    KKayitNo = txtKayitNo.Text.ToUpper(),
+                    PersonelId = id
+                };
+                if (client.PersonelGuncelle(par.KullaniciAdi, par.Sifre, par.Departman, per))
+                    MessageBox.Show("Personel Güncellendi");
+                else
+                    MessageBox.Show("Personel Güncellenemedi");
+            }
+            catch (Exception err)
+            {
 
+            }
+
+        }
+
+        private void cmbAskerlikDurumu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbAskerlikDurumu.SelectedText == "Tecilli")
+            {
+                label8.Text = "Tecil Bitiş YIlı";
+                txtTecilBitisYili.Enabled = true;
+            }
+            else if (cmbAskerlikDurumu.SelectedText == "Yapıldı")
+            {
+                label8.Text = "Yapılış Tarihi";
+                txtTecilBitisYili.Enabled = true;
+            }
+            else
+            {
+                label8.Text = "Tecil Bitiş YIlı";
+                txtTecilBitisYili.Enabled = false;
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                textBox1.Text = txtTcNo.Text;
+
+
+            }
         }
         
     }

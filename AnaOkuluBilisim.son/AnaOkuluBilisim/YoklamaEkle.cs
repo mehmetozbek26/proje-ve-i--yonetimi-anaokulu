@@ -20,33 +20,25 @@ namespace AnaOkuluBilisim
         }
         AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
         Parola par = Parola.GET();
+        IList<SiniflarDB> sinif;
         private void YoklamaEkle_Load(object sender, EventArgs e)
         {
-            cmbDurum.Items.Add("Katıldı");
-            cmbDurum.Items.Add("Katılmadı");
             txtOgrenciAd.Enabled = false;
             txtSinifi.Enabled = false;
             txtOgrenciNo.Enabled = false;
             txtOgrenciSoyad.Enabled = false;
-            var itemlist = client.TumSiniflar(par.KullaniciAdi, par.Sifre, par.Departman);       
-            comboBox1.Items.Insert(0, "Seçiniz");
-            foreach (var item in itemlist)
+            sinif = client.TumSiniflar(par.KullaniciAdi, par.Sifre, par.Departman);
+            cmbSinif.Items.Clear();
+            foreach (var item in sinif)
             {
-                comboBox1.Items.Add(item.sinifAdi);
-                comboBox1.Items.Insert(item.sinifId, item.sinifAdi);
+                cmbSinif.Items.Add(item.sinifAdi);
             }
           
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //DataTable dt = new DataTable();
-            //using (SqlDataAdapter da = new SqlDataAdapter("sp_SinifaGoreOgrenciGetir", cnn))
-            //{
-            //    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            //    da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = Convert.ToInt32(comboBox1.SelectedIndex.ToString());
-            //    da.Fill(dt);
-            //    dataGridView1.DataSource = dt;
-            //}
+           
+            
         }
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -87,6 +79,30 @@ namespace AnaOkuluBilisim
         {
             YoklamaDurum yoklama = new YoklamaDurum();
             yoklama.Show();
+        }
+
+        private void cmbSinif_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var item = client.OgrecilerSinifaGore(par.KullaniciAdi, par.Sifre, par.Departman, sinif[cmbSinif.SelectedIndex].sinifId);
+                if (item!=null)
+                {
+                    dataGridView1.DataSource = item;
+                }
+                else
+                {
+                    dataGridView1.DataSource = null;
+                    MessageBox.Show("Ögrenci Bulunamdı");
+                }
+
+            }
+            catch (Exception err)
+            {
+
+
+            }
         }
 
 

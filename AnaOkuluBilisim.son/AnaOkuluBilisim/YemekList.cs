@@ -34,8 +34,18 @@ namespace AnaOkuluBilisim
             dataGridView1.Columns["YemekId"].Visible = false;
         }
         public void MailleriGetir()
-        { 
-            dataGridView2.DataSource = client.VeliEmailler(par.KullaniciAdi, par.Sifre, par.Departman).Select(s=>new {Value=s}).ToList();
+        {
+            dataGridView2.DataSource = client.TumVeliler(par.KullaniciAdi, par.Sifre, par.Departman);
+            dataGridView2.Columns["Adi"].DisplayIndex = 0;
+            dataGridView2.Columns["Soyadi"].DisplayIndex = 1;
+            dataGridView2.Columns["Email"].DisplayIndex = 2;
+            dataGridView2.Columns["TcNo"].Visible = false;
+            dataGridView2.Columns["Ceptel"].Visible = false;
+            dataGridView2.Columns["EvTel"].Visible = false;
+            dataGridView2.Columns["YakinlikDerecesi"].Visible = false;
+            dataGridView2.Columns["Meslek"].Visible = false;
+            dataGridView2.Columns["OgrenciId"].Visible = false;
+            dataGridView2.Columns["Id"].Visible = false;
         }
         private void YemekList_Load(object sender, EventArgs e)
         {
@@ -47,7 +57,7 @@ namespace AnaOkuluBilisim
 
             try
             {
-                if (!client.YemekEkle(par.KullaniciAdi, par.Sifre, par.Departman, txtCorba.Text, txtAnaYemek.Text, txtTatli.Text, dateTimePicker1.Value.ToShortDateString()))
+                if (!client.YemekEkle(par.KullaniciAdi, par.Sifre, par.Departman, txtCorba.Text.ToUpper(), txtAnaYemek.Text.ToUpper(), txtTatli.Text.ToUpper(), dateTimePicker1.Value))
                     throw new Exception("Yemek Eklenemedi");
             }
             catch(Exception err)

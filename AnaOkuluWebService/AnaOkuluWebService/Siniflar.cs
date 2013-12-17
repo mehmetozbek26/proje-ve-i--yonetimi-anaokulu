@@ -22,11 +22,11 @@ namespace AnaOkuluWebService
     
         public int sinifId { get; set; }
         public string sinifAdi { get; set; }
-        public string sinifkapasite { get; set; }
+        public int sinifkapasite { get; set; }
         public int ögretmenId { get; set; }
     
+        public virtual DersTablo DersTablo { get; set; }
         public virtual ICollection<Ogrenciler> Ogrenciler { get; set; }
-        public virtual Ogretmenler Ogretmenler { get; set; }
         public virtual ICollection<Yoklama> Yoklama { get; set; }
     }
 }

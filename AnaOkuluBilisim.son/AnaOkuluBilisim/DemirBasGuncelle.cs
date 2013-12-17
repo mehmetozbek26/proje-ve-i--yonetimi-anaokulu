@@ -23,23 +23,23 @@ namespace AnaOkuluBilisim
         
         private void DemirBasGuncelle_Load(object sender, EventArgs e)
         {
-            txtDemirbasAdi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtDemirbasTuru.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtDemirbasCinsi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtDemirbasAdeti.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtDemirbasBirimi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtAlindigiYer.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            alistarihi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            txtGirisTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            txtAlisFaturaNo.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            txtKdvOrani.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            txtKdvTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[11].Value.ToString();
-            txtSatisYeri.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[12].Value.ToString();
-            satisTarihi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[13].Value.ToString();
-            txtSatisTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[14].Value.ToString();
-            txtSatisFaturaNo.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[15].Value.ToString();
-            txtSatisKdvTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[16].Value.ToString();
-            txtSatisNedeni.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells[17].Value.ToString();
+            txtDemirbasAdi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["Adi"].Value.ToString();
+            txtDemirbasTuru.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["Turu"].Value.ToString();
+            txtDemirbasCinsi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["Cinsi"].Value.ToString();
+            txtDemirbasAdeti.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["Adet"].Value.ToString();
+            txtDemirbasBirimi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["Birim"].Value.ToString();
+            txtAlindigiYer.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["AlindigiYer"].Value.ToString();
+            alistarihi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["AlisTarihi"].Value.ToString();
+            txtGirisTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["GirisTutari"].Value.ToString();
+            txtAlisFaturaNo.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["AlisFaturaNo"].Value.ToString();
+            txtKdvOrani.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["KdvOrani"].Value.ToString();
+            txtKdvTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["KdvTutari"].Value.ToString();
+            txtSatisYeri.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["SatisYeri"].Value.ToString();
+            satisTarihi.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["SatisTarihi"].Value.ToString();
+            txtSatisTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["SatisTutari"].Value.ToString();
+            txtSatisFaturaNo.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["SatisFaturaNo"].Value.ToString();
+            txtSatisKdvTutari.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["SatisKdvTutari"].Value.ToString();
+            txtSatisNedeni.Text = DmrBasKayit.dataGridView1.CurrentRow.Cells["SatisNedeni"].Value.ToString();
             id=Convert.ToInt32(DmrBasKayit.dataGridView1.CurrentRow.Cells["DEMIRBASID"].Value.ToString());
         }
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace AnaOkuluBilisim
             {
                 Parola par = Parola.GET();
                 AnaOkuluWebServiceClient client = new AnaOkuluWebServiceClient();
-                Demirbaslar temp = new Demirbaslar
+                DemirbaslarDB temp = new DemirbaslarDB
                 {
                     DEMIRBASID=id,
                     AlindigiYer=txtAlindigiYer.Text,
@@ -64,7 +64,6 @@ namespace AnaOkuluBilisim
                     GirisTutari=Convert.ToDecimal(txtGirisTutari.Text),
                     Cinsi=txtDemirbasCinsi.Text,
                     Birim=txtDemirbasBirimi.Text,
-                    AlisTarihi=alistarihi.Value,
                     AlisFaturaNo=txtAlisFaturaNo.Text,
                     Adi=txtDemirbasAdi.Text,
                     Adet=Convert.ToInt32(txtDemirbasAdeti.Text)

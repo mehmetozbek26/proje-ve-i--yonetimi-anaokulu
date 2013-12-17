@@ -24,6 +24,7 @@ namespace AnaOkuluWebService
         public string Meslek { get; set; }
         public int OgrenciId { get; set; }
         public string Email { get; set; }
+        public string Sifre { get; set; }
     
         public virtual Ogrenciler Ogrenciler { get; set; }
     }

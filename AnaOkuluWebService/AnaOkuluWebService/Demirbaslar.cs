@@ -26,7 +26,7 @@ namespace AnaOkuluWebService
         public Nullable<int> Adet { get; set; }
         public string Birim { get; set; }
         public string AlindigiYer { get; set; }
-        public Nullable<System.DateTime> AlisTarihi { get; set; }
+        public System.DateTime AlisTarihi { get; set; }
         public Nullable<decimal> GirisTutari { get; set; }
         public string AlisFaturaNo { get; set; }
         public Nullable<int> KdvOrani { get; set; }

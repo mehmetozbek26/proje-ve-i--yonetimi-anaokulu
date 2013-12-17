@@ -1,5 +1,0 @@
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\frmnewaccount\frmnewaccount\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\frmnewaccount\frmnewaccount\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\frmnewaccount\frmnewaccount\obj\x86\Debug\frmnewaccount.Properties.Resources.resources
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\frmnewaccount\frmnewaccount\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\sa\Documents\GitHub\proje-ve-i--yonetimi-anaokulu\frmnewaccount\frmnewaccount\obj\x86\Debug\GenerateResource.write.1.tlog

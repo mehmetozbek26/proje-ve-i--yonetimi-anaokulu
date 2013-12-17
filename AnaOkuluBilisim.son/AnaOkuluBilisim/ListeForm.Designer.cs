@@ -45,6 +45,7 @@
             this.hesabımToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hesapEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hesabımToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.demirbaşlarToolStripMenuItem,
             this.yoklamalarToolStripMenuItem,
             this.yemekToolStripMenuItem,
-            this.hesabımToolStripMenuItem});
+            this.hesabımToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
@@ -175,16 +177,23 @@
             // hesapEkleToolStripMenuItem
             // 
             this.hesapEkleToolStripMenuItem.Name = "hesapEkleToolStripMenuItem";
-            this.hesapEkleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hesapEkleToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.hesapEkleToolStripMenuItem.Text = "Hesap Ekle";
             this.hesapEkleToolStripMenuItem.Click += new System.EventHandler(this.hesapEkleToolStripMenuItem_Click);
             // 
             // hesabımToolStripMenuItem1
             // 
             this.hesabımToolStripMenuItem1.Name = "hesabımToolStripMenuItem1";
-            this.hesabımToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.hesabımToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.hesabımToolStripMenuItem1.Text = "Hesabım";
             this.hesabımToolStripMenuItem1.Click += new System.EventHandler(this.hesabımToolStripMenuItem1_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // ListeForm
             // 
@@ -196,11 +205,13 @@
             this.ClientSize = new System.Drawing.Size(1362, 699);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ListeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListeForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListeForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -228,5 +239,6 @@
         private System.Windows.Forms.ToolStripMenuItem hesabımToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hesapEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hesabımToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

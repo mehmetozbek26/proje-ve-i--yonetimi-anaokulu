@@ -28,19 +28,23 @@ namespace AnaOkuluWebService
 
         #region SERVİSLER
         [OperationContract]
-        IList<ServislerDB> TumServisler();
+        IList<ServislerDB> TumServisler(string userid, string userpass, string departman);
         #endregion
 
         #region UCUNCU SAHIS
         [OperationContract]
         List<UcuncuSahislar> TumUcuncuSahis();
+        [OperationContract]
+        bool UcuncuSahisEkle(string userid, string userpass, string departman, UcuncuSahisDB uc);
         #endregion
 
         #region VELİLER
         [OperationContract]
         List<string> VeliEmailler(string userid, string userpass, string departman);
         [OperationContract]
-        List<Veliler> TumVeliler();
+        List<VelilerDB> TumVeliler(string userid, string userpass, string departman);
+        [OperationContract]
+        bool VeliEkle(string userid, string userpass, string departman, VelilerDB veli);
         #endregion
 
         #region OGRETMENLER
@@ -53,12 +57,21 @@ namespace AnaOkuluWebService
         IList<OgrencilerDB> TumOgrenciler(string userid, string userpass, string departman);
         [OperationContract]
         IList<OgrencilerDB> OgrecilerSinifaGore(string userid, string userpass, string departman, int sinifid);
+        [OperationContract]
+        OgrencilerDB OgrenciGetirID(string userid, string userpass, string departman, int id);
+        [OperationContract]
+        int OgrenciEkle(string userid, string userpass, string departman,OgrencilerDB ogrenci);
         #endregion
 
         #region    PERSONEL
         [OperationContract]
         List<PersonellerDB> TumPersoneller();
-
+        [OperationContract]
+        bool PersonelKayit(string userid, string userpass, string departman, PersonellerDB per);
+        [OperationContract]
+        bool PersonelSil(string userid, string userpass, string departman, int id);
+        [OperationContract]
+        bool PersonelGuncelle(string userid, string userpass, string departman, PersonellerDB per);
         #endregion
 
         #region SINIF
@@ -72,7 +85,7 @@ namespace AnaOkuluWebService
 
         #region YEMEK
         [OperationContract]
-        bool YemekEkle(string userid, string userpass, string departman, string corba, string anayemek, string tatli, string tarih);
+        bool YemekEkle(string userid, string userpass, string departman, string corba, string anayemek, string tatli, DateTime tarih);
         [OperationContract]
         List<Yemekler> TumYemekler(string userid, string userpass, string departman);
         [OperationContract]
@@ -83,7 +96,7 @@ namespace AnaOkuluWebService
         [OperationContract]
         IList<DemirbaslarDB> TumDemirbaslar(string userid, string userpass, string departman);
         [OperationContract]
-        bool DemirbasEkle(string userid, string userpass, string departman, DemirbaslarDB demirbas);
+        int DemirbasEkle(string userid, string userpass, string departman, DemirbaslarDB demirbas);
         [OperationContract]
         bool DemirbasGunceller(string userid, string userpass, string departman, DemirbaslarDB demirbas);
         [OperationContract]
@@ -93,9 +106,7 @@ namespace AnaOkuluWebService
         #region YOKLAMA
 
         [OperationContract]
-        IEnumerable<Yoklama> TumYoklama();
-        [OperationContract]
-        Yoklama Yoklama(int ogrenciid);
+        IEnumerable<YoklamaDB> TumYoklamaById(string userid, string userpass, string departman,int sinifid);
         #endregion
 
         #region DEMİRBAS MEKANLARI
@@ -119,6 +130,8 @@ namespace AnaOkuluWebService
         public string TC;
         [DataMember]
         public int ID;
+        [DataMember]
+        public int KAYITID;
     }
 
     [DataContract]
@@ -140,11 +153,23 @@ namespace AnaOkuluWebService
         [DataMember]
         public int SinifId;
         [DataMember]
-        public DateTime? Tarih;
+        public int VeliId;
         [DataMember]
-        public string DevamsizlikTuru;
+        public DateTime? TARIH;
         [DataMember]
-        public string Aciklama;   
+        public string DEVAMSIZLIK;
+        [DataMember]
+        public string ACIKLAMA;
+        [DataMember]
+        public string OGRENCIADI;
+        [DataMember]
+        public string OGRENCISOYADI;
+        [DataMember]
+        public string VELIADI;
+        [DataMember]
+        public string VELISOYADI;
+        [DataMember]
+        public string VELIEMAIL; 
     }
 
     [DataContract]
@@ -225,8 +250,6 @@ namespace AnaOkuluWebService
         [DataMember]
         public string AlindigiYer;
         [DataMember]
-        public DateTime? AlisTarihi;
-        [DataMember]
         public decimal GirisTutari;
         [DataMember]
         public string AlisFaturaNo;
@@ -258,7 +281,7 @@ namespace AnaOkuluWebService
         [DataMember]
         public string BulunduguYer;
         [DataMember]
-        public string Adet;
+        public int Adet;
         [DataMember]
         public string Sorumlusu;
         [DataMember]
@@ -274,7 +297,7 @@ namespace AnaOkuluWebService
         [DataMember]
         public string sinifAdi;
         [DataMember]
-        public string sinifkapasite;
+        public int sinifkapasite;
         [DataMember]
         public int ögretmenId;
     }
@@ -309,7 +332,6 @@ namespace AnaOkuluWebService
         [DataMember] public string KayitNo;
         [DataMember] public byte[] Resim;
         [DataMember] public DateTime? KayitTarihi;
-        [DataMember] public DateTime? CikisTarihi;
         [DataMember] public int SinifId;
         [DataMember] public int ServisId;
         [DataMember] public string DavranisSorunu;
@@ -371,7 +393,7 @@ namespace AnaOkuluWebService
         [DataMember]
         public string EgitimDurumu;
         [DataMember]
-        public DateTime? AyrilisTarihi;
+        public string Durumu;
         [DataMember]
         public string Departman;
         [DataMember]
