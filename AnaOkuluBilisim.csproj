@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9579217-441B-4856-B1CE-C0B54652F9C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnaOkuluBilisim</RootNamespace>
+    <AssemblyName>AnaOkuluBilisim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Mehmet\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FB2A52A282EE3541FD835AA281982B06A4517622</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AnaOkuluBilisim_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\Downloads\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\Downloads\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="webcam_capture">
+      <HintPath>..\..\..\KameradanGoruntuAlmak\KameradanGoruntuAlmak\bin\Debug\webcam_capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DersDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersDuzenle.Designer.cs">
+      <DependentUpon>DersDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DERSEKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DERSEKLE.Designer.cs">
+      <DependentUpon>DERSEKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DERSPROGOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DERSPROGOS.Designer.cs">
+      <DependentUpon>DERSPROGOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DersProgramıEKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersProgramıEKLE.Designer.cs">
+      <DependentUpon>DersProgramıEKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="DemirBasGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemirBasGuncelle.Designer.cs">
+      <DependentUpon>DemirBasGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemirbasKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemirbasKayit.Designer.cs">
+      <DependentUpon>DemirbasKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmnewaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmnewaccount.Designer.cs">
+      <DependentUpon>frmnewaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeForm.Designer.cs">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dersler.cs" />
+    <Compile Include="Models\Ogretmenler.cs" />
+    <Compile Include="Models\Personel.cs" />
+    <Compile Include="Models\Servis.cs" />
+    <Compile Include="Models\Sinif.cs" />
+    <Compile Include="OgrDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrDuzenle.Designer.cs">
+      <DependentUpon>OgrDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciKayit.Designer.cs">
+      <DependentUpon>OgrenciKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogrenciler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogrenciler.Designer.cs">
+      <DependentUpon>Ogrenciler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGuncelle.Designer.cs">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayit.Designer.cs">
+      <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinifEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinifEkle.Designer.cs">
+      <DependentUpon>SinifEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YemekList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YemekList.Designer.cs">
+      <DependentUpon>YemekList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoklamaDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoklamaDurum.designer.cs">
+      <DependentUpon>YoklamaDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoklamaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoklamaEkle.Designer.cs">
+      <DependentUpon>YoklamaEkle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemirBasGuncelle.resx">
+      <DependentUpon>DemirBasGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemirbasKayit.resx">
+      <DependentUpon>DemirbasKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersDuzenle.resx">
+      <DependentUpon>DersDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DERSEKLE.resx">
+      <DependentUpon>DERSEKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DERSPROGOS.resx">
+      <DependentUpon>DERSPROGOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DersProgramıEKLE.resx">
+      <DependentUpon>DersProgramıEKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmnewaccount.resx">
+      <DependentUpon>frmnewaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeForm.resx">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrDuzenle.resx">
+      <DependentUpon>OgrDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciKayit.resx">
+      <DependentUpon>OgrenciKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogrenciler.resx">
+      <DependentUpon>Ogrenciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGuncelle.resx">
+      <DependentUpon>PersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayit.resx">
+      <DependentUpon>PersonelKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SinifEkle.resx">
+      <DependentUpon>SinifEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YemekList.resx">
+      <DependentUpon>YemekList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoklamaDurum.resx">
+      <DependentUpon>YoklamaDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoklamaEkle.resx">
+      <DependentUpon>YoklamaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AnaOkuluBilisim_TemporaryKey.pfx" />
+    <None Include="app.config" />
+    <None Include="iconlar\ReadMe.rtf" />
+    <None Include="iconlar\Rubiks Cube ico.zip" />
+    <None Include="iconlar\VeryIcon.com.url" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconlar\1387067232_229133.ico" />
+    <Content Include="iconlar\1387067262_229114.ico" />
+    <Content Include="iconlar\1387067296_229115.ico" />
+    <Content Include="iconlar\1387067369_224109.ico" />
+    <Content Include="iconlar\1387067378_224111.ico" />
+    <Content Include="iconlar\1387070357_22143.ico" />
+    <Content Include="iconlar\1387070469_22138.ico" />
+    <Content Include="iconlar\1387070517_49361.ico" />
+    <Content Include="iconlar\1387070530_49360.ico" />
+    <Content Include="iconlar\1387070555_49384.ico" />
+    <Content Include="iconlar\1387070725_61498.ico" />
+    <Content Include="iconlar\1387070757_49384.ico" />
+    <Content Include="iconlar\1387070764_49384.ico" />
+    <Content Include="iconlar\1387070906_173948.ico" />
+    <Content Include="iconlar\1387070979_173948.ico" />
+    <Content Include="iconlar\1387070998_61776.ico" />
+    <Content Include="iconlar\1387072328_131572.ico" />
+    <Content Include="iconlar\1387072334_131577.ico" />
+    <Content Include="iconlar\1387072342_131571.ico" />
+    <Content Include="iconlar\1387072358_131565.ico" />
+    <Content Include="iconlar\1387073500_102513.ico" />
+    <Content Include="iconlar\1387073529_102512.ico" />
+    <Content Include="iconlar\1387073538_102518.ico" />
+    <Content Include="iconlar\1387073542_102506.ico" />
+    <Content Include="iconlar\Action-arrow-blue-flat-right-icon.png" />
+    <Content Include="iconlar\Action-button-stop-icon.png" />
+    <Content Include="iconlar\Action-cancel-icon.png" />
+    <Content Include="iconlar\Actions-arrow-right-double-icon.png" />
+    <Content Include="iconlar\Alarm-Error-icon.png" />
+    <Content Include="iconlar\Alarm-Synchonize-icon.png" />
+    <Content Include="iconlar\Alarm-Warning-icon %281%29.png" />
+    <Content Include="iconlar\Alarm-Warning-icon.png" />
+    <Content Include="iconlar\Apps-BitTorrent-Metro-icon.png" />
+    <Content Include="iconlar\bell-alarm-icon.png" />
+    <Content Include="iconlar\button-ok-icon.png" />
+    <Content Include="iconlar\button-round-cancel-icon.png" />
+    <Content Include="iconlar\button-round-end-icon.png" />
+    <Content Include="iconlar\button-round-tick-ok-icon %281%29.png" />
+    <Content Include="iconlar\button-round-tick-ok-icon.png" />
+    <Content Include="iconlar\Camera-Nikon-Coolpix-L820-02-icon.png" />
+    <Content Include="iconlar\doc-limepen-icon.png" />
+    <Content Include="iconlar\Fasticon-Comic-Tiger-Hd.ico" />
+    <Content Include="iconlar\General-App-icon.png" />
+    <Content Include="iconlar\HP-Recycle-Full-icon.png" />
+    <Content Include="iconlar\Rotation-icon.png" />
+    <Content Include="iconlar\Unfold-3D-icon.png" />
+    <Content Include="iconlar\VeryIcon.txt" />
+    <Content Include="Resources\b.gif" />
+    <None Include="Resources\cancel1.png" />
+    <None Include="Resources\can11.png" />
+    <None Include="Resources\can2.png" />
+    <None Include="Resources\ca21.png" />
+    <None Include="Resources\ca11.png" />
+    <None Include="Resources\ca3.png" />
+    <None Include="Resources\buuu1.gif" />
+    <None Include="Resources\butt1.png" />
+    <None Include="Resources\blue1.gif" />
+    <None Include="Resources\bllll1.png" />
+    <None Include="Resources\bc1.gif" />
+    <None Include="Resources\bbbb1.png" />
+    <None Include="Resources\b1.gif" />
+    <Content Include="Resources\bbbb.png" />
+    <Content Include="Resources\bc.gif" />
+    <Content Include="Resources\bllll.png" />
+    <Content Include="Resources\blue.gif" />
+    <Content Include="Resources\butt.png" />
+    <Content Include="Resources\buuu.gif" />
+    <Content Include="Resources\ca.png" />
+    <Content Include="Resources\ca1.png" />
+    <Content Include="Resources\ca2.png" />
+    <Content Include="Resources\can.png" />
+    <Content Include="Resources\can1.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\com.jpg" />
+    <Content Include="Resources\dfdfdf.gif" />
+    <Content Include="Resources\f1.png" />
+    <Content Include="Resources\fdgd.gif" />
+    <Content Include="Resources\fg.gif" />
+    <Content Include="Resources\fghfj.png" />
+    <Content Include="Resources\fv.gif" />
+    <Content Include="Resources\g5.png" />
+    <Content Include="Resources\g6.png" />
+    <Content Include="Resources\g7.png" />
+    <Content Include="Resources\gfff.png" />
+    <Content Include="Resources\gg.png" />
+    <Content Include="Resources\gggg.png" />
+    <Content Include="Resources\himmel.jpg" />
+    <None Include="Resources\largeTransparent.gif" />
+    <Content Include="Resources\lggg.png" />
+    <Content Include="Resources\lime.png" />
+    <Content Include="Resources\rrrr.png" />
+    <Content Include="Resources\Shivam4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VeriTabanı\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
