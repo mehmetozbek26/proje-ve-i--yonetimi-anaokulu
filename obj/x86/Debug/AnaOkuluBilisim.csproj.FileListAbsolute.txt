@@ -1,0 +1,335 @@
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\PC\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\gorkem\Desktop\AnaOkuluBilisim\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\PC\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Code\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+D:\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\Retua\Desktop\New folder\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ChangePassword.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
+C:\Users\mahmut\Desktop\Ms Sql\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ChangePassword.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaDurum.resources
+C:\Users\mahmut\Desktop\ruby tutorial\proje\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+C:\Users\MESUT\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\MESUT\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\MESUT\Desktop\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\MESUT\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\MESUT\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\MESUT\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+K:\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+K:\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+K:\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ChangePassword.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersDuzenle.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSEKLE.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersProgramıEKLE.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaDurum.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.manifest
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.application
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.dll
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.dll
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.xml
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.xml
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe.manifest
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.application
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSPROGOS.resources
+C:\Users\Mehmet\Desktop\tez son\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\webcam_capture.dll
+E:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+E:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+E:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.manifest
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.application
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.dll
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.xml
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.DirectShow.xml
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.xml
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ChangePassword.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersDuzenle.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSEKLE.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSPROGOS.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersProgramıEKLE.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaDurum.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe.manifest
+D:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.application
+I:\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+I:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+I:\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.manifest
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.application
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.dll
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.xml
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.Video.DirectShow.xml
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\bin\Debug\AForge.xml
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ChangePassword.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersDuzenle.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSEKLE.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSPROGOS.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersProgramıEKLE.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaDurum.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe.manifest
+E:\kopya 2\AnaOkuluBilisim.son\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.application
+C:\Users\Mehmet\Desktop\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\Mehmet\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\Mehmet\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.manifest
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.application
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.pdb
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AForge.dll
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AForge.Video.xml
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\sa\Desktop\AnaOkuluBilisim\bin\Debug\AForge.xml
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csprojResolveAssemblyReference.cache
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ChangePassword.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirBasGuncelle.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DemirbasKayit.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersDuzenle.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSEKLE.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DERSPROGOS.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.DersProgramıEKLE.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Form1.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.frmnewaccount.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.ListeForm.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrDuzenle.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.OgrenciKayit.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Ogrenciler.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelGuncelle.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.PersonelKayit.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.Properties.Resources.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.SinifEkle.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YemekList.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaDurum.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.YoklamaEkle.resources
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.csproj.GenerateResource.Cache
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe.manifest
+C:\Users\sa\Desktop\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.application
+C:\Users\sa\Desktop\Proje\AnaOkuluBilisim\bin\Debug\AnaOkuluBilisim.exe.config
+C:\Users\sa\Desktop\Proje\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.exe
+C:\Users\sa\Desktop\Proje\AnaOkuluBilisim\obj\x86\Debug\AnaOkuluBilisim.pdb
