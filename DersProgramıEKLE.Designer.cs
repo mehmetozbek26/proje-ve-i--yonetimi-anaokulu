@@ -71,17 +71,10 @@
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cmbSinif = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -92,11 +85,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -506,43 +506,6 @@
             this.cmbSinif.Size = new System.Drawing.Size(187, 21);
             this.cmbSinif.TabIndex = 45;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Image = global::AnaOkuluBilisim.Properties.Resources.largeTransparent;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.Location = new System.Drawing.Point(258, 442);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 66);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "KAYDET";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label25
-            // 
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(734, 96);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(124, 23);
-            this.label25.TabIndex = 46;
-            this.label25.Text = "CUMA";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.Location = new System.Drawing.Point(584, 96);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(124, 23);
-            this.label24.TabIndex = 47;
-            this.label24.Text = "PERŞEMBE";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label5
             // 
             this.label5.Location = new System.Drawing.Point(734, 96);
@@ -551,16 +514,6 @@
             this.label5.TabIndex = 46;
             this.label5.Text = "CUMA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(447, 96);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(124, 23);
-            this.label23.TabIndex = 48;
-            this.label23.Text = "ÇARŞAMBA";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -571,16 +524,6 @@
             this.label4.Text = "PERŞEMBE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(164, 245);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(700, 46);
-            this.label22.TabIndex = 49;
-            this.label22.Text = "ÖĞLE TATİLİ";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(447, 96);
@@ -590,16 +533,6 @@
             this.label3.Text = "ÇARŞAMBA";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label21.Location = new System.Drawing.Point(306, 96);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(124, 23);
-            this.label21.TabIndex = 50;
-            this.label21.Text = "SALI";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label17
             // 
             this.label17.Location = new System.Drawing.Point(164, 245);
@@ -608,16 +541,6 @@
             this.label17.TabIndex = 49;
             this.label17.Text = "ÖĞLE TATİLE";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(16, 41);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(124, 23);
-            this.label20.TabIndex = 51;
-            this.label20.Text = "Sinif : ";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -733,16 +656,6 @@
             this.label9.Text = "09:00 - 10:00";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.Location = new System.Drawing.Point(16, 96);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(124, 23);
-            this.label19.TabIndex = 61;
-            this.label19.Text = "SAATLER";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -754,16 +667,6 @@
             this.label8.TabIndex = 59;
             this.label8.Text = "08:00 - 09:00";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(167, 96);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(124, 23);
-            this.label18.TabIndex = 44;
-            this.label18.Text = "PAZARTESİ";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -782,6 +685,102 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "PAZARTESİ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Image = global::AnaOkuluBilisim.Properties.Resources.largeTransparent;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.Location = new System.Drawing.Point(258, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(266, 66);
+            this.button1.TabIndex = 102;
+            this.button1.Text = "KAYDET";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(167, 96);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(124, 23);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "PAZARTESİ";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.Location = new System.Drawing.Point(16, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(124, 23);
+            this.label19.TabIndex = 61;
+            this.label19.Text = "SAATLER";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.Location = new System.Drawing.Point(16, 41);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(124, 23);
+            this.label20.TabIndex = 51;
+            this.label20.Text = "Sinif : ";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label21.Location = new System.Drawing.Point(306, 96);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(124, 23);
+            this.label21.TabIndex = 50;
+            this.label21.Text = "SALI";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Location = new System.Drawing.Point(164, 245);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(700, 46);
+            this.label22.TabIndex = 49;
+            this.label22.Text = "ÖĞLE TATİLİ";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Location = new System.Drawing.Point(447, 96);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(124, 23);
+            this.label23.TabIndex = 48;
+            this.label23.Text = "ÇARŞAMBA";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label24.Location = new System.Drawing.Point(584, 96);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(124, 23);
+            this.label24.TabIndex = 47;
+            this.label24.Text = "PERŞEMBE";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.Location = new System.Drawing.Point(734, 96);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(124, 23);
+            this.label25.TabIndex = 46;
+            this.label25.Text = "CUMA";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DersProgramıEKLE
             // 
