@@ -80,9 +80,6 @@
             this.cmbSinif = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.cmbServis = new System.Windows.Forms.ComboBox();
             this.label56 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -168,6 +165,9 @@
             this.txtDavranisSorunlari = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.txtVeliAdi.SuspendLayout();
@@ -687,34 +687,6 @@
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Servis Bilgileri";
             this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Lime;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(133, 93);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 30);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Kaydet";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(97, 61);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(208, 20);
-            this.textBox8.TabIndex = 50;
-            // 
-            // label40
-            // 
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label40.Location = new System.Drawing.Point(6, 64);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(92, 17);
-            this.label40.TabIndex = 49;
-            this.label40.Text = "Yeni Servis Adı ";
             // 
             // cmbServis
             // 
@@ -1546,6 +1518,34 @@
             this.label49.Size = new System.Drawing.Size(111, 13);
             this.label49.TabIndex = 26;
             this.label49.Text = "Davranış Sorunları";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(97, 61);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(208, 20);
+            this.textBox8.TabIndex = 50;
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label40.Location = new System.Drawing.Point(6, 64);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(92, 17);
+            this.label40.TabIndex = 49;
+            this.label40.Text = "Kayıt Tarihi";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(133, 93);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 30);
+            this.button3.TabIndex = 51;
+            this.button3.Text = "Kaydet";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // OgrenciKayit
             // 
