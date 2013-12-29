@@ -161,17 +161,16 @@ namespace AnaOkuluBilisim
         {
             ClearTextBoxes(panel1);
         }
-
+        
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
 
             prsguncelle = new PersonelGuncelle();
             prsguncelle.MdiParent = this.MdiParent;
-            prsguncelle.prskayit = this;
-            prsguncelle.Show();     
-
-
+            prsguncelle.prskayit = this;    
+            prsguncelle.Show();       
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             try

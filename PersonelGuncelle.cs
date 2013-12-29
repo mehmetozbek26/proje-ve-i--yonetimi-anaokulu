@@ -126,8 +126,8 @@ namespace AnaOkuluBilisim
                 if (cmbCinsiyet.SelectedIndex < 0) throw new Exception("Cinsiyeti Seçiniz");
                 if (cmbOgrenimDurumu.SelectedIndex < 0) throw new Exception("Öğrenim Durumunu Seçiniz");
                 if (cmbKayitDurumu.SelectedIndex < 0) throw new Exception("Kayıt Durumunu Seçiniz");
-                
-               
+
+
                 SqlCommand cmd = new SqlCommand("update Personeller set " +
                     "Adi='" + txtAd.Text + "'," +
                     "SoyAdi='" + txtSoyad.Text + "'," +
@@ -163,6 +163,11 @@ namespace AnaOkuluBilisim
                     "KVerilisYeri='" + txtVerYeri.Text + "'," +
                     "KKayitNo='" + txtKayitNo.Text + "' WHERE PersonelId=" + id, cnn);
                 cmd.ExecuteNonQuery();
+                if (cmbDepartman.SelectedIndex == 0)
+                {
+                    cmd.CommandText = "Update Ogretmenler set Adi='" + txtAd.Text + "'," + "SoyAdi='" + txtSoyad.Text + "' where PersonelID=" + id;
+                    cmd.ExecuteNonQuery();
+                }
                 cnn.Close();
                 prskayit.PersonelGetir();
                 MessageBox.Show("Güncelleme gerçekleşti.");
@@ -184,8 +189,8 @@ namespace AnaOkuluBilisim
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
-        
+
     }
 }

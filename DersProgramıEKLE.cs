@@ -208,7 +208,141 @@ namespace AnaOkuluBilisim
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       // private void button1_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (comboBox1.SelectedIndex < 0) throw new Exception("Pazartesi 08:00 - 09:00 Ders Seçiniz");
+        //        if (comboBox2.SelectedIndex < 0) throw new Exception("Pazartesi 09:00 - 10:00 Ders Seçiniz");
+        //        if (sinifid != 0)
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand("UPDATE DersTablo SET " +
+        //                 "CL0=" + dersler[comboBox1.SelectedIndex].DERSID + "," +
+        //                 "CL1=" + dersler[comboBox2.SelectedIndex].DERSID + "," +
+        //                 "CL2=" + dersler[comboBox3.SelectedIndex].DERSID + "," +
+        //                 "CL3=" + dersler[comboBox4.SelectedIndex].DERSID + "," +
+        //                 "CL4=" + dersler[comboBox6.SelectedIndex].DERSID + "," +
+        //                 "CL5=" + dersler[comboBox7.SelectedIndex].DERSID + "," +
+        //                 "CL6=" + dersler[comboBox8.SelectedIndex].DERSID + "," +
+        //                 "CL7=" + dersler[comboBox9.SelectedIndex].DERSID + "," +
+        //                 "CL8=" + dersler[comboBox10.SelectedIndex].DERSID + "," +
+        //                 "CL9=" + dersler[comboBox11.SelectedIndex].DERSID + "," +
+        //                 "CL10=" + dersler[comboBox12.SelectedIndex].DERSID + "," +
+        //                 "CL11=" + dersler[comboBox13.SelectedIndex].DERSID + "," +
+        //                 "CL12=" + dersler[comboBox15.SelectedIndex].DERSID + "," +
+        //                 "CL13=" + dersler[comboBox16.SelectedIndex].DERSID + "," +
+        //                 "CL14=" + dersler[comboBox17.SelectedIndex].DERSID + "," +
+        //                 "CL15=" + dersler[comboBox18.SelectedIndex].DERSID + "," +
+        //                 "CL16=" + dersler[comboBox19.SelectedIndex].DERSID + "," +
+        //                 "CL17=" + dersler[comboBox20.SelectedIndex].DERSID + "," +
+        //                 "CL18=" + dersler[comboBox21.SelectedIndex].DERSID + "," +
+        //                 "CL19=" + dersler[comboBox22.SelectedIndex].DERSID + "," +
+        //                 "CL20=" + dersler[comboBox24.SelectedIndex].DERSID + "," +
+        //                 "CL21=" + dersler[comboBox25.SelectedIndex].DERSID + "," +
+        //                 "CL22=" + dersler[comboBox26.SelectedIndex].DERSID + "," +
+        //                 "CL23=" + dersler[comboBox27.SelectedIndex].DERSID + "," +
+        //                 "CL24=" + dersler[comboBox28.SelectedIndex].DERSID + "," +
+        //                 "CL25=" + dersler[comboBox29.SelectedIndex].DERSID + "," +
+        //                 "CL26=" + dersler[comboBox30.SelectedIndex].DERSID + "," +
+        //                 "CL27=" + dersler[comboBox31.SelectedIndex].DERSID + "," +
+        //                 "CL28=" + dersler[comboBox33.SelectedIndex].DERSID + "," +
+        //                 "CL29=" + dersler[comboBox34.SelectedIndex].DERSID + "," +
+        //                 "CL30=" + dersler[comboBox35.SelectedIndex].DERSID + "," +
+        //                 "CL31=" + dersler[comboBox36.SelectedIndex].DERSID + "," +
+        //                 "CL32=" + dersler[comboBox37.SelectedIndex].DERSID + "," +
+        //                 "CL33=" + dersler[comboBox38.SelectedIndex].DERSID + "," +
+        //                 "CL34=" + dersler[comboBox39.SelectedIndex].DERSID + "," +
+        //                 "CL35=" + dersler[comboBox40.SelectedIndex].DERSID + "," +
+        //                 "CL36=" + dersler[comboBox42.SelectedIndex].DERSID + "," +
+        //                 "CL37=" + dersler[comboBox43.SelectedIndex].DERSID + "," +
+        //                 "CL38=" + dersler[comboBox44.SelectedIndex].DERSID + "," +
+        //                 "CL39=" + dersler[comboBox45.SelectedIndex].DERSID + " WHERE SINIFID=" + siniflar[cmbSinif.SelectedIndex].SinifID, baglan))
+        //            {
+        //                baglan.Open();
+        //                cmd.ExecuteNonQuery();
+        //                baglan.Close();
+        //                MessageBox.Show("Ders Programı Guncellendi");
+        //                this.Close();
+        //            }
+
+
+
+        //        }
+        //        else
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand("INSERT INTO DersTablo VALUES (" +
+        //                siniflar[cmbSinif.SelectedIndex].SinifID + "," +
+        //                dersler[comboBox1.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox2.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox3.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox4.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox6.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox7.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox8.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox9.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox10.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox11.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox12.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox13.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox15.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox16.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox17.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox18.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox19.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox20.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox21.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox22.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox24.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox25.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox26.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox27.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox28.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox29.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox30.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox31.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox33.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox34.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox35.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox36.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox37.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox38.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox39.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox40.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox42.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox43.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox44.SelectedIndex].DERSID + "," +
+        //                dersler[comboBox45.SelectedIndex].DERSID + ")", baglan))
+        //            {
+        //                baglan.Open();
+        //                cmd.ExecuteNonQuery();
+        //                baglan.Close();
+        //                MessageBox.Show("Ders Programı Kaydedildi");
+        //                this.Close();
+        //            }
+        //        }
+
+
+        //    }
+        //    catch (Exception err)
+        //    {
+        //        MessageBox.Show("Kayıt Yapılamadı");
+
+        //    }
+        //    finally
+        //    {
+        //        if (baglan.State == ConnectionState.Open)
+        //            baglan.Close();
+        //    }
+
+
+        //}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -335,11 +469,6 @@ namespace AnaOkuluBilisim
             }
 
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
