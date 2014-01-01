@@ -75,7 +75,7 @@ namespace AnaOkuluBilisim
                  {
                      string a = rw.Cells["Email"].Value.ToString();
                      MailMessage mail = new MailMessage(); //
-                     mail.From = new MailAddress("m.ozbek01@gmail.com", "Ana Okulu");//Mailin kimden gittiğini belirtiyoruz
+                     mail.From = new MailAddress("birdirbiranaokulu@gmail.com", "Ana Okulu");//Mailin kimden gittiğini belirtiyoruz
                      mail.To.Add(a); //Mailin kime gideceğini belirtiyoruz
                      mail.Subject = "Yoklama"; //Mail konusu          
                      mail.Body = "Tarih : " + Convert.ToDateTime(dataGridView1.CurrentRow.Cells["Tarih"].Value.ToString()).ToShortDateString() + "\n" +
@@ -86,7 +86,7 @@ namespace AnaOkuluBilisim
                      sc.Port = 587;
                      sc.Host = "smtp.gmail.com";
                      sc.EnableSsl = true;
-                     sc.Credentials = new NetworkCredential("m.ozbek01@gmail.com", "mehmet2473378");
+                     sc.Credentials = new NetworkCredential("birdirbiranaokulu@gmail.com", "147258369qwe");
                      sc.Send(mail);
                      MessageBox.Show("Mail Gönderildi.");
                  }

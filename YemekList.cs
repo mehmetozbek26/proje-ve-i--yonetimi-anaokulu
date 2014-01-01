@@ -101,7 +101,7 @@ namespace AnaOkuluBilisim
 
 
                 MailMessage mail = new MailMessage(); //
-                mail.From = new MailAddress("m.ozbek01@gmail.com", "Ana Okulu"); //Mailin kimden gittiğini belirtiyoruz
+                mail.From = new MailAddress("birdirbiranaokulu@gmail.com", "Ana Okulu"); //Mailin kimden gittiğini belirtiyoruz
                 mail.To.Add(a); //Mailin kime gideceğini belirtiyoruz
                 mail.Subject = "Yemek Listesi"; //Mail konusu          
                 mail.Body =  "Tarih : " + dateTimePicker1.Text+"\n"+"Çorba : "+dataGridView1.CurrentRow.Cells["Corba"].Value.ToString() + "\nAna Yemek : " + dataGridView1.CurrentRow.Cells["AnaYemek"].Value.ToString() + "\nTatlı : " + dataGridView1.CurrentRow.Cells["Tatli"].Value.ToString(); //Mailin içeriği                  
@@ -109,7 +109,7 @@ namespace AnaOkuluBilisim
                 sc.Port = 587;
                 sc.Host = "smtp.gmail.com";
                 sc.EnableSsl = true;
-                sc.Credentials = new NetworkCredential("m.ozbek01@gmail.com", "mehmet2473378");
+                sc.Credentials = new NetworkCredential("birdirbiranaokulu@gmail.com", "147258369qwe");
                 sc.Send(mail);
                 MessageBox.Show("Mail Gönderildi.");
             }
