@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AnaOkuluWebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="pwd">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="age" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="comdepart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="confirmpassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="createpassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="day" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="year" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="pwd" nillable="true" type="tns:pwd" />
+  <xs:complexType name="ArrayOfpwd">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="pwd" nillable="true" type="tns:pwd" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfpwd" nillable="true" type="tns:ArrayOfpwd" />
+  <xs:complexType name="ArrayOfServislerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServislerDB" nillable="true" type="tns:ServislerDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServislerDB" nillable="true" type="tns:ArrayOfServislerDB" />
+  <xs:complexType name="ServislerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServislerDB" nillable="true" type="tns:ServislerDB" />
+  <xs:complexType name="ArrayOfUcuncuSahislar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UcuncuSahislar" nillable="true" type="tns:UcuncuSahislar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUcuncuSahislar" nillable="true" type="tns:ArrayOfUcuncuSahislar" />
+  <xs:complexType name="UcuncuSahislar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ceptel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Meslek" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="Ogrenciler" nillable="true" type="tns:Ogrenciler" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YakinlikDerecesi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UcuncuSahislar" nillable="true" type="tns:UcuncuSahislar" />
+  <xs:complexType name="Ogrenciler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Aile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Alerjiler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ameliyatlar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Asilar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cilt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cinsiyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DavranisSorunu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DogumTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DogumYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dogumilce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dogumili" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fobileri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GecirdigiHastaliklar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KanGrubu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KayitNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KayitTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KimlikSeriNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Koy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mahalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="PostaKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Protez" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resim" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="RuhsalDurum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaglikSorunlari" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Semt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServisId" type="xs:int" />
+      <xs:element minOccurs="0" name="Servisler" nillable="true" type="tns:Servisler" />
+      <xs:element minOccurs="0" name="SevdigiYiyecekler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SinifId" type="xs:int" />
+      <xs:element minOccurs="0" name="Siniflar" nillable="true" type="tns:Siniflar" />
+      <xs:element minOccurs="0" name="SiraNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UcuncuSahislar" nillable="true" type="tns:ArrayOfUcuncuSahislar" />
+      <xs:element minOccurs="0" name="Uyruk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Veliler" nillable="true" type="tns:ArrayOfVeliler" />
+      <xs:element minOccurs="0" name="VerilisYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Yapilanlar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YasitlariylaIliskisi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Yoklama" nillable="true" type="tns:ArrayOfYoklama" />
+      <xs:element minOccurs="0" name="il" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ilac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ilce" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ogrenciler" nillable="true" type="tns:Ogrenciler" />
+  <xs:complexType name="Servisler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ogrenciler" nillable="true" type="tns:ArrayOfOgrenciler" />
+      <xs:element minOccurs="0" name="ServisAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServisID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Servisler" nillable="true" type="tns:Servisler" />
+  <xs:complexType name="ArrayOfOgrenciler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ogrenciler" nillable="true" type="tns:Ogrenciler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOgrenciler" nillable="true" type="tns:ArrayOfOgrenciler" />
+  <xs:complexType name="Siniflar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DersTablo" nillable="true" type="tns:DersTablo" />
+      <xs:element minOccurs="0" name="Ogrenciler" nillable="true" type="tns:ArrayOfOgrenciler" />
+      <xs:element minOccurs="0" name="Yoklama" nillable="true" type="tns:ArrayOfYoklama" />
+      <xs:element minOccurs="0" name="sinifAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sinifId" type="xs:int" />
+      <xs:element minOccurs="0" name="sinifkapasite" type="xs:int" />
+      <xs:element minOccurs="0" name="ögretmenId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Siniflar" nillable="true" type="tns:Siniflar" />
+  <xs:complexType name="DersTablo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CL0" type="xs:int" />
+      <xs:element minOccurs="0" name="CL1" type="xs:int" />
+      <xs:element minOccurs="0" name="CL10" type="xs:int" />
+      <xs:element minOccurs="0" name="CL11" type="xs:int" />
+      <xs:element minOccurs="0" name="CL12" type="xs:int" />
+      <xs:element minOccurs="0" name="CL13" type="xs:int" />
+      <xs:element minOccurs="0" name="CL14" type="xs:int" />
+      <xs:element minOccurs="0" name="CL15" type="xs:int" />
+      <xs:element minOccurs="0" name="CL16" type="xs:int" />
+      <xs:element minOccurs="0" name="CL17" type="xs:int" />
+      <xs:element minOccurs="0" name="CL18" type="xs:int" />
+      <xs:element minOccurs="0" name="CL19" type="xs:int" />
+      <xs:element minOccurs="0" name="CL2" type="xs:int" />
+      <xs:element minOccurs="0" name="CL20" type="xs:int" />
+      <xs:element minOccurs="0" name="CL21" type="xs:int" />
+      <xs:element minOccurs="0" name="CL22" type="xs:int" />
+      <xs:element minOccurs="0" name="CL23" type="xs:int" />
+      <xs:element minOccurs="0" name="CL24" type="xs:int" />
+      <xs:element minOccurs="0" name="CL25" type="xs:int" />
+      <xs:element minOccurs="0" name="CL26" type="xs:int" />
+      <xs:element minOccurs="0" name="CL27" type="xs:int" />
+      <xs:element minOccurs="0" name="CL28" type="xs:int" />
+      <xs:element minOccurs="0" name="CL29" type="xs:int" />
+      <xs:element minOccurs="0" name="CL3" type="xs:int" />
+      <xs:element minOccurs="0" name="CL30" type="xs:int" />
+      <xs:element minOccurs="0" name="CL31" type="xs:int" />
+      <xs:element minOccurs="0" name="CL32" type="xs:int" />
+      <xs:element minOccurs="0" name="CL33" type="xs:int" />
+      <xs:element minOccurs="0" name="CL34" type="xs:int" />
+      <xs:element minOccurs="0" name="CL35" type="xs:int" />
+      <xs:element minOccurs="0" name="CL36" type="xs:int" />
+      <xs:element minOccurs="0" name="CL37" type="xs:int" />
+      <xs:element minOccurs="0" name="CL38" type="xs:int" />
+      <xs:element minOccurs="0" name="CL39" type="xs:int" />
+      <xs:element minOccurs="0" name="CL4" type="xs:int" />
+      <xs:element minOccurs="0" name="CL5" type="xs:int" />
+      <xs:element minOccurs="0" name="CL6" type="xs:int" />
+      <xs:element minOccurs="0" name="CL7" type="xs:int" />
+      <xs:element minOccurs="0" name="CL8" type="xs:int" />
+      <xs:element minOccurs="0" name="CL9" type="xs:int" />
+      <xs:element minOccurs="0" name="DERSLER" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER1" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER10" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER11" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER12" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER13" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER14" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER15" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER16" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER17" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER18" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER19" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER2" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER20" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER21" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER22" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER23" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER24" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER25" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER26" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER27" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER28" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER29" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER3" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER30" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER31" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER32" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER33" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER34" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER35" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER36" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER37" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER38" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER39" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER4" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER5" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER6" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER7" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER8" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="DERSLER9" nillable="true" type="tns:DERSLER" />
+      <xs:element minOccurs="0" name="SINIFID" type="xs:int" />
+      <xs:element minOccurs="0" name="Siniflar" nillable="true" type="tns:Siniflar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DersTablo" nillable="true" type="tns:DersTablo" />
+  <xs:complexType name="DERSLER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DERSADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DERSID" type="xs:int" />
+      <xs:element minOccurs="0" name="DersTablo" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo1" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo10" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo11" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo12" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo13" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo14" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo15" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo16" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo17" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo18" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo19" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo2" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo20" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo21" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo22" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo23" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo24" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo25" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo26" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo27" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo28" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo29" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo3" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo30" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo31" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo32" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo33" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo34" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo35" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo36" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo37" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo38" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo39" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo4" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo5" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo6" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo7" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo8" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="DersTablo9" nillable="true" type="tns:ArrayOfDersTablo" />
+      <xs:element minOccurs="0" name="OGRETMENID" type="xs:int" />
+      <xs:element minOccurs="0" name="Ogretmenler" nillable="true" type="tns:Ogretmenler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DERSLER" nillable="true" type="tns:DERSLER" />
+  <xs:complexType name="ArrayOfDersTablo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DersTablo" nillable="true" type="tns:DersTablo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDersTablo" nillable="true" type="tns:ArrayOfDersTablo" />
+  <xs:complexType name="Ogretmenler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DERSLER" nillable="true" type="tns:ArrayOfDERSLER" />
+      <xs:element minOccurs="0" name="KayitId" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonelID" type="xs:int" />
+      <xs:element minOccurs="0" name="Personeller" nillable="true" type="tns:Personeller" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ogretmenler" nillable="true" type="tns:Ogretmenler" />
+  <xs:complexType name="ArrayOfDERSLER">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DERSLER" nillable="true" type="tns:DERSLER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDERSLER" nillable="true" type="tns:ArrayOfDERSLER" />
+  <xs:complexType name="Personeller">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AskerlikDurumu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BaslamaTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BasvuruTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CepTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cinsiyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Departman" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Durumu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EgitimDurumu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ilce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KKayitNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KSiraNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KVerilisYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kaile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KanGrubu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kcilt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KdogumTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KdogumYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kdogumilce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kdogumili" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KkimlikSeriNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kkoy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kmahalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kuyruk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ogretmenler" nillable="true" type="tns:ArrayOfOgretmenler" />
+      <xs:element minOccurs="0" name="PersonelId" type="xs:int" />
+      <xs:element minOccurs="0" name="Semt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SicilNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TecilBitisYili" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="il" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Personeller" nillable="true" type="tns:Personeller" />
+  <xs:complexType name="ArrayOfOgretmenler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ogretmenler" nillable="true" type="tns:Ogretmenler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOgretmenler" nillable="true" type="tns:ArrayOfOgretmenler" />
+  <xs:complexType name="ArrayOfYoklama">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Yoklama" nillable="true" type="tns:Yoklama" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfYoklama" nillable="true" type="tns:ArrayOfYoklama" />
+  <xs:complexType name="Yoklama">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevamsizlikTuru" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="Ogrenciler" nillable="true" type="tns:Ogrenciler" />
+      <xs:element minOccurs="0" name="SinifId" type="xs:int" />
+      <xs:element minOccurs="0" name="Siniflar" nillable="true" type="tns:Siniflar" />
+      <xs:element minOccurs="0" name="Tarih" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Yoklama" nillable="true" type="tns:Yoklama" />
+  <xs:complexType name="ArrayOfVeliler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Veliler" nillable="true" type="tns:Veliler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVeliler" nillable="true" type="tns:ArrayOfVeliler" />
+  <xs:complexType name="Veliler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ceptel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Meslek" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="Ogrenciler" nillable="true" type="tns:Ogrenciler" />
+      <xs:element minOccurs="0" name="Sifre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YakinlikDerecesi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Veliler" nillable="true" type="tns:Veliler" />
+  <xs:complexType name="UcuncuSahisDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ceptel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Meslek" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YakinlikDerecesi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UcuncuSahisDB" nillable="true" type="tns:UcuncuSahisDB" />
+  <xs:complexType name="ArrayOfVelilerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VelilerDB" nillable="true" type="tns:VelilerDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVelilerDB" nillable="true" type="tns:ArrayOfVelilerDB" />
+  <xs:complexType name="VelilerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ceptel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Meslek" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YakinlikDerecesi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VelilerDB" nillable="true" type="tns:VelilerDB" />
+  <xs:complexType name="ArrayOfOgretmelerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OgretmelerDB" nillable="true" type="tns:OgretmelerDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOgretmelerDB" nillable="true" type="tns:ArrayOfOgretmelerDB" />
+  <xs:complexType name="OgretmelerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="KAYITID" type="xs:int" />
+      <xs:element minOccurs="0" name="SOYAD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OgretmelerDB" nillable="true" type="tns:OgretmelerDB" />
+  <xs:complexType name="ArrayOfOgrencilerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OgrencilerDB" nillable="true" type="tns:OgrencilerDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOgrencilerDB" nillable="true" type="tns:ArrayOfOgrencilerDB" />
+  <xs:complexType name="OgrencilerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Aile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Alerjiler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ameliyatlar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Asilar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cilt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cinsiyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DavranisSorunu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DogumTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DogumYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dogumilce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dogumili" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fobileri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GecirdigiHastaliklar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KanGrubu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KayitNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KayitTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KimlikSeriNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Koy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mahalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="PostaKodu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Protez" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resim" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="RuhsalDurum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaglikSorunlari" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Semt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServisId" type="xs:int" />
+      <xs:element minOccurs="0" name="SevdigiYiyecekler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SinifId" type="xs:int" />
+      <xs:element minOccurs="0" name="SiraNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uyruk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VerilisYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Yapilanlar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YasitlariylaIliskisi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="il" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ilac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ilce" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OgrencilerDB" nillable="true" type="tns:OgrencilerDB" />
+  <xs:complexType name="ArrayOfPersonellerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonellerDB" nillable="true" type="tns:PersonellerDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonellerDB" nillable="true" type="tns:ArrayOfPersonellerDB" />
+  <xs:complexType name="PersonellerDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Adres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AskerlikDurumu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BaslamaTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BasvuruTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CepTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cinsiyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Departman" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Durumu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EgitimDurumu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ilce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KKayitNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KSiraNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KVerilisYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kaile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KanGrubu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kcilt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KdogumTarihi" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KdogumYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kdogumilce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kdogumili" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KkimlikSeriNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kkoy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kmahalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kuyruk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonelId" type="xs:int" />
+      <xs:element minOccurs="0" name="Semt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SicilNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soyadi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TcNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TecilBitisYili" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="il" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonellerDB" nillable="true" type="tns:PersonellerDB" />
+  <xs:complexType name="ArrayOfSiniflarDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SiniflarDB" nillable="true" type="tns:SiniflarDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSiniflarDB" nillable="true" type="tns:ArrayOfSiniflarDB" />
+  <xs:complexType name="SiniflarDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sinifAdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sinifId" type="xs:int" />
+      <xs:element minOccurs="0" name="sinifkapasite" type="xs:int" />
+      <xs:element minOccurs="0" name="ögretmenId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SiniflarDB" nillable="true" type="tns:SiniflarDB" />
+  <xs:complexType name="ArrayOfYemekler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Yemekler" nillable="true" type="tns:Yemekler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfYemekler" nillable="true" type="tns:ArrayOfYemekler" />
+  <xs:complexType name="Yemekler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnaYemek" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Corba" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tarih" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Tatli" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YemekId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Yemekler" nillable="true" type="tns:Yemekler" />
+  <xs:complexType name="ArrayOfDemirbaslarDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DemirbaslarDB" nillable="true" type="tns:DemirbaslarDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDemirbaslarDB" nillable="true" type="tns:ArrayOfDemirbaslarDB" />
+  <xs:complexType name="DemirbaslarDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:int" />
+      <xs:element minOccurs="0" name="Adi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AlindigiYer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AlisFaturaNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cinsi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEMIRBASID" type="xs:int" />
+      <xs:element minOccurs="0" name="GirisTutari" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KdvOrani" type="xs:int" />
+      <xs:element minOccurs="0" name="KdvTutari" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SatisFaturaNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SatisKdvTutari" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SatisNedeni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SatisTarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SatisTutari" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SatisYeri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Turu" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DemirbaslarDB" nillable="true" type="tns:DemirbaslarDB" />
+  <xs:complexType name="ArrayOfYoklamaDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="YoklamaDB" nillable="true" type="tns:YoklamaDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfYoklamaDB" nillable="true" type="tns:ArrayOfYoklamaDB" />
+  <xs:complexType name="YoklamaDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACIKLAMA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEVAMSIZLIK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OGRENCIADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OGRENCISOYADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OgrenciId" type="xs:int" />
+      <xs:element minOccurs="0" name="SinifId" type="xs:int" />
+      <xs:element minOccurs="0" name="TARIH" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VELIADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VELIEMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VELISOYADI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VeliId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="YoklamaDB" nillable="true" type="tns:YoklamaDB" />
+  <xs:complexType name="ArrayOfDemirbasMekanlariDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DemirbasMekanlariDB" nillable="true" type="tns:DemirbasMekanlariDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDemirbasMekanlariDB" nillable="true" type="tns:ArrayOfDemirbasMekanlariDB" />
+  <xs:complexType name="DemirbasMekanlariDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adet" type="xs:int" />
+      <xs:element minOccurs="0" name="BulunduguYer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DemirbasId" type="xs:int" />
+      <xs:element minOccurs="0" name="MekanId" type="xs:int" />
+      <xs:element minOccurs="0" name="Sorumlusu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeslimTarihi" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DemirbasMekanlariDB" nillable="true" type="tns:DemirbasMekanlariDB" />
+</xs:schema>
